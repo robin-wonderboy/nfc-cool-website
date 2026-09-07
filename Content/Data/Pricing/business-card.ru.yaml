@@ -1,0 +1,34 @@
+# Сравнение тарифов для /ru/business-card/. Отрисовывается PricingTableRenderer
+# по токену {{PRICING_TABLE:business-card}} в Content/Pages/business-card.ru.md.
+columns: ["Free", "Personal", "Small Business", "Business"]
+rows:
+  - label: "Цена"
+    values: ["**$0**", "**$19.99**", "**$49.99**", "**$99.99**"]
+  - label: "Визитки"
+    values: ["1", "1", "10", "100"]
+  - label: "Просмотр профиля"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Сохранение vCard"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Сбор контактов"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Аналитика"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Свой логотип"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Передача через NFC и QR"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Apple Wallet"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Google Wallet"
+    values: ["soon", "soon", "soon", "soon"]
+  - label: "Режим конференции"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Защита PIN-кодом"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Уведомления в реальном времени"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Экспорт данных (GDPR)"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Кому подойдёт"
+    values: ["Попробовать", "Частным лицам", "Небольшим командам", "Растущим компаниям"]

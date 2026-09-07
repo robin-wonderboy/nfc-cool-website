@@ -5,7 +5,7 @@ language: "en"
 
 localization:
   defaultLanguage: "en"
-  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar", "it", "tr"]
+  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar", "it", "tr", "ru"]
   translationMode: "manual"
   legalLanguage: "de"
   # Localized nav + footer labels. URLs stay locale-agnostic; SiteKit prefixes
@@ -552,6 +552,61 @@ localization:
           - title: "Kullanım Koşulları"
             url: "/terms/"
           - title: "Şikayet Defteri"
+            url: "https://www.livroreclamacoes.pt/Inicio/"
+
+    ru:
+      navigation:
+        items:
+          - title: "Главная"
+            url: "/"
+          - title: "Возможности"
+            url: "/features/"
+          - title: "Визитка"
+            url: "/business-card/"
+          - title: "Купить NFC-метки"
+            url: "/affiliate-links/"
+          - title: "NFC-считыватель онлайн"
+            url: "/online-nfc-reader/"
+          - title: "Блог"
+            url: "/blog/"
+          - title: "Поддержка и контакты"
+            url: "/contact/"
+        showSearch: false
+        showThemeToggle: true
+      footer:
+        copyrightName: "NFC.cool"
+        startYear: 2017
+        showAttribution: false
+        links:
+          - title: "Возможности"
+            url: "/features/"
+          - title: "NFC-считыватель онлайн"
+            url: "/online-nfc-reader/"
+          - title: "Визитка"
+            url: "/business-card/"
+          - title: "NFC-метки"
+            url: "/affiliate-links/"
+          - title: "Разработчикам"
+            url: "/developers/"
+          - title: "Отзывы"
+            url: "/reviews/"
+          - title: "Другие приложения"
+            url: "/apps/"
+          - title: "О проекте"
+            url: "/about/"
+          - title: "История обновлений"
+            url: "/changelog/"
+          - title: "Блог"
+            url: "/blog/"
+          - title: "Поддержка и контакты"
+            url: "/contact/"
+          - title: "Пресса"
+            url: "/press/"
+          - title: "Конфиденциальность"
+            url: "/privacy/"
+          - title: "Условия использования"
+            url: "/terms/"
+          - title: "Книга жалоб"
             url: "https://www.livroreclamacoes.pt/Inicio/"
 
 contentDirectory: "Content"

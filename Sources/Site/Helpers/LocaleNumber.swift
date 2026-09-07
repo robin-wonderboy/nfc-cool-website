@@ -34,6 +34,7 @@ enum LocaleNumber {
       "ar": Style(grouping: "\u{066C}", decimal: "\u{066B}", digits: easternArabicDigits),
       "it": Style(grouping: ".", decimal: ",", digits: nil),
       "tr": Style(grouping: ".", decimal: ",", digits: nil),
+      "ru": Style(grouping: "\u{00A0}", decimal: ",", digits: nil),
    ]
 
    private static func style(for locale: String) -> Style {
