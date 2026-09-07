@@ -6,7 +6,13 @@ import Yams
 /// SiteKit's own `SiteConfig` decoder ignores unknown keys, so the rating
 /// figures are re-read here independently (same approach as `LandingPageRenderer`).
 private struct RatingsConfigFragment: Decodable {
+   struct Localization: Decodable {
+      let defaultLanguage: String?
+      let languages: [String]?
+   }
+
    let apps: AppRatings?
+   let localization: Localization?
 }
 
 /// Replace `{{RATINGS_*}}` tokens in emitted HTML with live figures derived
@@ -14,8 +20,11 @@ private struct RatingsConfigFragment: Decodable {
 /// and Reviews pages a single source of truth: refresh the counts in
 /// `SiteConfig.yaml` and every page picks them up on the next build.
 ///
-/// Numbers are formatted per locale - `/de/` pages get `.` digit grouping and
-/// `,` decimals; every other locale gets `,` grouping and `.` decimals.
+/// Numbers are formatted per locale by `LocaleNumber`, the same table the
+/// landing-page trust line uses - so `/it/` reads `73.500`, `/fr/` `73 500`
+/// and `/ar/` `٧٣٬٥٠٠`, and a page can never print `72.000` in its hero and
+/// `73,500` in its body. The locale is the first path component under the
+/// output root when that component is a configured language.
 ///
 /// Tokens:
 /// - `{{RATINGS_TOTAL}}` - sum of every app's count, floored to the nearest 500
@@ -34,6 +43,9 @@ struct RatingsCountProcessor: OutputProcessor {
             let businessCard = ratings.businessCardIOS
       else { return }
 
+      let defaultLanguage = fragment.localization?.defaultLanguage ?? "en"
+      let languages = Set(fragment.localization?.languages ?? [])
+
       let apps = [toolsIOS, toolsAndroid, businessCard]
       let totalCount = apps.reduce(0) { $0 + $1.ratingCount }
       guard totalCount > 0 else { return }
@@ -46,16 +58,16 @@ struct RatingsCountProcessor: OutputProcessor {
       for case let url as URL in enumerator where url.pathExtension == "html" {
          guard var html = try? String(contentsOf: url, encoding: .utf8), html.contains("{{RATINGS_") else { continue }
 
-         let german = url.path.contains("/de/")
+         let locale = Self.locale(of: url, under: outputDirectory, languages: languages, default: defaultLanguage)
          let replacements: [String: String] = [
-            "{{RATINGS_TOTAL}}": Self.integer(totalFloored, german: german),
-            "{{RATINGS_AVG}}": Self.decimal(weightedAverage, places: 1, german: german),
-            "{{RATINGS_TOOLS_IOS_COUNT}}": Self.integer(toolsIOS.ratingCount, german: german),
-            "{{RATINGS_TOOLS_IOS_VALUE}}": Self.decimal(toolsIOS.ratingValue, places: 2, german: german),
-            "{{RATINGS_TOOLS_ANDROID_COUNT}}": Self.integer(toolsAndroid.ratingCount, german: german),
-            "{{RATINGS_TOOLS_ANDROID_VALUE}}": Self.decimal(toolsAndroid.ratingValue, places: 2, german: german),
-            "{{RATINGS_BUSINESS_CARD_COUNT}}": Self.integer(businessCard.ratingCount, german: german),
-            "{{RATINGS_BUSINESS_CARD_VALUE}}": Self.decimal(businessCard.ratingValue, places: 2, german: german),
+            "{{RATINGS_TOTAL}}": LocaleNumber.integer(totalFloored, locale: locale),
+            "{{RATINGS_AVG}}": LocaleNumber.decimal(weightedAverage, places: 1, locale: locale),
+            "{{RATINGS_TOOLS_IOS_COUNT}}": LocaleNumber.integer(toolsIOS.ratingCount, locale: locale),
+            "{{RATINGS_TOOLS_IOS_VALUE}}": LocaleNumber.decimal(toolsIOS.ratingValue, places: 2, locale: locale),
+            "{{RATINGS_TOOLS_ANDROID_COUNT}}": LocaleNumber.integer(toolsAndroid.ratingCount, locale: locale),
+            "{{RATINGS_TOOLS_ANDROID_VALUE}}": LocaleNumber.decimal(toolsAndroid.ratingValue, places: 2, locale: locale),
+            "{{RATINGS_BUSINESS_CARD_COUNT}}": LocaleNumber.integer(businessCard.ratingCount, locale: locale),
+            "{{RATINGS_BUSINESS_CARD_VALUE}}": LocaleNumber.decimal(businessCard.ratingValue, places: 2, locale: locale),
          ]
          for (token, value) in replacements {
             html = html.replacingOccurrences(of: token, with: value)
@@ -64,21 +76,21 @@ struct RatingsCountProcessor: OutputProcessor {
       }
    }
 
-   /// Group digits in threes - `.` separator for German pages, `,` elsewhere.
-   private static func integer(_ value: Int, german: Bool) -> String {
-      let separator = german ? "." : ","
-      let digits = Array(String(value))
-      var result = ""
-      for (offset, digit) in digits.enumerated() {
-         if offset != 0, (digits.count - offset).isMultiple(of: 3) { result.append(separator) }
-         result.append(digit)
-      }
-      return result
-   }
-
-   /// Round to `places` decimals - `,` decimal separator for German pages.
-   private static func decimal(_ value: Double, places: Int, german: Bool) -> String {
-      let string = String(format: "%.\(places)f", value)
-      return german ? string.replacingOccurrences(of: ".", with: ",") : string
+   /// The locale a built page belongs to: the first path component under the
+   /// output root when it names a configured language (`_Site/it/about/` ->
+   /// `it`), the default language otherwise. Matching on the path component
+   /// rather than `path.contains("/de/")` keeps a slug like `/blog/de-mystified/`
+   /// from being mistaken for a locale directory.
+   private static func locale(
+      of url: URL,
+      under outputDirectory: URL,
+      languages: Set<String>,
+      default defaultLanguage: String
+   ) -> String {
+      let root = outputDirectory.standardizedFileURL.pathComponents
+      let components = url.standardizedFileURL.pathComponents
+      guard components.count > root.count else { return defaultLanguage }
+      let candidate = components[root.count]
+      return languages.contains(candidate) ? candidate : defaultLanguage
    }
 }

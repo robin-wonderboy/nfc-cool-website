@@ -24,7 +24,22 @@ import SiteKit
 struct CSSAsyncLoadProcessor: OutputProcessor {
    /// CSS basenames that should be async-loaded (not blocking first paint).
    /// Matches the non-critical entries in `Theme/theme.yaml`'s `css:` list.
-   private let nonCriticalBasenames = ["newsletter", "marketing", "social", "faq", "blog", "features"]
+   ///
+   /// `nfc-reader` and `rtl` are page-scoped rather than merely below-the-fold:
+   /// `nfc-reader.css` styles one page (`/online-nfc-reader/`) and `rtl.css` only
+   /// applies under `[dir=rtl]` (the `/ar/` tree), yet both ship on every page.
+   /// Async-loading them takes ~13.7 KB of render-blocking CSS off the other ~727.
+   private let nonCriticalBasenames = ["newsletter", "marketing", "social", "faq", "blog", "features", "nfc-reader", "rtl"]
+
+   /// Stylesheets that are non-critical *in general* but critical on the pages
+   /// they actually target, keyed by the path prefix where they must stay
+   /// render-blocking.
+   ///
+   /// `rtl.css` on `/ar/` drives the mirrored layout, so deferring it would
+   /// paint the page left-to-right and then flip it; `nfc-reader.css` styles the
+   /// widget panels that are the whole point of `/online-nfc-reader/`. On every
+   /// other page each matches nothing and can load late.
+   private let criticalUnderPath: [String: String] = ["rtl": "/ar/", "nfc-reader": "/online-nfc-reader/"]
 
    func process(outputDirectory: URL, projectDirectory: URL, themeConfig: ThemeConfig?) throws {
       let fileManager = FileManager.default
@@ -35,6 +50,8 @@ struct CSSAsyncLoadProcessor: OutputProcessor {
          var changed = false
 
          for basename in self.nonCriticalBasenames {
+            // Keep this sheet synchronous on the pages it actually styles.
+            if let prefix = self.criticalUnderPath[basename], url.path.contains(prefix) { continue }
             // Match `<link rel="stylesheet" href="...css/<basename>.css?v=...">` (with optional self-close).
             // SiteKit emits these without `media` attrs today; if a `media` attr is already present we skip.
             let pattern = #"<link rel="stylesheet" href="([^"]*/"# + basename + #"\.css(?:\?[^"]*)?)"\s*/?>"#

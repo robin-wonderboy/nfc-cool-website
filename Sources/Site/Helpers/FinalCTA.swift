@@ -83,32 +83,54 @@ func renderTitleWithBrandTail(_ title: String, tagName: String, classAttr: Strin
    return "<\(tagName)\(classPart)>\(lead)\(separator)\(wordmark)</\(tagName)>"
 }
 
-private func formatThousands(_ n: Int) -> String {
-   let formatter = NumberFormatter()
-   formatter.numberStyle = .decimal
-   formatter.groupingSeparator = ","
-   return formatter.string(from: NSNumber(value: n)) ?? "\(n)"
+/// Store-rating figures for the hero + final CTA, already localized.
+///
+/// Built once per page by `loadTrustLine(context:trust:)` so the numbers come
+/// from the single source of truth (`apps:` in `SiteConfig.yaml`) rather than
+/// being copied into nine `Landing*.yaml` files where they would drift.
+struct TrustLine: Sendable {
+   let rating: String
+   let count: String
+   let ratingsWord: String
+   let version: String?
+   let price: String?
+}
+
+/// Resolves the trust line for the current locale, or `nil` when the locale's
+/// `Landing*.yaml` has no `trust:` block (which keeps the line opt-in) or when
+/// `SiteConfig.yaml` carries no iOS Tools rating.
+///
+/// Only `version` / `price` come from the YAML - those are per-locale prose.
+/// The rating and the count are read from `apps.toolsIOS` so refreshing the
+/// store figures stays a one-line edit in `SiteConfig.yaml`.
+func loadTrustLine(context: BuildContext, trust: TrustSection?) -> TrustLine? {
+   guard let trust else { return nil }
+   let ratings = AppRatings.load(projectDirectory: context.projectDirectory)
+   guard let toolsIOS = ratings.toolsIOS else { return nil }
+   let locale = context.uiStrings.locale
+   return TrustLine(
+      rating: LocaleNumber.decimal(toolsIOS.ratingValue, places: 1, locale: locale),
+      count: LocaleNumber.integer(toolsIOS.ratingCount, locale: locale),
+      ratingsWord: context.s(.trustRatings),
+      version: trust.version,
+      price: trust.price
+   )
 }
 
 /// Renders the rating/version/price trust line shared by the landing hero
-/// and the final CTA. Returns "" when `trust` is nil or has no fields set.
-func renderTrust(_ trust: TrustSection?, classAttr: String = "landing-hero-trust") -> String {
+/// and the final CTA. Returns "" when there is no trust line for this locale.
+func renderTrust(_ trust: TrustLine?, classAttr: String = "landing-hero-trust") -> String {
    guard let trust else { return "" }
-   var parts: [String] = []
-   if let rating = trust.rating {
-      parts.append("<span class=\"stars\">★</span>\(rating.htmlEscaped)")
-   }
-   if let count = trust.ratingCount {
-      let formatted = formatThousands(count)
-      parts.append("\(formatted) ratings")
-   }
+   var parts: [String] = [
+      "<span class=\"stars\">★</span>\(trust.rating.htmlEscaped)",
+      "\(trust.count.htmlEscaped) \(trust.ratingsWord.htmlEscaped)",
+   ]
    if let version = trust.version {
       parts.append("v\(version.htmlEscaped)")
    }
    if let price = trust.price {
       parts.append(price.htmlEscaped)
    }
-   guard !parts.isEmpty else { return "" }
    return "<p class=\"\(classAttr)\">" + parts.joined(separator: "<span class=\"sep\">·</span>") + "</p>"
 }
 
@@ -143,7 +165,7 @@ func renderStoreButtons(appStoreURL: String, googlePlayURL: String?) -> String {
 /// and optional trust line from `Landing{.locale}.yaml` so all three pages
 /// stay visually and editorially in sync — change `cta.title` in one place
 /// and every page updates.
-func renderFinalCTA(cta: CTASection, trust: TrustSection?, appStoreURL: String, googlePlayURL: String?) -> String {
+func renderFinalCTA(cta: CTASection, trust: TrustLine?, appStoreURL: String, googlePlayURL: String?) -> String {
    let titleHTML = renderTitleWithBrandTail(cta.title, tagName: "h2", classAttr: "landing-cta-title")
    return """
    <section class="landing-final-cta">

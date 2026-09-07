@@ -25,7 +25,7 @@ struct FeaturesIndexRenderer: Renderer {
       let landing = try loadLandingData(context: context)
       let finalCTAHTML: String = {
          guard let cta = landing.cta else { return "" }
-         return renderFinalCTA(cta: cta, trust: landing.trust, appStoreURL: toolsAppStoreURL, googlePlayURL: toolsGooglePlayURL)
+         return renderFinalCTA(cta: cta, trust: loadTrustLine(context: context, trust: landing.trust), appStoreURL: toolsAppStoreURL, googlePlayURL: toolsGooglePlayURL)
       }()
       let newsletterHTML = NewsletterForm.section(for: context)
 

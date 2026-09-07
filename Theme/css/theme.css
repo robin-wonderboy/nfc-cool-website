@@ -1,6 +1,7 @@
 /* NFC.cool - Theme chrome (header, nav, footer, static pages)
  * Brand Manual V1: Titillium Web body, Caveat script accent,
- * yellow #FFC709, black #212529, blue gradient #137BD9 → #00A2F3.
+ * yellow #FFC700, black #212529, blue gradient #1A60CE -> #128CF0
+ * (the iOS app's appThemeGradient; see nfc-cool-design/docs/GUIDELINE.md).
  */
 
 /* ============================================================
@@ -93,13 +94,17 @@
 
 :root {
    --font-script: 'Caveat', 'Brush Script MT', cursive;
-   --brand-blue-1: #137BD9;
-   --brand-blue-2: #00A2F3;
+   /* The iOS app's appThemeGradient. One blue gradient in the brand: it is
+      the band, and it is never ramped across a button. */
+   --brand-blue-1: #1A60CE;
+   --brand-blue-2: #128CF0;
    --brand-gradient: linear-gradient(180deg, var(--brand-blue-1) 0%, var(--brand-blue-2) 100%);
    --brand-gradient-radial: radial-gradient(at 80% 20%, var(--brand-blue-2) 0%, var(--brand-blue-1) 60%);
    --color-link: var(--brand-blue-1);
-   --color-link-hover: var(--brand-blue-2);
-   --color-link-light: rgba(19, 123, 217, 0.12);
+   /* Hover darkens. It used to lighten to the second stop, which took an
+      inline link from 3.99:1 down to 2.60:1 on hover. */
+   --color-link-hover: #1754B5;
+   --color-link-light: rgba(26, 96, 206, 0.12);
 }
 
 /* Dark-mode hero - match the page bg (#161B22 = --color-bg in dark mode)
@@ -107,9 +112,9 @@
    sections, with a faint brand-yellow radial in the middle. */
 [data-theme="dark"] {
    --brand-gradient:
-      radial-gradient(ellipse 85% 55% at 50% 50%, rgba(255, 199, 9, 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 85% 55% at 50% 50%, rgba(255, 199, 0, 0.10) 0%, transparent 70%),
       linear-gradient(180deg, #161B22 0%, #161B22 100%);
-   --brand-gradient-radial: radial-gradient(at 50% 50%, rgba(255, 199, 9, 0.08) 0%, #161B22 60%);
+   --brand-gradient-radial: radial-gradient(at 50% 50%, rgba(255, 199, 0, 0.08) 0%, #161B22 60%);
    --color-link: var(--color-accent);
    --color-link-hover: var(--color-accent-hover);
    --color-link-light: var(--color-accent-light);

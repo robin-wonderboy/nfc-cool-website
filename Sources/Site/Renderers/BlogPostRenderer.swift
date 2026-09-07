@@ -13,6 +13,11 @@ struct BlogPostRenderer: Renderer {
       let defaultLang = context.config.effectiveDefaultLanguage
       let dateFormatter = Self.dateFormatter(for: locale)
       let newsletterHTML = NewsletterForm.section(for: context)
+      // Closing store CTA, shared with the landing/features pages so the copy
+      // stays in one place. Loaded once here rather than per post - every post
+      // in this locale renders the same block.
+      let landing = try? loadLandingData(context: context)
+      let trustLine = loadTrustLine(context: context, trust: landing?.trust)
 
       for section in context.sections {
          // Only pages that are actually emitted. Non-default-locale pages
@@ -34,7 +39,9 @@ struct BlogPostRenderer: Renderer {
                allInSection: renderable,
                context: context,
                dateFormatter: dateFormatter,
-               newsletterHTML: newsletterHTML
+               newsletterHTML: newsletterHTML,
+               cta: landing?.cta,
+               trust: trustLine
             ))
          }
       }
@@ -47,7 +54,9 @@ struct BlogPostRenderer: Renderer {
       allInSection: [Page],
       context: BuildContext,
       dateFormatter: DateFormatter,
-      newsletterHTML: String
+      newsletterHTML: String,
+      cta: CTASection?,
+      trust: TrustLine?
    ) -> OutputFile {
       let helper = OutputFileRenderer(context: context)
       let listingPath = context.router.sectionListingPath(for: section.config)
@@ -201,6 +210,17 @@ struct BlogPostRenderer: Renderer {
       \(tagsHTML.isEmpty ? "" : "<div class=\"blog-post-tags\">\(tagsHTML)</div>")
       """
       let heroHTML = renderPageHero(modifier: "blog-post-hero", text: heroText, visual: heroVisual)
+      // Every post closes on a download path. `StoreLink` already routes any
+      // page id starting with "blog-" to utm_medium=blog, so each post reports
+      // as its own campaign in App Store Connect / Play Console.
+      let ctaHTML = cta.map { cta in
+         renderFinalCTA(
+            cta: cta,
+            trust: trust,
+            appStoreURL: StoreLink.appStore(app: .tools, page: "blog-\(page.slug)", locale: context.uiStrings.locale),
+            googlePlayURL: StoreLink.googlePlay(app: .tools, page: "blog-\(page.slug)", locale: context.uiStrings.locale)
+         )
+      } ?? ""
       let body = """
       <main class="sk-main blog-post">
          \(heroHTML)
@@ -223,6 +243,7 @@ struct BlogPostRenderer: Renderer {
          </section>
          """)
          \(newsletterHTML)
+         \(ctaHTML)
       </main>
       """
 

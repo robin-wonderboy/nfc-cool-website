@@ -115,7 +115,7 @@ struct FeaturePageRenderer: Renderer {
             sections.append(newsletterHTML)
          }
          if let cta = landing.cta {
-            sections.append(renderFinalCTA(cta: cta, trust: landing.trust, appStoreURL: appStoreURL, googlePlayURL: googlePlayURL))
+            sections.append(renderFinalCTA(cta: cta, trust: loadTrustLine(context: context, trust: landing.trust), appStoreURL: appStoreURL, googlePlayURL: googlePlayURL))
          }
 
          let mainContent = "<main class=\"sk-main feature-page\">\(sections.joined())</main>"

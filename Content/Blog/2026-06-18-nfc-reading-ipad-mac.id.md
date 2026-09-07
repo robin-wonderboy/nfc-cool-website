@@ -32,7 +32,22 @@ Triknya adalah pembaca NFC USB eksternal. Anda menyambungkannya ke iPad atau Mac
 
 Aplikasi lebih memprioritaskan pembaca eksternal kapan pun satu tersambung. Di iPad atau Mac, pembaca itu adalah satu-satunya perangkat keras NFC yang berperan, jadi tidak ada yang perlu diputuskan. Di iPhone, ini menjadi pilihan yang dibuat aplikasi untuk Anda: colokkan pembaca dan NFC.cool menggunakannya, biarkan tidak tercolok dan ponsel kembali ke NFC bawaannya sendiri. Anda tidak mengubah pengaturan, dan tidak memilih mode - aplikasi mencari tahu perangkat keras apa yang dimilikinya dan bertindak sesuai itu.
 
-Pembaca yang saya jadikan dasar pengembangan ini, dan satu-satunya yang benar-benar saya uji, adalah HID OMNIKEY 5022 CL. Pembaca USB lain mungkin berfungsi, tapi saya tidak bisa menjanjikannya, karena saya hanya memverifikasi pengalamannya secara menyeluruh dengan yang satu itu. Jika Anda mencoba pembaca yang berbeda, saya benar-benar ingin tahu hasilnya: [beri tahu saya](/contact/) apakah berhasil atau di bagian mana yang gagal, dan saya akan menyatukan apa yang saya pelajari kembali ke dalam aplikasi dan tulisan ini.
+Pembaca yang saya jadikan dasar pengembangan ini, dan satu-satunya yang benar-benar saya uji, adalah HID OMNIKEY 5022 CL. Pembaca USB lain juga berfungsi, dan beberapa di antaranya ada di daftar di bawah, dilaporkan oleh pengguna yang mencobanya.
+
+---
+
+## Pembaca yang berfungsi
+
+Ini semua pembaca yang sejauh ini saya tahu berfungsi dengan NFC.cool:
+
+- **HID OMNIKEY 5022 CL** - yang saya jadikan dasar pengembangan dan saya uji menyeluruh ([Amazon](https://amzn.to/3SNPi46))
+- **HID OMNIKEY 5422** - dilaporkan berfungsi oleh seorang pengguna ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1552U-M1** - dilaporkan berfungsi oleh seorang pengguna ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1255U-J1** - dilaporkan berfungsi oleh seorang pengguna ([Amazon](https://amzn.to/4xZVEwe))
+
+Terima kasih kepada semua yang sudah menulis kepada saya. Saya tidak bisa membeli setiap pembaca yang ada di pasaran, jadi setiap model setelah yang pertama ada di daftar ini karena seseorang membelinya, mencobanya, dan menyempatkan diri memberi tahu saya. Kalau Anda memakai pembaca yang belum ada di sini, [beri tahu saya](/contact/) apakah berhasil atau di bagian mana yang gagal, dan akan saya tambahkan ke tulisan ini.
+
+Itu adalah tautan afiliasi Amazon: jika Anda membeli melalui salah satunya, saya mungkin mendapat komisi kecil tanpa biaya tambahan bagi Anda.
 
 ---
 
@@ -48,7 +63,7 @@ Yang terakhir itu adalah bagian yang sulit. Mereset kepala Sonicare berarti memb
 
 Beberapa hal masih belum ada, dan saya lebih suka memberi tahu Anda daripada membiarkan Anda menemukannya sendiri.
 
-- OMNIKEY 5022 CL adalah satu-satunya pembaca yang saya uji. Pembaca yang berbeda menempatkan Anda di wilayah yang belum terverifikasi.
+- OMNIKEY 5022 CL adalah satu-satunya pembaca yang saya uji sendiri. Yang lain di daftar di atas berasal dari laporan pengguna, dan apa pun di luar daftar itu adalah wilayah yang belum terverifikasi.
 - Tag MIFARE Classic hanya bisa dibaca melalui pembaca. Anda bisa membacanya, tapi tidak menulisnya.
 
 Tidak ada satu pun dari ini yang merusak cara kebanyakan orang akan menggunakannya, tapi semuanya nyata, dan ini adalah jenis hal yang ingin saya ketahui sebelum membeli sebuah pembaca.
@@ -61,7 +76,7 @@ Saya ingin memperjelas dari mana ini berasal. Saya tidak duduk lalu menciptakann
 
 Pembacaan tag NFC di iPad dan Mac hadir di NFC.cool 6.15.0. Jika Anda memiliki iPad atau Mac, pembaca yang didukung, dan sebuah tag yang sebelumnya tidak pernah bisa Anda pindai dari meja Anda, ini akan langsung berfungsi.
 
-Butuh pembacanya? Berikut HID OMNIKEY 5022 CL di [Amazon AS](https://amzn.to/4rq6gCj) dan [Amazon Eropa](https://amzn.to/483UyEp). Itu adalah tautan afiliasi: jika Anda membeli melalui salah satunya, saya mungkin mendapat komisi kecil tanpa biaya tambahan bagi Anda, dan itu membantu mendanai pengembangan NFC.cool.
+Butuh pembacanya? Berikut HID OMNIKEY 5022 CL di [Amazon](https://amzn.to/3SNPi46) - tautannya mengarahkan Anda ke toko Amazon di negara Anda. Itu adalah tautan afiliasi: jika Anda membeli melaluinya, saya mungkin mendapat komisi kecil tanpa biaya tambahan bagi Anda, dan itu membantu mendanai pengembangan NFC.cool.
 
 [Unduh NFC.cool Tools untuk iPhone, iPad, dan Mac](https://apps.apple.com/app/apple-store/id1249686798?pt=106913804&ct=blog-nfc-reading-ipad-mac-id&mt=8)
 

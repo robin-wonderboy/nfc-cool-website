@@ -1,0 +1,90 @@
+slug: "room-scanner"
+backLinkText: "← Tutte le funzioni"
+
+card:
+  title: "Scanner di ambienti"
+  description: "Attraversa una stanza e RoomPlan ne ricava una pianta ordinata con pareti, porte, finestre e mobili, completa di misure e calcolo della superficie."
+  imagePath: "/assets/images/Webflow/scan-room.webp"
+  platforms: "Solo iOS"
+
+hero:
+  title: "Scanner di ambienti"
+  subtitle: "Grazie al LiDAR, RoomPlan trasforma un giro per le stanze in una pianta parametrica ordinata: pareti, porte, finestre e mobili riconosciuti, il tutto esportato in un'unica scena USDZ."
+  platforms: "Solo iOS"
+  heroImagePath: "/assets/images/Webflow/scan-room.webp"
+
+capabilitiesTitle: "Cosa puoi fare"
+capabilities:
+  - title: "Cattura con RoomPlan"
+    description: "Attraversa la stanza usando il sensore LiDAR dell'iPhone: NFC.cool costruisce in tempo reale un modello parametrico con pareti, porte, finestre e aperture."
+  - title: "Mobili riconosciuti"
+    description: "Letti, divani, tavoli, sedie, mobili contenitori, fornelli, lavandini, sanitari, vasche e televisori vengono riconosciuti ed etichettati all'interno della scena."
+  - title: "Superficie e dimensioni"
+    description: "Di ogni stanza ottieni la superficie calpestabile, l'altezza del soffitto e le dimensioni di ciascuna parete. Leggile sul modello oppure includile nell'USDZ esportato."
+  - title: "AR Quick Look"
+    description: "Apri la stanza finita in AR Quick Look oppure condividi l'USDZ: chi lo riceve può girare intorno al modello direttamente in Messaggi."
+
+subsectionsTitle: "Da una passeggiata tra le stanze a una pianta pronta all'uso"
+subsections:
+  - title: "La stanza in realtà aumentata"
+    body: "<p>Appena la scansione è pronta, aprila in AR Quick Look e cammina davvero intorno al gemello digitale. Comodo per capire dove andranno i mobili prima di comprarli o per farsi un'idea delle proporzioni che un disegno sul tablet non riesce a dare.</p>"
+    imagePath: "/assets/images/Blog/mac-3d-detail.webp"
+    imageAlt: "Vista di dettaglio della scansione di un ambiente"
+    platforms: "iOS"
+
+  - title: "Più stanze, un unico progetto"
+    body: "<p>Ogni scansione corrisponde a una stanza. Cattura la cucina, poi il soggiorno, poi le camere da letto: restano una accanto all'altra nella libreria e un editor 3D a tua scelta può unirle in un solo USDZ con tutte le stanze. Comodissimo per gli annunci immobiliari, per pianificare una ristrutturazione o per la documentazione da mandare all'assicurazione.</p>"
+    platforms: "iOS"
+
+  - title: "Comandi Rapidi e App Intents"
+    body: "<p>NFC.cool si integra direttamente nell'app Comandi Rapidi di iOS con azioni già pronte: recuperare l'ultimo tag NFC letto, scrivere un messaggio su un tag, aprire lo scanner o ottenere l'ultimo codice QR scansionato. Concatenale in un comando rapido che legge un tag, ne interpreta il contenuto e avvia quello che vuoi subito dopo: un'automazione, un registro, un diario, qualsiasi cosa. Le stesse azioni stanno dietro al controllo <strong>Pulsante di scansione</strong> nella schermata di blocco, da iOS 17 in poi.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "iPhone che collega un tag NFC a blocchi di automazione"
+    platforms: "iOS"
+
+  - title: "Sincronizzazione iCloud tra iPhone, iPad e Mac"
+    body: "<p>Le stanze scansionate finiscono nella cartella Documenti di iCloud: l'iPhone con cui hai fatto la scansione, l'iPad su cui l'hai controllata e il <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac</a> su cui la modificherai vedono tutti la stessa libreria. Percorri l'ambiente una volta sola e rifinisci la pianta con calma alla scrivania.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "NFC.cool che si sincronizza tra iPhone, iPad e Mac"
+    platforms: "iOS"
+
+specsTitle: "Hardware e risultato"
+specs:
+  - title: "Requisiti hardware"
+    items:
+      - "iPhone con LiDAR (modelli Pro dal 12 Pro in poi)"
+      - "Compatibile anche con iPad Pro (2020) e successivi"
+      - "RoomPlan è disponibile da iOS 16; i miglioramenti più recenti arrivano con iOS 17 e versioni successive"
+  - title: "Cosa ottieni"
+    items:
+      - "Una scena USDZ con gli elementi nominati"
+      - "Pareti, porte, finestre e aperture"
+      - "Le categorie di mobili riconosciute"
+      - "Superficie e dimensioni"
+
+pricing:
+  title: "Free e Platinum a confronto"
+  columns: ["Gratis", "Platinum"]
+  rows:
+    - label: "Scansionare gli ambienti"
+      values: ["✓", "✓"]
+    - label: "Misure delle stanze"
+      values: ["✓", "✓"]
+    - label: "Calcolo della superficie"
+      values: ["✗", "✓"]
+
+faqTitle: "Domande frequenti"
+faq:
+  - question: "Serve il LiDAR?"
+    answer: "Sì. RoomPlan è un'API di Apple che funziona solo con il LiDAR. (Anche lo scanner di oggetti 3D lo richiede: la sessione di Object Capture di Apple ne verifica la presenza.)"
+  - question: "Quanto dura una scansione?"
+    answer: "Basta attraversare la stanza. Il risultato si costruisce in tempo reale ed è già pronto quando finisci il giro."
+  - question: "Posso aprire il risultato in un programma CAD?"
+    answer: "Sì, l'USDZ è supportato dalla maggior parte dei programmi CAD e 3D moderni. Per lavorare con SketchUp o Revit, converti il file con Blender o con un convertitore gratuito da USD a OBJ."
+
+relatedReadingTitle: "Continua a leggere"
+relatedReading:
+  - title: "Scanner di oggetti 3D"
+    url: "/features/3d-object-scanner/"
+  - title: "Scansione 3D su iPhone con fotogrammetria e LiDAR"
+    url: "/blog/3d-scan-feature/"

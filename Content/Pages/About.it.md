@@ -1,0 +1,79 @@
+---
+title: "Chi c'è dietro NFC.cool"
+slug: "about"
+description: "La storia, la missione e la persona dietro NFC.cool - un set di strumenti di scansione che mette la privacy al primo posto, per iPhone e Android, sviluppato in autonomia da una sola persona che conosce a fondo le piattaforme."
+---
+
+<section class="page-hero">
+
+<div class="page-hero-grid">
+
+<div class="page-hero-text">
+
+# Sviluppato in autonomia, in Europa.
+
+NFC.cool è un prodotto indipendente di **Nicolo Stanciu**, nato tra la Germania e il Portogallo. Una persona, una missione: rendere l'NFC accessibile a tutti gli altri. È una tecnologia notoriamente da smanettoni e quasi tutte le app che la sfruttano sono troppo tecniche, così NFC.cool punta a essere il miglior set di strumenti di scansione che si possa avere sul telefono, pensato per chiunque.
+
+<a href="mailto:info@nfc.cool?subject=NFC.cool%20Support" class="landing-cta-button">Scrivimi</a>
+
+</div>
+
+<div class="page-hero-visual">
+<img src="/assets/images/About/hero-nicolo.webp" alt="Nicolo Stanciu durante un intervento all'mDevCamp" loading="eager" fetchpriority="high" width="1200" height="900"/>
+</div>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+## La storia
+
+NFC.cool è nato da un'esigenza personale. Nel 2017 Apple ha aperto l'NFC su iOS e io sono stato tra i primi a svilupparci sopra: quello stesso anno ho pubblicato la prima versione di NFC.cool Tools sull'App Store e ho visto formarsi intorno all'app una comunità piccola ma appassionata.
+
+Da allora NFC.cool è cresciuta fino a diventare una famiglia di app: il set completo di strumenti di scansione (NFC, QR, codici a barre, documenti, 3D, ambienti, webhook), l'app dedicata Business Card su iPhone e Android e una versione Android del set concentrata su ciò che Android sa fare meglio - insieme raccolgono oltre {{RATINGS_TOTAL}} valutazioni con {{RATINGS_AVG}} stelle tra App Store e Google Play. Tutto continua a uscire da una sola tastiera - una persona, che lavora tra la Germania e il Portogallo.
+
+È una scelta voluta. Niente investitori, niente team dedicato alla crescita, solo una persona che usa davvero ogni giorno quello che pubblica.
+
+</section>
+
+<section class="page-section">
+
+## I valori di NFC.cool
+
+<div class="page-cards-grid">
+
+<article class="page-card">
+<h3>Privacy per impostazione predefinita</h3>
+<p>Scansioni, documenti, contatti: resta tutto sul dispositivo. Nulla arriva fino a me, a meno che tu non attivi esplicitamente i webhook (e anche in quel caso la destinazione è <em>il tuo</em> server).</p>
+</article>
+
+<article class="page-card">
+<h3>Elaborazione sul dispositivo</h3>
+<p>OCR, fotogrammetria, lettura dei dati NFC: tutto avviene in locale. Nessun passaggio dal cloud, nessuna connessione a internet.</p>
+</article>
+
+<article class="page-card">
+<h3>Standard aperti</h3>
+<p>Tipi NFC Forum, NDEF, vCard, iCalendar, OpenPrintTag. Dove esiste uno standard, NFC.cool lo rispetta.</p>
+</article>
+
+<article class="page-card">
+<h3>Gratis dove è possibile</h3>
+<p>Leggere i tag NFC, scansionare codici QR e codici a barre, digitalizzare documenti, catturare oggetti 3D e ambienti: le funzioni di base si usano gratis. La versione gratuita è supportata dalla pubblicità e l'abbonamento Platinum, facoltativo, la rimuove e sblocca i flussi di lavoro avanzati. L'essenziale non costa mai nulla.</p>
+</article>
+
+</div>
+
+</section>
+
+<section class="page-section">
+
+## Scrivimi
+
+Il modo più rapido per raggiungermi è [via email](mailto:info@nfc.cool?subject=NFC.cool%20Support). Leggo tutto personalmente. Le richieste di nuove funzioni orientano davvero la roadmap e le segnalazioni di bug vengono prese in carico entro un giorno.
+
+Per le richieste della stampa, consulta la [pagina stampa](/press/).
+
+</section>

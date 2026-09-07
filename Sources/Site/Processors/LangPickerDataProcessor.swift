@@ -52,6 +52,7 @@ struct LangPickerDataProcessor: OutputProcessor {
          const labels = \(literal(localizations(of: "langFlag")));
          const names = \(literal(localizations(of: "langName")));
          const navToggleLabels = \(literal(localizations(of: "navToggle")));
+         const themeToggleLabels = \(literal(localizations(of: "themeToggle")));
          const CURRENT_LANG = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
          \(Self.endMarker)
       """

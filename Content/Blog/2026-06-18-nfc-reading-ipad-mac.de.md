@@ -32,7 +32,22 @@ Der Trick ist ein externer USB-NFC-Reader. Du steckst ihn an dein iPad oder dein
 
 Ist ein externer Reader angesteckt, hat er Vorrang. Auf iPad und Mac ist er ohnehin die einzige NFC-Hardware, da gibt es nichts zu entscheiden. Auf dem iPhone nimmt dir die App die Entscheidung ab: Steckst du einen Reader an, benutzt NFC.cool ihn. Ziehst du ihn ab, greift das iPhone wieder auf sein eingebautes NFC zurück. Du musst keine Einstellung umlegen und keinen Modus wählen. Die App schaut, welche Hardware da ist, und richtet sich danach.
 
-Entwickelt habe ich das Ganze mit dem HID OMNIKEY 5022 CL, und er ist auch der einzige Reader, den ich wirklich getestet habe. Andere USB-Reader funktionieren vielleicht, versprechen kann ich es aber nicht, weil ich nur mit diesem einen alles von vorne bis hinten durchprobiert habe. Falls du einen anderen Reader ausprobierst, würde mich ehrlich interessieren, wie es läuft: [Schreib mir](/contact/), ob es geklappt hat oder wo es gehakt hat. Was ich daraus lerne, fließt in die App und in diesen Beitrag zurück.
+Entwickelt habe ich das Ganze mit dem HID OMNIKEY 5022 CL, und er ist auch der einzige Reader, den ich wirklich getestet habe. Andere USB-Reader laufen aber ebenfalls. Ein paar davon stehen in der Liste weiter unten, gemeldet von Nutzern, die sie ausprobiert haben.
+
+---
+
+## Die Reader, die funktionieren
+
+Das sind alle Reader, von denen ich bisher weiß, dass sie mit NFC.cool laufen:
+
+- **HID OMNIKEY 5022 CL** - der Reader, mit dem ich entwickelt und alles durchgetestet habe ([Amazon](https://amzn.to/3SNPi46))
+- **HID OMNIKEY 5422** - von einem Nutzer als funktionierend gemeldet ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1552U-M1** - von einem Nutzer als funktionierend gemeldet ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1255U-J1** - von einem Nutzer als funktionierend gemeldet ([Amazon](https://amzn.to/4xZVEwe))
+
+Danke an alle, die mir geschrieben haben. Ich kann nicht jeden Reader auf dem Markt kaufen, jedes Modell nach dem ersten steht also nur deshalb hier, weil jemand es gekauft, ausprobiert und sich die Zeit genommen hat, mir Bescheid zu sagen. Wenn du einen Reader benutzt, der hier fehlt: [Schreib mir](/contact/), ob er funktioniert hat oder wo es gehakt hat, und ich nehme ihn in diesen Beitrag auf.
+
+Das sind Amazon-Affiliate-Links: Kaufst du darüber, bekomme ich unter Umständen eine kleine Provision, für dich ändert sich am Preis nichts.
 
 ---
 
@@ -48,7 +63,7 @@ Der Sonicare-Reset war der schwierigste Brocken. Beim Zurücksetzen eines Bürst
 
 Ein paar Sachen fehlen noch, und ich sage dir das lieber vorher, als dass du es selbst herausfindest.
 
-- Der OMNIKEY 5022 CL ist der einzige Reader, den ich getestet habe. Mit jedem anderen bist du auf ungetestetem Terrain unterwegs.
+- Der OMNIKEY 5022 CL ist der einzige Reader, den ich selbst getestet habe. Die anderen aus der Liste oben stammen aus Nutzerberichten, und alles darüber hinaus ist ungetestetes Terrain.
 - MIFARE-Classic-Tags sind über den Reader nur lesbar. Auslesen klappt, Beschreiben nicht.
 
 Für die meisten Anwendungsfälle spielt beides keine Rolle, aber es sind echte Einschränkungen, und ich selbst wüsste so etwas gern, bevor ich einen Reader kaufe.
@@ -61,7 +76,7 @@ Eins will ich klarstellen: Ich habe mir das nicht selbst ausgedacht. Alexander h
 
 Ab NFC.cool 6.15.0 kannst du NFC-Tags auch auf iPad und Mac lesen. Wenn du ein iPad oder einen Mac hast, einen unterstützten Reader und ein Tag, das du bisher nie vom Schreibtisch aus scannen konntest: Es funktioniert einfach.
 
-Du brauchst noch den Reader? Den HID OMNIKEY 5022 CL gibt es bei [Amazon US](https://amzn.to/4rq6gCj) und [Amazon Europa](https://amzn.to/483UyEp). Das sind Affiliate-Links: Kaufst du darüber, bekomme ich unter Umständen eine kleine Provision, für dich ändert sich am Preis nichts, und es hilft mir, die Arbeit an NFC.cool zu finanzieren.
+Du brauchst noch den Reader? Den HID OMNIKEY 5022 CL gibt es bei [Amazon](https://amzn.to/3SNPi46) - der Link leitet dich in den Amazon-Shop deines Landes weiter. Das ist ein Affiliate-Link: Kaufst du darüber, bekomme ich unter Umständen eine kleine Provision, für dich ändert sich am Preis nichts, und es hilft mir, die Arbeit an NFC.cool zu finanzieren.
 
 [NFC.cool Tools für iPhone, iPad und Mac laden](https://apps.apple.com/app/apple-store/id1249686798?pt=106913804&ct=blog-nfc-reading-ipad-mac-de&mt=8)
 

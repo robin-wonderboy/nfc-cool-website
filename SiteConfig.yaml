@@ -5,7 +5,7 @@ language: "en"
 
 localization:
   defaultLanguage: "en"
-  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar"]
+  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar", "it"]
   translationMode: "manual"
   legalLanguage: "de"
   # Localized nav + footer labels. URLs stay locale-agnostic; SiteKit prefixes
@@ -444,6 +444,61 @@ localization:
           - title: "كتاب الشكاوى"
             url: "https://www.livroreclamacoes.pt/Inicio/"
 
+    it:
+      navigation:
+        items:
+          - title: "Home"
+            url: "/"
+          - title: "Funzioni"
+            url: "/features/"
+          - title: "Biglietto da visita"
+            url: "/business-card/"
+          - title: "Acquista tag NFC"
+            url: "/affiliate-links/"
+          - title: "Lettore NFC online"
+            url: "/online-nfc-reader/"
+          - title: "Blog"
+            url: "/blog/"
+          - title: "Supporto e contatti"
+            url: "/contact/"
+        showSearch: false
+        showThemeToggle: true
+      footer:
+        copyrightName: "NFC.cool"
+        startYear: 2017
+        showAttribution: false
+        links:
+          - title: "Funzioni"
+            url: "/features/"
+          - title: "Lettore NFC online"
+            url: "/online-nfc-reader/"
+          - title: "Biglietto da visita"
+            url: "/business-card/"
+          - title: "Tag NFC"
+            url: "/affiliate-links/"
+          - title: "Sviluppatori"
+            url: "/developers/"
+          - title: "Recensioni"
+            url: "/reviews/"
+          - title: "Altre app"
+            url: "/apps/"
+          - title: "Chi sono"
+            url: "/about/"
+          - title: "Changelog"
+            url: "/changelog/"
+          - title: "Blog"
+            url: "/blog/"
+          - title: "Supporto e contatti"
+            url: "/contact/"
+          - title: "Stampa"
+            url: "/press/"
+          - title: "Privacy"
+            url: "/privacy/"
+          - title: "Termini"
+            url: "/terms/"
+          - title: "Libro dei reclami"
+            url: "https://www.livroreclamacoes.pt/Inicio/"
+
 contentDirectory: "Content"
 outputDirectory: "_Site"
 assetsDirectory: "Content/Assets"
@@ -480,13 +535,13 @@ author:
 apps:
   toolsIOS:
     ratingValue: 4.52
-    ratingCount: 70660
+    ratingCount: 73500
   toolsAndroid:
     ratingValue: 4.60
-    ratingCount: 1280
+    ratingCount: 1400
   businessCardIOS:
     ratingValue: 4.80
-    ratingCount: 593
+    ratingCount: 664
 
 navigation:
   logo:

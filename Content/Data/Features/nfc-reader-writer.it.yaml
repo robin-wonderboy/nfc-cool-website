@@ -1,0 +1,188 @@
+slug: "nfc-reader-writer"
+backLinkText: "← Tutte le funzioni"
+
+card:
+  title: "Lettore e scrittore NFC"
+  description: "Leggi qualsiasi tag NFC e scrivi oltre 25 tipi di messaggio: link, reti Wi-Fi, biglietti da visita, comandi rapidi e altro ancora. Blocca i tag e cifra i dati riservati con NFC Safe."
+  imagePath: "/assets/images/Webflow/nfc-card.webp"
+  platforms: "iOS · Android"
+
+hero:
+  title: "Lettore e scrittore NFC"
+  subtitle: "Leggi e scrivi tag NFC su iPhone e Android. Avvicina il telefono per leggere qualsiasi tag, scrivi i tuoi con link, contatti e reti Wi-Fi, poi bloccali così nessun altro potrà modificarli."
+  platforms: "iOS · Android"
+  heroImagePath: "/assets/images/Webflow/nfc-scan-tag.webp"
+
+capabilitiesTitle: "Cosa puoi fare"
+capabilities:
+  - title: "Leggi qualsiasi tag NDEF"
+    description: "Avvicina il telefono a un tag NFC ed esamina i record NDEF che contiene: URL, contatti, testo semplice, dati MIME, avvii di app e contenuti personalizzati, oltre ai byte grezzi e al tipo di tecnologia."
+  - title: "Scrivi oltre 25 tipi di messaggio"
+    description: "Siti web, numeri di telefono, vCard, credenziali Wi-Fi, PayPal, Cash App e Venmo, Spotify, YouTube, Comandi Rapidi, Instagram, X, LinkedIn, TikTok, WhatsApp e altro ancora."
+  - title: "Blocca e proteggi con password"
+    description: "Rendi un tag definitivamente di sola lettura oppure proteggilo con una password, così solo i dispositivi autorizzati possono leggerlo o scriverlo. Una protezione di livello industriale."
+  - title: "Formatta, scrivi in serie, duplica"
+    description: "Formatta i tag vuoti, scrivi lo stesso contenuto su un'intera pila di tag per eventi o lanci di prodotto e copia il contenuto di un tag su un altro."
+  - title: "Azioni automatiche a ogni lettura"
+    description: "Avvia un comando rapido di iOS, ascolta il risultato ad alta voce, invia un webhook o apri il link in automatico ogni volta che avvicini un tag. Cinque automatismi, un solo avvicinamento."
+
+subsectionsTitle: "Molto più di una normale app NFC"
+subsections:
+  - title: "NFC Safe: dati riservati cifrati sul tag"
+    body: "<p>Quasi tutte le app NFC trattano il tag come una cartolina: lo legge chiunque abbia un telefono. NFC Safe lo tratta come una busta sigillata. Il dato da proteggere (una password, una frase di recupero, un codice di licenza o un testo qualsiasi) viene cifrato con AES-256 sul dispositivo, prima ancora di arrivare sul tag. Perdi il tag, te lo rubano, lo lasci a uno sconosciuto: senza la tua passphrase il contenuto è solo rumore.</p><p>La stessa cifratura vale su entrambe le piattaforme, quindi puoi chiudere un dato riservato da iPhone e riaprirlo da Android. Vuoi sapere nel dettaglio come funziona? <a href=\"/blog/nfc-safe-encrypted-secrets/\">Sul blog trovi l'approfondimento su NFC Safe</a>.</p>"
+    imagePath: "/assets/images/Blog/nfc-safe-encrypted-secrets.webp"
+    imageAlt: "Un dato riservato cifrato con NFC Safe su un tag"
+    platforms: "iOS · Android"
+
+  - title: "Contatore degli avvicinamenti: riconosci ogni tag dall'ID e dal conteggio"
+    body: "<p>Alcuni chip NFC contano da soli le scansioni, direttamente nell'hardware. Il contatore degli avvicinamenti sfrutta proprio questo: configura il tag in modo che a ogni lettura aggiunga il conteggio aggiornato, e volendo anche il proprio ID univoco, a qualunque cosa contenga (un URL, un'email, un SMS o un comando rapido). Niente server, niente internet, nessun backend da mantenere: a contare e a sostituire i valori ci pensa il chip.</p><p>Così un solo tag ti dice quale adesivo è stato avvicinato e quante volte, e ti lascia agire di conseguenza: riservare le prime 100 scansioni a una demo, misurare l'interesse su un biglietto da visita o dimostrare l'autenticità con un contatore che può solo salire. Vuoi la guida passo passo? <a href=\"/blog/count-nfc-tag-scans/\">Sul blog trovi la guida al contatore degli avvicinamenti</a>, oppure <a href=\"/tap-counter/\">prova la demo dal vivo</a>: avvicina un tag e guarda salire il numero nella pagina.</p>"
+    imagePath: "/assets/images/Blog/count-nfc-tag-scans.webp"
+    imageAlt: "Un telefono avvicinato a un tag NFC mentre il conteggio delle scansioni sale"
+    platforms: "iOS · Android"
+
+  - title: "OpenPrintTag: il filamento della stampante 3D, sulla bobina"
+    body: "<p>OpenPrintTag è uno standard aperto che racchiude i dati di una bobina di filamento (materiale, colore, produttore, UUID, lunghezza residua) in un piccolo record NDEF codificato in CBOR. NFC.cool legge e scrive questo formato in modo nativo su entrambe le piattaforme, così le stampanti compatibili riconoscono la bobina nel momento in cui la carichi. Non conosci il formato? <a href=\"/blog/openprinttag-read-write-nfc-spools-phone/\">La guida sul blog spiega come leggere e scrivere le bobine OpenPrintTag</a>.</p><p>Lo stesso formato alimenta i contenuti strutturati dei webhook descritti nella pagina <a href=\"/features/webhooks/\">Webhook e automazione</a>: appena viene rilevata una bobina nuova, parte una richiesta POST verso il tuo parco stampanti.</p>"
+    imagePath: "/assets/images/Blog/openprinttag-read-write-nfc-spools-phone.webp"
+    imageAlt: "Lettura e scrittura di bobine NFC OpenPrintTag con un telefono"
+    platforms: "iOS · Android"
+
+  - title: "Azzera la testina dello spazzolino"
+    body: "<p>Le testine Philips Sonicare contengono un tag NFC che tiene il conto dell'utilizzo, così il manico ti ricorda di cambiarle. NFC.cool può azzerare quel contatore: legge lo stato del tag, ti guida passo passo e riscrive il nuovo stato. Funziona allo stesso modo su entrambe le piattaforme. Vuoi sapere esattamente cosa registra il chip? <a href=\"/blog/reset-sonicare-brush-head-nfc/\">Sul blog trovi la guida alle testine Sonicare</a>. (Non produciamo testine, regaliamo solo alla tua un altro mese di dignità.)</p>"
+    imagePath: "/assets/images/Blog/reset-sonicare-brush-head-nfc.webp"
+    imageAlt: "Azzeramento di una testina Philips Sonicare tramite NFC"
+    platforms: "iOS · Android"
+
+  - title: "Modalità per esperti"
+    body: "<p>Per chi vuole sapere cosa c'è davvero dentro al chip: NFC.cool esporta l'intera memoria del tag in esadecimale, riconosce il modello del chip (NTAG213/215/216, NTAG424 DNA, MIFARE Classic/Ultralight, varianti ISO 15693, FeliCa e altri) e indica byte totali, byte a disposizione dell'utente, pagine di blocco e Capability Container. È pensata per sviluppatori, maker e per chiunque debba analizzare un tag.</p><p>Su iOS la <strong>modalità APDU per esperti</strong> scende ancora più a fondo: invia comandi ISO 7816 grezzi al tag e mostra le risposte, utile quando lavori con un lettore fuori dal comune, con un protocollo su misura o quando vuoi solo vedere fin dove il chip è disposto a rispondere.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-power-user-mode.webp"
+    imageAlt: "iPhone che esamina la memoria di un tag NFC con i pannelli diagnostici"
+    platforms: "iOS · Android"
+
+  - title: "Criptovalute con un avvicinamento"
+    body: "<p>Scrivi un indirizzo Bitcoin, Ethereum, Solana, Lightning o di qualunque altro wallet come record NDEF con URI di pagamento. Condividi un wallet fisso alle conferenze con un semplice avvicinamento, nascondilo in un adesivo sul tuo prodotto oppure consegna una tessera di metallo con un indirizzo permanente. Vale anche al contrario: scansiona un tag di questo tipo e si apre direttamente la tua app di wallet.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-cryptocurrency-tap.webp"
+    imageAlt: "iPhone che condivide un wallet di criptovalute tramite un tag NFC"
+    platforms: "iOS · Android"
+
+  - title: "Wi-Fi senza dettare la password"
+    body: "<p>Scrivi una volta sola su un tag l'SSID della rete, il tipo di sicurezza e la password. Da quel momento chiunque avvicini il telefono entra nella rete: niente password da dettare lettera per lettera, niente foglietto appiccicato al frigo dell'AirBnB. Funziona anche al contrario: leggi il tag Wi-Fi di casa d'altri e lascia che sia il sistema a proporti di connetterti.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-wifi-onboarding.webp"
+    imageAlt: "iPhone che si connette al Wi-Fi grazie a un tag NFC"
+    platforms: "iOS · Android"
+
+  - title: "Ascolta il contenuto ad alta voce"
+    body: "<p>Per accessibilità, per lavorare senza occupare le mani o semplicemente perché è comodo: attiva la sintesi vocale e il contenuto di ogni tag viene letto ad alta voce nel momento stesso in cui lo avvicini. La velocità della voce è regolabile e la funzione convive con VoiceOver e con le altre tecnologie assistive.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-speak-aloud.webp"
+    imageAlt: "iPhone che legge ad alta voce un tag NFC tra le onde sonore"
+    platforms: "iOS"
+
+  - title: "Scrittura in serie da un file CSV"
+    body: "<p>Prepara l'elenco in Numbers, Excel o Google Sheets, esportalo in formato CSV e importa il file sul telefono. Ogni riga diventa un tag e, se le colonne sono più di una, ogni cella diventa un record di quel tag. NFC.cool riconosce il separatore, mostra un'anteprima con i byte occupati da ciascun tag e poi scrive un tag dopo l'altro, mano a mano che li avvicini al telefono. Le righe già scritte spariscono dal file, così puoi fermarti e riprendere quando vuoi. <a href=\"/blog/batch-write-nfc-tags-csv/\">Leggi la guida completa, dal foglio di calcolo all'ultimo tag</a>.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-csv-batch-write.webp"
+    imageAlt: "iPhone che scrive tag NFC in serie partendo da un foglio di calcolo"
+    platforms: "iOS · Android"
+
+  - title: "Comandi Rapidi e App Intents"
+    body: "<p>NFC.cool si integra direttamente con l'app Comandi Rapidi di iOS grazie ad azioni già pronte: recuperare l'ultimo tag NFC scansionato, scrivere un messaggio su un tag, aprire lo scanner o riprendere l'ultimo codice QR letto. Concatenale in comandi rapidi che leggono un tag, ne interpretano il contenuto e avviano qualsiasi cosa ti venga in mente: automazioni, registri, appunti di giornata. Le stesse azioni alimentano il controllo <strong>Pulsante di scansione</strong> nella schermata di blocco su iOS 17 e versioni successive.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "iPhone che collega un tag NFC a una serie di blocchi di automazione"
+    platforms: "iOS"
+
+  - title: "Sincronizzazione iCloud tra iPhone, iPad e Mac"
+    body: "<p>La cronologia delle scansioni, le voci di NFC Safe e i modelli di scrittura si sincronizzano senza attriti su tutti i dispositivi collegati al tuo account iCloud. Avvicini un tag con l'iPhone che hai in tasca e un attimo dopo la scansione è già nella libreria dell'iPad. Ora NFC.cool <a href=\"/blog/nfc-cool-comes-to-mac/\">gira anche sui Mac con Apple Silicon</a>, quindi la stessa libreria compare pure lì.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "NFC.cool che si sincronizza tra iPhone, iPad e Mac"
+    platforms: "iOS"
+
+specsTitle: "Tag e tecnologie supportati"
+specs:
+  - title: "Famiglie di tag"
+    items:
+      - "NFC Forum di tipo 1, 2, 3, 4, 5"
+      - "NTAG 213, 215, 216, 424 DNA, varianti NTAG I²C"
+      - "MIFARE Classic 1K/4K, MIFARE Ultralight, MIFARE DESFire"
+      - "ISO 14443 A/B, ISO 15693, FeliCa (iOS)"
+  - title: "Tipi di record"
+    items:
+      - "URI (web, mailto, tel, sms, geo, schemi personalizzati)"
+      - "Testo (con indicazione della lingua)"
+      - "vCard / contatto"
+      - "Credenziali Wi-Fi, associazione Bluetooth"
+      - "Smart Poster (composito)"
+      - "Avvio di un'applicazione"
+      - "Indirizzo di criptovaluta (basato su URI)"
+      - "OpenPrintTag (dati del filamento per stampanti 3D)"
+      - "NFC Safe (tipo esterno cifrato, urn:nfc:ext:crypto)"
+      - "MIME, External, byte grezzi"
+  - title: "Note sulle piattaforme"
+    items:
+      - "iOS 16+ (lettura dei tag in background dalla schermata di blocco su iPhone XS e modelli più recenti)"
+      - "Android 8.0+ (API 26), lettura NFC in primo piano"
+      - "Per scrivere i tag da iOS servono i permessi Core NFC, già inclusi nell'app"
+      - "Su Android la lettura NFC in background richiede che l'app sia in primo piano"
+
+pricing:
+  title: "Gratis o Platinum"
+  columns: ["Gratis", "Platinum"]
+  rows:
+    - label: "Lettura dei tag NFC"
+      values: ["✓", "✓"]
+    - label: "Analisi dei tag NFC"
+      values: ["✓", "✓"]
+    - label: "Scrittura dei tag NFC"
+      values: ["limited", "✓"]
+    - label: "Tipi di messaggio NFC"
+      values: ["limited", "✓"]
+    - label: "Formattazione dei tag NFC"
+      values: ["✗", "✓"]
+    - label: "Protezione dei tag NFC con password"
+      values: ["✗", "✓"]
+    - label: "Blocco dei tag NFC"
+      values: ["✗", "✓"]
+    - label: "NFC Safe"
+      values: ["✗", "✓"]
+    - label: "Modalità NFC in serie"
+      values: ["✗", "✓"]
+    - label: "Scrittura NFC da CSV"
+      values: ["✗", "✓"]
+    - label: "Comandi NFC per esperti"
+      values: ["✗", "✓"]
+    - label: "Contatore degli avvicinamenti"
+      values: ["✗", "✓"]
+    - label: "OpenPrintTag (stampa 3D)"
+      values: ["✓", "✓"]
+
+featuredReviewsTitle: "Cosa dicono dell'NFC"
+featuredReviews:
+  - quote: "Interfaccia bellissima ed esecuzione quasi impeccabile, al contrario delle altre app NFC."
+    author: "garretthoyos"
+    location: "App Store · marzo 2023"
+  - quote: "ADORO QUESTA APP. È perfetta per gente come me che di tag NFC non sapeva quasi nulla."
+    author: "Dallasg479"
+    location: "App Store · ottobre 2020"
+
+faqTitle: "Domande frequenti"
+faq:
+  - question: "Devo sbloccare l'iPhone per leggere un tag?"
+    answer: "Nella maggior parte dei casi no: dall'iPhone XS in poi i tag NDEF si leggono in background dalla schermata di blocco, senza aprire nessuna app. Su Android, invece, per leggere un tag l'app deve essere in primo piano."
+  - question: "Posso leggere un tag senza connessione a internet?"
+    answer: "Sì. La lettura e la scrittura NFC avvengono interamente sul dispositivo. NFC.cool non invia mai il contenuto dei tag a nessun server."
+  - question: "Scrivere un tag NFC è rischioso?"
+    answer: "No, ed è un'operazione reversibile: un tag si può riscrivere tutte le volte che vuoi. Usa il blocco solo quando sei davvero sicuro, perché un tag bloccato in modo permanente non è più riscrivibile."
+  - question: "Quanto è sicuro NFC Safe?"
+    answer: "NFC Safe cifra i contenuti con AES-256-GCM e ricava la chiave dalla tua passphrase con PBKDF2-HMAC-SHA256 su 100.000 iterazioni, con un salt casuale di 16 byte e un nonce di 12 byte per ogni record. Senza la passphrase, quello che si trova sul tag è indistinguibile da una sequenza di byte casuali."
+  - question: "Lo stesso tag di NFC Safe funziona sia su iOS sia su Android?"
+    answer: "Sì, il formato è interoperabile. Cifra su una piattaforma e decifra sull'altra: stessa passphrase, stesso contenuto."
+  - question: "Azzerare una testina Sonicare comporta qualche rischio?"
+    answer: "L'operazione azzera il contatore d'uso scritto sul tag, così il manico smette di assillarti. La testina in sé non sa di essere stata azzerata, continua semplicemente a lavare. Sta a te valutare quando le setole vanno sostituite."
+
+relatedReadingTitle: "Continua a leggere"
+relatedReading:
+  - title: "Leggere i tag NFC online dal browser"
+    url: "/online-nfc-reader/"
+  - title: "I tag NFC spiegati: la guida completa per chi inizia"
+    url: "/blog/nfc-tags-beginners-guide/"
+  - title: "Come scrivere i tag NFC con l'iPhone"
+    url: "/blog/write-nfc-tags-iphone/"
+  - title: "Quali tipi di tag NFC funzionano con l'iPhone"
+    url: "/blog/nfc-tag-types-for-iphones/"

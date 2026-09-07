@@ -76,6 +76,9 @@ identicalAllowlist:
     - tagName_networking
     # "Guides" is spelled identically in French and English (like iPhone/Android).
     - tagName_guides
+    # Italian uses the English loanword "Privacy" (as Apple Italy does); there is
+    # no idiomatic native alternative a reader would expect on a tag chip.
+    - tagName_privacy
   # Pricing-cell sentinel glyphs / tokens, never translated.
   pricingCellTokens: ["✓", "✗", "-", "~"]
 

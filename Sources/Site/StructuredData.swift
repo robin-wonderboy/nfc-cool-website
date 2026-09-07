@@ -27,11 +27,12 @@ enum StructuredData {
       description: String,
       ratings: AppRatings,
       toolsReviews: [AppReview] = [],
-      faq: [FAQItem]?
+      faq: [FAQItem]?,
+      languages: [String]
    ) -> String {
       var nodes: [String] = []
       nodes.append(self.organization(baseURL: baseURL, siteName: siteName))
-      nodes.append(self.webSite(baseURL: baseURL, siteName: siteName, description: description))
+      nodes.append(self.webSite(baseURL: baseURL, siteName: siteName, description: description, languages: languages))
       nodes.append(self.person(baseURL: baseURL))
       nodes.append(self.softwareApplicationToolsiOS(baseURL: baseURL, rating: ratings.toolsIOS, reviews: toolsReviews))
       nodes.append(self.softwareApplicationToolsAndroid(baseURL: baseURL, rating: ratings.toolsAndroid))
@@ -247,9 +248,10 @@ enum StructuredData {
       """
    }
 
-   private static func webSite(baseURL: String, siteName: String, description: String) -> String {
+   private static func webSite(baseURL: String, siteName: String, description: String, languages: [String]) -> String {
+      let inLanguageJSON = languages.map { "\"\($0)\"" }.joined(separator: ",")
       return """
-      {"@type":"WebSite","@id":"\(baseURL)/#website","url":"\(baseURL)/","name":"\(siteName.jsonEscaped)","description":"\(description.jsonEscaped)","publisher":{"@id":"\(baseURL)/#organization"},"inLanguage":["en","de","ja"]}
+      {"@type":"WebSite","@id":"\(baseURL)/#website","url":"\(baseURL)/","name":"\(siteName.jsonEscaped)","description":"\(description.jsonEscaped)","publisher":{"@id":"\(baseURL)/#organization"},"inLanguage":[\(inLanguageJSON)]}
       """
    }
 

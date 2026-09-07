@@ -35,9 +35,9 @@ headInlineScript: |
 
 tokens:
    # Brand-defined palette (Brand Manual V1)
-   colorAccent:        { any: "#FFC709", dark: "#FFC709" }
+   colorAccent:        { any: "#FFC700", dark: "#FFC700" }
    colorAccentHover:   { any: "#E6B400", dark: "#FFD93D" }
-   colorAccentLight:   { any: "rgba(255,199,9,0.12)", dark: "rgba(255,199,9,0.18)" }
+   colorAccentLight:   { any: "rgba(255,199,0,0.12)", dark: "rgba(255,199,0,0.18)" }
    colorBg:            { any: "#F5F6F8", dark: "#161B22" }
    colorBgAlt:         { any: "#F5F6F8", dark: "#161B22" }
    colorBgCard:        { any: "#FFFFFF", dark: "#1C2128" }

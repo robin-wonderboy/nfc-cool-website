@@ -18,7 +18,8 @@ enum SiteStringKey: String, CaseIterable {
    case tagsIndexHeading, tagsIndexDescription, tagsBackAll
    case featuresHubTitle, featuresHubSubtitle, featuresLabel, featuresBackAll
    case pricingIncluded, pricingNotIncluded, pricingLimited, pricingNotApplicable, pricingComingSoon
-   case navToggle, langFlag, langName
+   case navToggle, themeToggle, langFlag, langName
+   case trustRatings
 }
 
 extension BuildContext {

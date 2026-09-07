@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
    const labels = { en: '🇺🇸', de: '🇩🇪', ja: '🇯🇵' };
    const names = { en: 'English', de: 'Deutsch', ja: '日本語' };
    const navToggleLabels = { en: 'Toggle navigation menu', de: 'Toggle navigation menu', ja: 'Toggle navigation menu' };
+   const themeToggleLabels = { en: 'Toggle light or dark theme', de: 'Toggle light or dark theme', ja: 'Toggle light or dark theme' };
    const CURRENT_LANG = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
    /* __LANG_DATA_END__ */
 
@@ -68,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
    // Dark mode toggle
    const toggle = document.querySelector('.sk-theme-toggle');
    if (toggle) {
+      // SiteKit hardcodes aria-label="Theme" on this button, so the localized
+      // label is applied here from the catalog-driven map above.
+      toggle.setAttribute('aria-label', themeToggleLabels[CURRENT_LANG] || themeToggleLabels.en || 'Toggle light or dark theme');
       toggle.addEventListener('click', function() {
          const current = document.documentElement.getAttribute('data-theme');
          const next = current === 'dark' ? 'light' : 'dark';

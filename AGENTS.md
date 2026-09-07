@@ -1,6 +1,6 @@
 # NFC.cool - website
 
-Multi-page marketing site for the NFC.cool brand in nine locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
+Multi-page marketing site for the NFC.cool brand in ten locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
 
 ## Build & serve
 
@@ -9,6 +9,7 @@ swift run Site build       # produce static site in _Site/
 swift run Site serve       # build + dev server on http://localhost:8080
 swift run Site i18n-check   # translation completeness gate (hard, run in CI)
 swift run Site validate    # SiteKit's built-in file-presence check (Blog/ + Pages/ only)
+python3 Scripts/lint-italian.py   # Italian-only prose lint (see below)
 ```
 
 `i18n-check` is this repo's own gate (see `Sources/Site/I18n/`, configured by repo-root
@@ -17,11 +18,22 @@ localizable roots (Blog, Pages, Data/Features, Data/Pricing, Landing), a UI-stri
 `Strings/Localizable.json` left untranslated for some locale, a leftover `⟦TODO⟧`
 scaffold marker, an em/en dash in structured data, or a straight ASCII `"` in the prose of
 a locale that has its own quotation marks (`lint.quoteStyle` in `i18n.yaml`: `de` `„…“`,
-`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`; `es`/`pt`/`id` are deliberately absent
-because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
+`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`; `es`/`pt`/`id`/`it` are deliberately
+absent because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
 blocks, HTML attributes and link targets are exempt from that rule. Structural drift (a
 translation missing an optional section the default language has) and "looks untranslated"
 content are advisory warnings. CI runs it before every build (`.github/workflows/deploy.yml`).
+
+`Scripts/lint-italian.py` is a second, Italian-only prose gate. `it` was added without a
+native reviewer in the loop, so the tells a native reader spots first are enforced
+mechanically instead: English plurals on invariable loanwords (`i tags`, `le apps` - it is
+`i tag`, `le app`), the `perché` / `qual è` / `po'` / `È` orthography traps, and em dashes.
+It also emits advisory warnings on possessive density (`il tuo` repeated where Italian
+would drop it) and `puoi` density - the two habits that make translated Italian read as
+translated. Prose only: frontmatter, code spans, HTML tags and URLs are stripped first.
+Run it on the whole locale, or pass specific files. The register the lint cannot check -
+informal `tu`, Apple-Italy vocabulary, the fixed glossary, and the Italian calque traps -
+is written down in `Scripts/italian-style-guide.md`; read it before editing any `.it` file.
 
 Requires Swift 6.2+ and macOS 26 locally. CI uses `swift-actions/setup-swift@v2` on Ubuntu.
 
@@ -38,7 +50,7 @@ If we ever move to Cloudflare Pages, the form already works as-is (Worker is hos
 
 ## Sitemap (what visitors get)
 
-Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`); the table shows the EN path and its source.
+Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`); the table shows the EN path and its source.
 
 | EN path | Source |
 | --- | --- |
@@ -126,7 +138,7 @@ The newsletter form posts cross-origin to a shared Cloudflare Worker; this repo 
 - **Pick a different color scheme or font pairing:** open `Plugin/themes/ThemePreview.html` from the SiteKit-Plugin repo, pick, then update `Theme/theme.yaml`.
 - **Add a language (deterministic):** the gate makes this repeatable - you cannot ship a half-translated locale.
   1. `python3 Scripts/scaffold-locale.py <lang>` - copies every default-language file the locale needs (derived from `i18n.yaml` roots, skipping `enOnly`) to a `.<lang>` sibling with a `⟦TODO:<lang>⟧` banner.
-  2. `SiteConfig.yaml`: append `<lang>` to `localization.languages`; add a `localeOverrides.<lang>` block (nav + footer titles; keep URLs). Also add a region row to `LocaleRegionProcessor.swift`'s `regions` table (e.g. `("pt", "pt-PT", "pt_PT", "🇵🇹")`) so `<html lang>` / `og:locale` / the lang-picker flag flash are correct - this is the one remaining per-language code edit.
+  2. `SiteConfig.yaml`: append `<lang>` to `localization.languages`; add a `localeOverrides.<lang>` block (nav + footer titles; keep URLs). Also make the **two** per-language code edits, both easy to miss because neither fails a gate: a region row in `LocaleRegionProcessor.swift`'s `regions` table (e.g. `("pt", "pt-PT", "pt_PT", "🇵🇹", "")`) so `<html lang>` / `og:locale` / the lang-picker flag flash are correct, and a style row in `LocaleNumber.swift`'s `styles` table (e.g. `"it": Style(grouping: ".", decimal: ",", digits: nil)`) so the rating trust line groups digits the local way. `LocaleNumber` silently falls back to English separators for an unknown locale, so a missing row ships `4.5 · 70,660` to a reader who expects `4,5 · 70.660`.
   3. `Strings/Localizable.json`: add a `<lang>` value to every key (and the real `langFlag` / `langName`). The language picker + nav-toggle pick these up via `LangPickerDataProcessor` - no JS edit needed.
   4. Translate every scaffolded file, then delete each `⟦TODO⟧` banner line. Conventions: no em/en dashes (use ` - `), no decorative emojis, Title Case for English titles only, Japanese typography for `.ja`, and feature/pricing tables mirror nfcreader's `PaywallFeatures.swift`.
   5. `swift run Site i18n-check` until it reports `0 error(s)`, then `swift run Site build` and spot-check `/<lang>/`.

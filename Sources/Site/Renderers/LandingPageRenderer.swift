@@ -55,7 +55,8 @@ struct LandingPageRenderer: Renderer {
          description: context.config.description,
          ratings: ratings,
          toolsReviews: Array(toolsReviews),
-         faq: data.faq
+         faq: data.faq,
+         languages: context.config.allLanguages
       )
 
       let head = helper.buildHead(
@@ -75,8 +76,10 @@ struct LandingPageRenderer: Renderer {
       let homeAppStore = StoreLink.appStore(app: .tools, page: "web-home", locale: locale)
       let homeGooglePlay = StoreLink.googlePlay(app: .tools, page: "web-home", locale: locale)
 
+      let trustLine = loadTrustLine(context: context, trust: data.trust)
+
       var sections: [String] = []
-      sections.append(self.renderHero(data.hero, trust: data.trust, heroImagePath: data.heroImagePath, heroImageWidth: data.heroImageWidth, heroImageHeight: data.heroImageHeight, appStoreURL: homeAppStore, googlePlayURL: homeGooglePlay))
+      sections.append(self.renderHero(data.hero, trust: trustLine, heroImagePath: data.heroImagePath, heroImageWidth: data.heroImageWidth, heroImageHeight: data.heroImageHeight, appStoreURL: homeAppStore, googlePlayURL: homeGooglePlay))
       let features = try loadFeatures(context: context)
       if !features.isEmpty {
          sections.append(self.renderFeatureGrid(features, title: data.featuresTitle, basePath: context.router.homePath()))
@@ -109,7 +112,7 @@ struct LandingPageRenderer: Renderer {
          sections.append(self.renderSlogan())
       }
       if let cta = data.cta {
-         sections.append(renderFinalCTA(cta: cta, trust: data.trust, appStoreURL: homeAppStore, googlePlayURL: homeGooglePlay))
+         sections.append(renderFinalCTA(cta: cta, trust: trustLine, appStoreURL: homeAppStore, googlePlayURL: homeGooglePlay))
       }
 
       let mainContent = "<main class=\"sk-main landing-page\">\(sections.joined())</main>"
@@ -145,7 +148,7 @@ struct LandingPageRenderer: Renderer {
 
    // MARK: - Section Renderers
 
-   private func renderHero(_ hero: HeroSection, trust: TrustSection?, heroImagePath: String?, heroImageWidth: Int?, heroImageHeight: Int?, appStoreURL: String, googlePlayURL: String?) -> String {
+   private func renderHero(_ hero: HeroSection, trust: TrustLine?, heroImagePath: String?, heroImageWidth: Int?, heroImageHeight: Int?, appStoreURL: String, googlePlayURL: String?) -> String {
       let titleHTML = renderTitleWithBrandTail(hero.title, tagName: "h1", classAttr: "landing-hero-title")
       let text = """
       \(titleHTML)

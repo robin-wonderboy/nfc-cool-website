@@ -2,6 +2,9 @@ hero:
   title: "NFC 标签读取、写入与扫描 - NFC.cool Tools"
   subtitle: "在 iPhone 和 Android 上免费读取与写入 NFC 标签，在 iPhone 上还可以扫描二维码、条形码、文档、3D 模型和房间。"
 
+trust:
+  price: "免费"
+
 description: "面向 iPhone 和 Android 的免费 NFC 工具。轻触即可读取任意 NFC 标签，写入你自己的链接、Wi-Fi 和联系人，还能扫描二维码、条形码和文档。"
 
 heroImagePath: "/assets/images/Webflow/nfc-scan-tag.webp"
@@ -17,10 +20,6 @@ featureBanner:
   title: "NFC.cool Business Card"
   subtitle: "面向 iPhone 和 Android 的专用电子名片 App，可通过 NFC 轻触或二维码分享，在 iPhone 上还支持 App Clip 和 Apple Wallet。追踪谁保存了你的名片、整理潜在客户，并在现场活动中开启会议模式。"
   imagePath: "/assets/images/BusinessCard/02BusinessCardTop.webp"
-  # iOS: dedicated NFC.cool Business Card app (App Store id 6502926572)
-  appStoreURL: "https://apps.apple.com/app/apple-store/id6502926572?pt=106913804&ct=BusinessCardBanner&mt=8"
-  # Android: dedicated NFC.cool Business Card app (cool.nfc.businesscard)
-  googlePlayURL: "https://play.google.com/store/apps/details?id=cool.nfc.businesscard&referrer=utm_source%3Dwebsite%26utm_campaign%3Dbusiness-card-banner"
 
 appStoreReviewsTitle: "用户怎么说"
 appStoreReviews:
@@ -99,4 +98,3 @@ newsletter:
 
 cta:
   title: "准备好扫描了吗？"
-  buttonText: "下载 iOS 版"

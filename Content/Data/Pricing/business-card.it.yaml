@@ -1,0 +1,34 @@
+# Confronto tra i piani per /it/business-card/. Generato da PricingTableRenderer tramite
+# il token {{PRICING_TABLE:business-card}} in Content/Pages/business-card.it.md.
+columns: ["Free", "Personal", "Small Business", "Business"]
+rows:
+  - label: "Prezzo"
+    values: ["**$0**", "**$19,99**", "**$49,99**", "**$99,99**"]
+  - label: "Biglietti"
+    values: ["1", "1", "10", "100"]
+  - label: "Visualizzazione del profilo"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Salvataggio della vCard"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Raccolta contatti"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Statistiche"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Logo personalizzato"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Condivisione NFC e QR"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Apple Wallet"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Google Wallet"
+    values: ["soon", "soon", "soon", "soon"]
+  - label: "Modalità Conferenza"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Protezione con PIN"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Notifiche in tempo reale"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Esportazione dei dati (GDPR)"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Ideale per"
+    values: ["Provare", "Professionisti singoli", "Piccoli team", "Aziende in crescita"]

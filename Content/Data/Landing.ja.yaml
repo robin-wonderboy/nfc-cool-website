@@ -2,6 +2,9 @@ hero:
   title: "NFCリーダー・ライター・タグスキャナー - NFC.cool Tools"
   subtitle: "iPhoneとAndroidでNFCタグの読み取りと書き込みが無料。さらにiPhoneでは、QRコード、バーコード、書類、3Dモデル、お部屋もスキャンできます。"
 
+trust:
+  price: "無料"
+
 description: "iPhone・Android対応の無料NFCツール。タップでNFCタグを読み取り、リンクやWi-Fi、連絡先を自分で書き込み。QRコード・バーコード・書類のスキャンにも対応しています。"
 
 heroImagePath: "/assets/images/Webflow/nfc-scan-tag.webp"
@@ -57,8 +60,6 @@ featureBanner:
   title: "NFC.cool Business Card"
   subtitle: "iPhoneとAndroid向けの専用デジタル名刺アプリ - NFCタッチやQRコードで共有でき、iPhoneではApp ClipとApple Walletにも対応しています。誰がカードを保存したかをトラッキングし、リードを管理し、イベント向けにConference Modeを利用できます。"
   imagePath: "/assets/images/BusinessCard/02BusinessCardTop.webp"
-  appStoreURL: "https://apps.apple.com/app/apple-store/id6502926572?pt=106913804&ct=BusinessCardBanner&mt=8"
-  googlePlayURL: "https://play.google.com/store/apps/details?id=cool.nfc.businesscard&referrer=utm_source%3Dwebsite%26utm_campaign%3Dbusiness-card-banner"
 
 appStoreReviewsTitle: "ユーザーの声"
 appStoreReviews:
@@ -137,4 +138,3 @@ newsletter:
 
 cta:
   title: "スキャンの準備はいい？"
-  buttonText: "iOS版をダウンロード"

@@ -103,10 +103,17 @@ struct BlogIndexRenderer: Renderer {
 
       let heroVisualAlt = title.htmlEscaped
       let rssLabel = context.s(.blogRssFeed)
+      // The index is a high-traffic entry point, so the primary action is the
+      // download, not the feed. RSS stays available as a secondary text link
+      // rather than occupying the hero's button slot.
+      let campaign = "web-\(section.config.slug)"
+      let indexAppStore = StoreLink.appStore(app: .tools, page: campaign, locale: locale)
+      let indexGooglePlay = StoreLink.googlePlay(app: .tools, page: campaign, locale: locale)
       let heroText = """
       \(renderTitleWithBrandTail(title, tagName: "h1", classAttr: "blog-index-title"))
       <p class="blog-index-subtitle">\(subtitle.htmlEscaped)</p>
-      <a class="landing-cta-button" href="\(rssFeedPath)" aria-label="\(rssLabel.htmlEscaped)">\(rssLabel.htmlEscaped)</a>
+      \(renderStoreButtons(appStoreURL: indexAppStore, googlePlayURL: indexGooglePlay))
+      <a class="blog-index-rss" href="\(rssFeedPath)" aria-label="\(rssLabel.htmlEscaped)">\(rssLabel.htmlEscaped)</a>
       """
       let heroHTML = renderPageHero(
          modifier: "blog-index-hero",
@@ -118,6 +125,16 @@ struct BlogIndexRenderer: Renderer {
             height: 1120
          )
       )
+      let landing = try? loadLandingData(context: context)
+      let ctaHTML = landing?.cta.map { cta in
+         renderFinalCTA(
+            cta: cta,
+            trust: loadTrustLine(context: context, trust: landing?.trust),
+            appStoreURL: indexAppStore,
+            googlePlayURL: indexGooglePlay
+         )
+      } ?? ""
+
       let body = """
       <main class="sk-main blog-index">
          \(heroHTML)
@@ -127,6 +144,7 @@ struct BlogIndexRenderer: Renderer {
             </div>
          </section>
          \(newsletterHTML)
+         \(ctaHTML)
       </main>
       """
 

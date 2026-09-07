@@ -34,6 +34,24 @@
    max-width: 38em;
    margin: 0 auto 1rem;
 }
+/* The index hero's primary action is the app, with the feed as a secondary
+   text link beneath it (it used to occupy the .landing-cta-button slot). */
+.blog-index-hero .landing-store-buttons {
+   margin-bottom: 1rem;
+}
+.blog-index-rss {
+   display: inline-block;
+   font-size: 0.9375rem;
+   font-weight: 600;
+   color: rgba(255, 255, 255, 0.88);
+   text-decoration: underline;
+   text-underline-offset: 0.2em;
+   text-decoration-thickness: 1px;
+}
+.blog-index-rss:hover,
+.blog-index-rss:focus-visible {
+   color: #FFFFFF;
+}
 .blog-index-grid-section {
    padding: clamp(3.5rem, 7vw, 6rem) 0 clamp(4rem, 8vw, 7rem);
    background: var(--color-bg);

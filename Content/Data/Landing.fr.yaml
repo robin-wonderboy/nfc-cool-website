@@ -2,6 +2,9 @@ hero:
   title: "Lecteur, enregistreur et scanner de tags NFC - NFC.cool Tools"
   subtitle: "Lisez et écrivez des tags NFC gratuitement sur iPhone et Android - et, sur iPhone, scannez QR codes et codes-barres, numérisez des documents et capturez modèles 3D et pièces."
 
+trust:
+  price: "Gratuit"
+
 description: "Des outils NFC gratuits pour iPhone et Android. Lisez n'importe quel tag NFC d'un simple geste, écrivez les vôtres avec des liens, du Wi-Fi et des contacts, sans oublier le scan de QR codes, de codes-barres et la numérisation de documents."
 
 heroImagePath: "/assets/images/Webflow/nfc-scan-tag.webp"
@@ -17,10 +20,6 @@ featureBanner:
   title: "NFC.cool Business Card"
   subtitle: "Une app de carte de visite numérique dédiée pour iPhone et Android - partagez-la d'un simple contact NFC ou via un QR code, et sur iPhone également via un AppClip ou Apple Wallet. Voyez qui enregistre votre carte, organisez vos prospects et activez le mode Conférence pour vos événements en direct."
   imagePath: "/assets/images/BusinessCard/02BusinessCardTop.webp"
-  # iOS: dedicated NFC.cool Business Card app (App Store id 6502926572)
-  appStoreURL: "https://apps.apple.com/app/apple-store/id6502926572?pt=106913804&ct=BusinessCardBanner&mt=8"
-  # Android: dedicated NFC.cool Business Card app (cool.nfc.businesscard)
-  googlePlayURL: "https://play.google.com/store/apps/details?id=cool.nfc.businesscard&referrer=utm_source%3Dwebsite%26utm_campaign%3Dbusiness-card-banner"
 
 appStoreReviewsTitle: "Ce qu'en disent les utilisateurs"
 appStoreReviews:
@@ -99,4 +98,3 @@ newsletter:
 
 cta:
   title: "Prêt à scanner ?"
-  buttonText: "Télécharger pour iOS"

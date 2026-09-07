@@ -35,9 +35,12 @@ struct LandingData: Decodable, Sendable {
    let slogan: String?
 }
 
+/// Per-locale prose for the hero/final-CTA trust line. The rating value and
+/// count deliberately live in `SiteConfig.yaml`'s `apps:` block instead, so
+/// refreshing the store figures is one edit rather than nine - see
+/// `loadTrustLine(context:trust:)`. Presence of the block is what opts a
+/// locale into showing the line at all.
 struct TrustSection: Decodable, Sendable {
-   let rating: String?
-   let ratingCount: Int?
    let version: String?
    let price: String?
 }
@@ -71,7 +74,6 @@ struct Testimonial: Decodable, Sendable {
 struct PricingSection: Decodable, Sendable {
    let title: String
    let subtitle: String
-   let ctaText: String
    let tiers: [PricingTier]
 }
 
@@ -112,7 +114,6 @@ struct FAQItem: Decodable, Sendable {
 
 struct CTASection: Decodable, Sendable {
    let title: String
-   let buttonText: String
 }
 
 struct NewsletterSection: Decodable, Sendable {
@@ -123,6 +124,5 @@ struct NewsletterSection: Decodable, Sendable {
    let successText: String
    let errorText: String
    let endpoint: String?
-   let listID: String?
    let consent: String?
 }

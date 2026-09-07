@@ -32,7 +32,22 @@ O truque é um leitor NFC USB externo. Liga-o ao seu iPad ou Mac e o NFC.cool fa
 
 A app prefere um leitor externo sempre que houver um ligado. Num iPad ou Mac, esse leitor é o único hardware NFC em jogo, por isso não há nada a decidir. Num iPhone passa a ser uma escolha que a app faz por si: ligue um leitor e o NFC.cool usa-o, deixe-o desligado e o telemóvel recorre ao seu próprio NFC integrado. Não tem de mudar uma definição nem de escolher um modo - a app percebe que hardware tem e age em conformidade.
 
-O leitor em torno do qual construí isto, e o único que testei de facto, é o HID OMNIKEY 5022 CL. Outros leitores USB podem funcionar, mas não o posso prometer, porque só verifiquei a experiência de ponta a ponta com esse. Se experimentar um leitor diferente, quero mesmo saber como correu: [diga-me](/contact/) se funcionou ou onde falhou, e eu incorporo o que aprender de volta na app e neste artigo.
+O leitor em torno do qual construí isto, e o único que testei de facto, é o HID OMNIKEY 5022 CL. Outros leitores USB também funcionam, e alguns estão na lista abaixo, comunicados por utilizadores que os experimentaram.
+
+---
+
+## Os leitores que funcionam
+
+Estes são todos os leitores que sei até agora que funcionam com o NFC.cool:
+
+- **HID OMNIKEY 5022 CL** - aquele em torno do qual construí isto, testado de ponta a ponta ([Amazon](https://amzn.to/3SNPi46))
+- **HID OMNIKEY 5422** - um utilizador comunicou que funciona ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1552U-M1** - um utilizador comunicou que funciona ([Amazon](https://amzn.to/4xZVEwe))
+- **ACS ACR1255U-J1** - um utilizador comunicou que funciona ([Amazon](https://amzn.to/4xZVEwe))
+
+Obrigado a todos os que me escreveram. Não posso comprar todos os leitores do mercado, por isso cada modelo a seguir ao primeiro está nesta lista porque alguém o comprou, o experimentou e teve o cuidado de me dizer. Se usa um leitor que não está aqui, [diga-me](/contact/) se funcionou ou onde falhou, e eu acrescento-o a este artigo.
+
+São links de afiliado da Amazon: se comprar através de um deles, posso receber uma pequena comissão sem custo adicional para si.
 
 ---
 
@@ -48,7 +63,7 @@ Esta última foi a parte difícil. Repor uma cabeça Sonicare significa ler um c
 
 Há algumas coisas que ainda não estão lá, e prefiro dizer-lhe do que deixá-lo descobrir.
 
-- O OMNIKEY 5022 CL é o único leitor que testei. Um diferente coloca-o em território não verificado.
+- O OMNIKEY 5022 CL é o único leitor que testei eu próprio. Os restantes da lista acima vêm de relatos de utilizadores, e tudo o que não esteja nessa lista é território não verificado.
 - As tags MIFARE Classic são apenas de leitura através do leitor. Pode lê-las, não escrevê-las.
 
 Nenhuma destas estraga a forma como a maioria das pessoas vai usar isto, mas são reais e são o género de coisa que eu gostaria de saber antes de comprar um leitor.
@@ -61,7 +76,7 @@ Quero ser claro quanto à origem disto. Não me sentei a inventá-lo - o Alexand
 
 A leitura de tags NFC no iPad e no Mac chega no NFC.cool 6.15.0. Se tiver um iPad ou um Mac, um leitor compatível e uma tag que nunca conseguiu ler da sua secretária, vai simplesmente funcionar.
 
-Precisa do leitor? Aqui está o HID OMNIKEY 5022 CL na [Amazon EUA](https://amzn.to/4rq6gCj) e na [Amazon Europa](https://amzn.to/483UyEp). São links de afiliado: se comprar através de um deles, posso receber uma pequena comissão sem custo adicional para si, e ajuda a financiar o trabalho no NFC.cool.
+Precisa do leitor? Aqui está o HID OMNIKEY 5022 CL na [Amazon](https://amzn.to/3SNPi46) - o link encaminha-o para a loja Amazon do seu país. É um link de afiliado: se comprar através dele, posso receber uma pequena comissão sem custo adicional para si, e ajuda a financiar o trabalho no NFC.cool.
 
 [Descarregue o NFC.cool Tools para iPhone, iPad e Mac](https://apps.apple.com/app/apple-store/id1249686798?pt=106913804&ct=blog-nfc-reading-ipad-mac-pt&mt=8)
 
