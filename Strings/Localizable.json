@@ -1,24 +1,24 @@
 {
    "blogBack": {
-      "localizations": { "en": "← Back", "de": "← Zurück", "ja": "← 戻る", "pt": "← Voltar", "zh": "← 返回", "id": "← Kembali", "es": "← Volver", "fr": "← Retour", "ar": "→ رجوع", "it": "← Indietro", "tr": "← Geri", "ru": "← Назад" }
+      "localizations": { "en": "← Back", "de": "← Zurück", "ja": "← 戻る", "pt": "← Voltar", "zh": "← 返回", "id": "← Kembali", "es": "← Volver", "fr": "← Retour", "ar": "→ رجوع", "it": "← Indietro", "tr": "← Geri", "ru": "← Назад", "uk": "← Назад" }
    },
    "blogBackTo": {
-      "localizations": { "en": "← Back to %@", "de": "← Zurück zu %@", "ja": "← %@に戻る", "pt": "← Voltar a %@", "zh": "← 返回 %@", "id": "← Kembali ke %@", "es": "← Volver a %@", "fr": "← Retour à %@", "ar": "→ العودة إلى %@", "it": "← Torna a %@", "tr": "← %@ sayfasına dön", "ru": "← Назад в раздел %@" }
+      "localizations": { "en": "← Back to %@", "de": "← Zurück zu %@", "ja": "← %@に戻る", "pt": "← Voltar a %@", "zh": "← 返回 %@", "id": "← Kembali ke %@", "es": "← Volver a %@", "fr": "← Retour à %@", "ar": "→ العودة إلى %@", "it": "← Torna a %@", "tr": "← %@ sayfasına dön", "ru": "← Назад в раздел %@", "uk": "← Назад до розділу %@" }
    },
    "blogRelated": {
-      "localizations": { "en": "Related", "de": "Weitere Beiträge", "ja": "関連記事", "pt": "Relacionados", "zh": "相关文章", "id": "Artikel Terkait", "es": "Relacionados", "fr": "Articles liés", "ar": "مقالات ذات صلة", "it": "Articoli correlati", "tr": "İlgili yazılar", "ru": "Похожие статьи" }
+      "localizations": { "en": "Related", "de": "Weitere Beiträge", "ja": "関連記事", "pt": "Relacionados", "zh": "相关文章", "id": "Artikel Terkait", "es": "Relacionados", "fr": "Articles liés", "ar": "مقالات ذات صلة", "it": "Articoli correlati", "tr": "İlgili yazılar", "ru": "Похожие статьи", "uk": "Схожі статті" }
    },
    "blogNewerPost": {
-      "localizations": { "en": "Newer Post", "de": "Neuerer Beitrag", "ja": "新しい記事", "pt": "Artigo mais recente", "zh": "较新文章", "id": "Artikel Lebih Baru", "es": "Artículo más reciente", "fr": "Article plus récent", "ar": "مقال أحدث", "it": "Articolo più recente", "tr": "Sonraki yazı", "ru": "Следующая статья" }
+      "localizations": { "en": "Newer Post", "de": "Neuerer Beitrag", "ja": "新しい記事", "pt": "Artigo mais recente", "zh": "较新文章", "id": "Artikel Lebih Baru", "es": "Artículo más reciente", "fr": "Article plus récent", "ar": "مقال أحدث", "it": "Articolo più recente", "tr": "Sonraki yazı", "ru": "Следующая статья", "uk": "Наступна стаття" }
    },
    "blogOlderPost": {
-      "localizations": { "en": "Older Post", "de": "Älterer Beitrag", "ja": "古い記事", "pt": "Artigo anterior", "zh": "较旧文章", "id": "Artikel Lebih Lama", "es": "Artículo anterior", "fr": "Article plus ancien", "ar": "مقال أقدم", "it": "Articolo precedente", "tr": "Önceki yazı", "ru": "Предыдущая статья" }
+      "localizations": { "en": "Older Post", "de": "Älterer Beitrag", "ja": "古い記事", "pt": "Artigo anterior", "zh": "较旧文章", "id": "Artikel Lebih Lama", "es": "Artículo anterior", "fr": "Article plus ancien", "ar": "مقال أقدم", "it": "Articolo precedente", "tr": "Önceki yazı", "ru": "Предыдущая статья", "uk": "Попередня стаття" }
    },
    "blogPostNavigation": {
-      "localizations": { "en": "Post Navigation", "de": "Beitragsnavigation", "ja": "記事ナビゲーション", "pt": "Navegação de artigos", "zh": "文章导航", "id": "Navigasi Artikel", "es": "Navegación de artículos", "fr": "Navigation des articles", "ar": "التنقل بين المقالات", "it": "Navigazione degli articoli", "tr": "Yazılar arası gezinme", "ru": "Навигация по статьям" }
+      "localizations": { "en": "Post Navigation", "de": "Beitragsnavigation", "ja": "記事ナビゲーション", "pt": "Navegação de artigos", "zh": "文章导航", "id": "Navigasi Artikel", "es": "Navegación de artículos", "fr": "Navigation des articles", "ar": "التنقل بين المقالات", "it": "Navigazione degli articoli", "tr": "Yazılar arası gezinme", "ru": "Навигация по статьям", "uk": "Навігація між статтями" }
    },
    "blogRssFeed": {
-      "localizations": { "en": "RSS Feed", "de": "RSS-Feed", "ja": "RSSフィード", "pt": "Feed RSS", "zh": "RSS 订阅", "id": "Umpan RSS", "es": "Feed RSS", "fr": "Flux RSS", "ar": "خلاصة RSS", "it": "Feed RSS", "tr": "RSS Akışı", "ru": "RSS-лента" }
+      "localizations": { "en": "RSS Feed", "de": "RSS-Feed", "ja": "RSSフィード", "pt": "Feed RSS", "zh": "RSS 订阅", "id": "Umpan RSS", "es": "Feed RSS", "fr": "Flux RSS", "ar": "خلاصة RSS", "it": "Feed RSS", "tr": "RSS Akışı", "ru": "RSS-лента", "uk": "RSS-стрічка" }
    },
    "blogSubtitleBlog": {
       "localizations": {
@@ -33,7 +33,8 @@
          "ar": "أدلة ومقارنات وشروحات عملية حول وسوم NFC ورموز QR والباركود وبطاقات العمل الرقمية على iPhone وAndroid. بقلم المطوّر صاحب NFC.cool.",
          "it": "Guide, confronti e tutorial su tag NFC, codici QR, codici a barre e biglietti da visita digitali su iPhone e Android. Scritti dallo sviluppatore che c'è dietro NFC.cool.",
          "tr": "iPhone ve Android'de NFC tag'ler, QR kodlar, barkodlar ve dijital kartvizitler üzerine rehberler, karşılaştırmalar ve adım adım anlatımlar. NFC.cool'un arkasındaki geliştirici yazıyor.",
-         "ru": "Руководства, сравнения и инструкции по NFC-меткам, QR-кодам, штрихкодам и цифровым визиткам на iPhone и Android. Пишет разработчик NFC.cool."
+         "ru": "Руководства, сравнения и инструкции по NFC-меткам, QR-кодам, штрихкодам и цифровым визиткам на iPhone и Android. Пишет разработчик NFC.cool.",
+         "uk": "Посібники, порівняння та інструкції про NFC-мітки, QR-коди, штрихкоди й цифрові візитівки на iPhone і Android. Пише розробник NFC.cool."
       }
    },
    "blogSubtitleChangelog": {
@@ -49,11 +50,12 @@
          "ar": "ملاحظات إصدارات NFC.cool Tools (iOS + Android) وتطبيق Business Card المستقل وهذا الموقع - ما الذي صدر وما الذي تحسّن وما القادم.",
          "it": "Note di rilascio di NFC.cool Tools (iOS + Android), dell'app Business Card e di questo sito - cosa è uscito, cosa è migliorato e cosa arriva dopo.",
          "tr": "NFC.cool Tools (iOS + Android), bağımsız Business Card uygulaması ve bu site için sürüm notları - neler çıktı, neler iyileşti, sırada ne var.",
-         "ru": "Что нового в NFC.cool Tools (iOS + Android), в отдельном приложении Business Card и на этом сайте: что вышло, что стало лучше и что будет дальше."
+         "ru": "Что нового в NFC.cool Tools (iOS + Android), в отдельном приложении Business Card и на этом сайте: что вышло, что стало лучше и что будет дальше.",
+         "uk": "Що нового в NFC.cool Tools (iOS + Android), в окремому застосунку Business Card і на цьому сайті: що вийшло, що стало краще і що буде далі."
       }
    },
    "tagsIndexHeading": {
-      "localizations": { "en": "Tags", "de": "Themen", "ja": "タグ", "pt": "Tópicos", "zh": "主题", "id": "Topik", "es": "Temas", "fr": "Thèmes", "ar": "المواضيع", "it": "Argomenti", "tr": "Etiketler", "ru": "Теги" }
+      "localizations": { "en": "Tags", "de": "Themen", "ja": "タグ", "pt": "Tópicos", "zh": "主题", "id": "Topik", "es": "Temas", "fr": "Thèmes", "ar": "المواضيع", "it": "Argomenti", "tr": "Etiketler", "ru": "Теги", "uk": "Теги" }
    },
    "tagsIndexDescription": {
       "localizations": {
@@ -68,44 +70,45 @@
          "ar": "تصفّح مقالات مدونة NFC.cool حسب الموضوع - وسوم NFC ورموز QR والباركود ومسح المستندات والالتقاط ثلاثي الأبعاد وبطاقات العمل الرقمية على iPhone وAndroid.",
          "it": "Esplora gli articoli per argomento sul blog di NFC.cool - tag NFC, codici QR, codici a barre, scansione dei documenti, cattura 3D e biglietti da visita digitali per iPhone e Android.",
          "tr": "NFC.cool blogundaki yazılara konuya göre göz at - NFC tag'ler, QR kodlar, barkodlar, belge tarama, 3B yakalama ve iPhone ile Android için dijital kartvizitler.",
-         "ru": "Статьи блога NFC.cool по темам: NFC-метки, QR-коды, штрихкоды, сканирование документов, 3D-съёмка и цифровые визитки для iPhone и Android."
+         "ru": "Статьи блога NFC.cool по темам: NFC-метки, QR-коды, штрихкоды, сканирование документов, 3D-съёмка и цифровые визитки для iPhone и Android.",
+         "uk": "Статті блогу NFC.cool за темами: NFC-мітки, QR-коди, штрихкоди, сканування документів, 3D-зйомка та цифрові візитівки для iPhone і Android."
       }
    },
    "tagsBackAll": {
-      "localizations": { "en": "← All Tags", "de": "← Alle Themen", "ja": "← すべてのタグ", "pt": "← Todos os tópicos", "zh": "← 所有主题", "id": "← Semua Topik", "es": "← Todos los temas", "fr": "← Tous les thèmes", "ar": "→ كل المواضيع", "it": "← Tutti gli argomenti", "tr": "← Tüm etiketler", "ru": "← Все теги" }
+      "localizations": { "en": "← All Tags", "de": "← Alle Themen", "ja": "← すべてのタグ", "pt": "← Todos os tópicos", "zh": "← 所有主题", "id": "← Semua Topik", "es": "← Todos los temas", "fr": "← Tous les thèmes", "ar": "→ كل المواضيع", "it": "← Tutti gli argomenti", "tr": "← Tüm etiketler", "ru": "← Все теги", "uk": "← Усі теги" }
    },
    "tagName_nfc-tags": {
-      "localizations": { "en": "NFC Tags", "de": "NFC Tags", "ja": "NFC Tags", "pt": "Tags NFC", "zh": "NFC 标签", "id": "Tag NFC", "es": "Etiquetas NFC", "fr": "Tags NFC", "ar": "وسوم NFC", "it": "Tag NFC", "tr": "NFC Tag'ler", "ru": "NFC-метки" }
+      "localizations": { "en": "NFC Tags", "de": "NFC Tags", "ja": "NFC Tags", "pt": "Tags NFC", "zh": "NFC 标签", "id": "Tag NFC", "es": "Etiquetas NFC", "fr": "Tags NFC", "ar": "وسوم NFC", "it": "Tag NFC", "tr": "NFC Tag'ler", "ru": "NFC-метки", "uk": "NFC-мітки" }
    },
    "tagName_business-cards": {
-      "localizations": { "en": "Business Cards", "de": "Visitenkarten", "ja": "デジタル名刺", "pt": "Cartões de Visita", "zh": "电子名片", "id": "Kartu Nama", "es": "Tarjetas de Visita", "fr": "Cartes de visite", "ar": "بطاقات العمل", "it": "Biglietti da visita", "tr": "Kartvizitler", "ru": "Визитки" }
+      "localizations": { "en": "Business Cards", "de": "Visitenkarten", "ja": "デジタル名刺", "pt": "Cartões de Visita", "zh": "电子名片", "id": "Kartu Nama", "es": "Tarjetas de Visita", "fr": "Cartes de visite", "ar": "بطاقات العمل", "it": "Biglietti da visita", "tr": "Kartvizitler", "ru": "Визитки", "uk": "Візитівки" }
    },
    "tagName_qr-codes": {
-      "localizations": { "en": "QR Codes", "de": "QR Codes", "ja": "QR Codes", "pt": "Códigos QR", "zh": "二维码", "id": "Kode QR", "es": "Códigos QR", "fr": "QR codes", "ar": "رموز QR", "it": "Codici QR", "tr": "QR Kodlar", "ru": "QR-коды" }
+      "localizations": { "en": "QR Codes", "de": "QR Codes", "ja": "QR Codes", "pt": "Códigos QR", "zh": "二维码", "id": "Kode QR", "es": "Códigos QR", "fr": "QR codes", "ar": "رموز QR", "it": "Codici QR", "tr": "QR Kodlar", "ru": "QR-коды", "uk": "QR-коди" }
    },
    "tagName_iphone": {
-      "localizations": { "en": "iPhone", "de": "iPhone", "ja": "iPhone", "pt": "iPhone", "zh": "iPhone", "id": "iPhone", "es": "iPhone", "fr": "iPhone", "ar": "iPhone", "it": "iPhone", "tr": "iPhone", "ru": "iPhone" }
+      "localizations": { "en": "iPhone", "de": "iPhone", "ja": "iPhone", "pt": "iPhone", "zh": "iPhone", "id": "iPhone", "es": "iPhone", "fr": "iPhone", "ar": "iPhone", "it": "iPhone", "tr": "iPhone", "ru": "iPhone", "uk": "iPhone" }
    },
    "tagName_android": {
-      "localizations": { "en": "Android", "de": "Android", "ja": "Android", "pt": "Android", "zh": "Android", "id": "Android", "es": "Android", "fr": "Android", "ar": "Android", "it": "Android", "tr": "Android", "ru": "Android" }
+      "localizations": { "en": "Android", "de": "Android", "ja": "Android", "pt": "Android", "zh": "Android", "id": "Android", "es": "Android", "fr": "Android", "ar": "Android", "it": "Android", "tr": "Android", "ru": "Android", "uk": "Android" }
    },
    "tagName_guides": {
-      "localizations": { "en": "Guides", "de": "Anleitungen", "ja": "ガイド", "pt": "Guias", "zh": "指南", "id": "Panduan", "es": "Guías", "fr": "Guides", "ar": "أدلة", "it": "Guide", "tr": "Rehberler", "ru": "Руководства" }
+      "localizations": { "en": "Guides", "de": "Anleitungen", "ja": "ガイド", "pt": "Guias", "zh": "指南", "id": "Panduan", "es": "Guías", "fr": "Guides", "ar": "أدلة", "it": "Guide", "tr": "Rehberler", "ru": "Руководства", "uk": "Посібники" }
    },
    "tagName_privacy": {
-      "localizations": { "en": "Privacy", "de": "Datenschutz", "ja": "プライバシー", "pt": "Privacidade", "zh": "隐私", "id": "Privasi", "es": "Privacidad", "fr": "Confidentialité", "ar": "الخصوصية", "it": "Privacy", "tr": "Gizlilik", "ru": "Приватность" }
+      "localizations": { "en": "Privacy", "de": "Datenschutz", "ja": "プライバシー", "pt": "Privacidade", "zh": "隐私", "id": "Privasi", "es": "Privacidad", "fr": "Confidentialité", "ar": "الخصوصية", "it": "Privacy", "tr": "Gizlilik", "ru": "Приватность", "uk": "Приватність" }
    },
    "tagName_networking": {
-      "localizations": { "en": "Networking", "de": "Networking", "ja": "ネットワーキング", "pt": "Networking", "zh": "人脉拓展", "id": "Networking", "es": "Networking", "fr": "Networking", "ar": "التواصل المهني", "it": "Networking", "tr": "Networking", "ru": "Нетворкинг" }
+      "localizations": { "en": "Networking", "de": "Networking", "ja": "ネットワーキング", "pt": "Networking", "zh": "人脉拓展", "id": "Networking", "es": "Networking", "fr": "Networking", "ar": "التواصل المهني", "it": "Networking", "tr": "Networking", "ru": "Нетворкинг", "uk": "Нетворкінг" }
    },
    "tagName_automation": {
-      "localizations": { "en": "Automation", "de": "Automatisierung", "ja": "自動化", "pt": "Automação", "zh": "自动化", "id": "Otomatisasi", "es": "Automatización", "fr": "Automatisation", "ar": "الأتمتة", "it": "Automazione", "tr": "Otomasyon", "ru": "Автоматизация" }
+      "localizations": { "en": "Automation", "de": "Automatisierung", "ja": "自動化", "pt": "Automação", "zh": "自动化", "id": "Otomatisasi", "es": "Automatización", "fr": "Automatisation", "ar": "الأتمتة", "it": "Automazione", "tr": "Otomasyon", "ru": "Автоматизация", "uk": "Автоматизація" }
    },
    "tagName_industry": {
-      "localizations": { "en": "Industry", "de": "Branchen", "ja": "業界", "pt": "Setores", "zh": "行业", "id": "Industri", "es": "Sectores", "fr": "Secteurs", "ar": "القطاعات", "it": "Settori", "tr": "Sektörler", "ru": "Отрасли" }
+      "localizations": { "en": "Industry", "de": "Branchen", "ja": "業界", "pt": "Setores", "zh": "行业", "id": "Industri", "es": "Sectores", "fr": "Secteurs", "ar": "القطاعات", "it": "Settori", "tr": "Sektörler", "ru": "Отрасли", "uk": "Галузі" }
    },
    "tagName_announcements": {
-      "localizations": { "en": "Announcements", "de": "Neuigkeiten", "ja": "お知らせ", "pt": "Novidades", "zh": "动态", "id": "Pengumuman", "es": "Novedades", "fr": "Actualités", "ar": "إعلانات", "it": "Novità", "tr": "Duyurular", "ru": "Анонсы" }
+      "localizations": { "en": "Announcements", "de": "Neuigkeiten", "ja": "お知らせ", "pt": "Novidades", "zh": "动态", "id": "Pengumuman", "es": "Novedades", "fr": "Actualités", "ar": "إعلانات", "it": "Novità", "tr": "Duyurular", "ru": "Анонсы", "uk": "Анонси" }
    },
    "tagDesc_nfc-tags": {
       "localizations": {
@@ -120,7 +123,8 @@
          "ar": "أدلة وشروحات حول وسوم NFC - اختيار شريحة NTAG المناسبة، وكتابة سجلات NDEF، وبناء إجراءات موثوقة تعمل عند اللمس على iPhone وAndroid.",
          "it": "Guide e tutorial sui tag NFC - scegliere il chip NTAG giusto, scrivere record NDEF e creare azioni affidabili che partono con un semplice avvicinamento, su iPhone e Android.",
          "tr": "NFC tag'ler üzerine rehberler ve adım adım anlatımlar - doğru NTAG çipini seçmek, NDEF kaydı yazmak ve iPhone ile Android'de okutunca tetiklenen eylemleri güvenilir biçimde kurmak.",
-         "ru": "Руководства и инструкции по NFC-меткам: как выбрать подходящий чип NTAG, как записать NDEF-записи и как надёжно настроить действия по касанию на iPhone и Android."
+         "ru": "Руководства и инструкции по NFC-меткам: как выбрать подходящий чип NTAG, как записать NDEF-записи и как надёжно настроить действия по касанию на iPhone и Android.",
+         "uk": "Посібники та інструкції про NFC-мітки: як вибрати відповідний чип NTAG, як записати NDEF-записи і як надійно налаштувати дії одним дотиком на iPhone та Android."
       }
    },
    "tagDesc_business-cards": {
@@ -136,7 +140,8 @@
          "ar": "كل ما يتعلق ببطاقات العمل الرقمية - لمسات NFC، وApp Clips، والملفات الشخصية القابلة للتعديل، والاستغناء عن البطاقات الورقية في المؤتمرات وداخل الفرق وفي كل قطاع.",
          "it": "Tutto sui biglietti da visita digitali - condivisione via NFC, App Clip, profili modificabili e l'addio alle schede di carta alle conferenze, nei team e in ogni settore.",
          "tr": "Dijital kartvizit üzerine her şey - NFC okutma, App Clip'ler, düzenlenebilir profiller ve konferanslarda, ekiplerde, her sektörde kağıt kartın yerini alması.",
-         "ru": "Всё о цифровых визитках: касание NFC, App Clip, редактируемые профили и замена бумажных карточек на конференциях, в командах и в любой отрасли."
+         "ru": "Всё о цифровых визитках: касание NFC, App Clip, редактируемые профили и замена бумажных карточек на конференциях, в командах и в любой отрасли.",
+         "uk": "Усе про цифрові візитівки: дотик NFC, App Clip, редаговані профілі та заміна паперових карток на конференціях, у командах і в будь-якій галузі."
       }
    },
    "tagDesc_qr-codes": {
@@ -152,7 +157,8 @@
          "ar": "مقالات عن رموز QR والباركود - كيفية إنشائها، وتصميم رموز تحمل هويتك التجارية دون أن تفقد قابلية المسح، وصيغ البيانات الكامنة خلف كل عملية مسح.",
          "it": "Articoli su codici QR e codici a barre - come generarli, come progettare codici personalizzati che restano leggibili e quali formati di dati si nascondono dietro ogni scansione.",
          "tr": "QR kodlar ve barkodlar üzerine yazılar - kod üretmek, markana uyan ama yine de sorunsuz taranan kodlar tasarlamak ve her taramanın arkasındaki veri biçimleri.",
-         "ru": "Статьи о QR-кодах и штрихкодах: как их создавать, как оформить код в фирменном стиле и не сломать считывание, какие форматы данных стоят за каждым сканированием."
+         "ru": "Статьи о QR-кодах и штрихкодах: как их создавать, как оформить код в фирменном стиле и не сломать считывание, какие форматы данных стоят за каждым сканированием.",
+         "uk": "Статті про QR-коди та штрихкоди: як їх створювати, як оформити код у фірмовому стилі й не зламати зчитування, які формати даних стоять за кожним скануванням."
       }
    },
    "tagDesc_iphone": {
@@ -168,7 +174,8 @@
          "ar": "قراءة وسوم NFC وكتابتها، ومسح رموز QR والمستندات، وبطاقة العمل الرقمية - كل ما يفعله تطبيق NFC.cool Tools على iPhone وiPad وMac.",
          "it": "Lettura e scrittura dei tag NFC, scansione di codici QR e documenti e biglietto da visita digitale - tutto quello che l'app NFC.cool Tools sa fare su iPhone, iPad e Mac.",
          "tr": "NFC tag okuma ve yazma, QR ile belge tarama ve dijital kartvizit - NFC.cool Tools uygulamasının iPhone, iPad ve Mac'te yaptığı her şey.",
-         "ru": "Чтение и запись NFC-меток, сканирование QR-кодов и документов, цифровая визитка: всё, что приложение NFC.cool Tools умеет на iPhone, iPad и Mac."
+         "ru": "Чтение и запись NFC-меток, сканирование QR-кодов и документов, цифровая визитка: всё, что приложение NFC.cool Tools умеет на iPhone, iPad и Mac.",
+         "uk": "Читання і запис NFC-міток, сканування QR-кодів і документів, цифрова візитівка: усе, що застосунок NFC.cool Tools вміє на iPhone, iPad і Mac."
       }
    },
    "tagDesc_android": {
@@ -184,7 +191,8 @@
          "ar": "قراءة وسوم NFC وكتابتها على Android مع تطبيق NFC.cool Tools، إلى جانب تطبيق NFC.cool Business Card - العلامة نفسها التي تعرفها من iPhone.",
          "it": "Leggere e scrivere tag NFC su Android con NFC.cool Tools, insieme all'app NFC.cool Business Card - lo stesso marchio che conosci già su iPhone.",
          "tr": "NFC.cool Tools ile Android'de NFC tag okuma ve yazma, üstüne NFC.cool Business Card uygulaması - iPhone'dan tanıdığın markanın aynısı.",
-         "ru": "Чтение и запись NFC-меток на Android в NFC.cool Tools, а рядом приложение NFC.cool Business Card: тот же бренд, который ты знаешь по iPhone."
+         "ru": "Чтение и запись NFC-меток на Android в NFC.cool Tools, а рядом приложение NFC.cool Business Card: тот же бренд, который ты знаешь по iPhone.",
+         "uk": "Читання і запис NFC-міток на Android у NFC.cool Tools, а поруч застосунок NFC.cool Business Card: той самий бренд, знайомий тобі з iPhone."
       }
    },
    "tagDesc_guides": {
@@ -200,7 +208,8 @@
          "ar": "شروحات خطوة بخطوة لمسح NFC وQR والباركود والمستندات والأجسام ثلاثية الأبعاد على هاتفك - مكتوبة من واقع تطوير تطبيق NFC.cool Tools، لا من ورقة مواصفات.",
          "it": "Tutorial passo passo per scansionare NFC, QR, codici a barre, documenti e oggetti 3D dal telefono - nati dallo sviluppo dell'app NFC.cool Tools, non da una scheda tecnica.",
          "tr": "Telefonunda NFC, QR, barkod, belge ve 3B tarama için adım adım anlatımlar - teknik dokümandan değil, NFC.cool Tools uygulamasını yazma deneyiminden çıktı.",
-         "ru": "Пошаговые инструкции по NFC, QR-кодам, штрихкодам, документам и 3D-сканированию на телефоне: написаны по опыту разработки NFC.cool Tools, а не по техническому описанию."
+         "ru": "Пошаговые инструкции по NFC, QR-кодам, штрихкодам, документам и 3D-сканированию на телефоне: написаны по опыту разработки NFC.cool Tools, а не по техническому описанию.",
+         "uk": "Покрокові інструкції з NFC, QR-кодів, штрихкодів, документів і 3D-сканування на телефоні: написані з досвіду розробки NFC.cool Tools, а не з технічного опису."
       }
    },
    "tagDesc_privacy": {
@@ -216,7 +225,8 @@
          "ar": "كيف تتعامل NFC.cool مع بياناتك - المعالجة على الجهاز، والتشفير، وعدم التتبّع، وبطاقات عمل رقمية تضع الخصوصية أولًا في التطبيقات والموقع.",
          "it": "Come NFC.cool tratta i tuoi dati - elaborazione sul dispositivo, crittografia, nessun tracciamento e biglietti da visita digitali che mettono la privacy al primo posto, nelle app come sul sito.",
          "tr": "NFC.cool verini nasıl işliyor - cihazda işleme, şifreleme, takip yok ve uygulamalarla sitede gizliliği önceleyen dijital kartvizitler.",
-         "ru": "Как NFC.cool обращается с твоими данными: обработка на устройстве, шифрование, никакой слежки и цифровые визитки, где приватность на первом месте."
+         "ru": "Как NFC.cool обращается с твоими данными: обработка на устройстве, шифрование, никакой слежки и цифровые визитки, где приватность на первом месте.",
+         "uk": "Як NFC.cool поводиться з твоїми даними: обробка на пристрої, шифрування, жодного стеження і цифрові візитівки, де приватність на першому місці."
       }
    },
    "tagDesc_networking": {
@@ -232,7 +242,8 @@
          "ar": "تواصل مهني أذكى مع NFC - مشاركة جهات الاتصال بلمسة واحدة، وApp Clips لا تحتاج إلى تثبيت أي تطبيق، والتخلّص أخيرًا من بطاقات العمل الورقية في الفعاليات.",
          "it": "Fare rete in modo più intelligente con l'NFC - condividere i contatti con un solo avvicinamento, App Clip che non richiedono installazioni e finalmente basta con i biglietti di carta agli eventi.",
          "tr": "NFC ile daha akıllı networking - tek okutmayla kişi paylaşmak, uygulama kurulumu gerektirmeyen App Clip'ler ve etkinliklerde kağıt kartviziti nihayet bırakmak.",
-         "ru": "Нетворкинг с NFC: контакт передаётся одним касанием, App Clip работает без установки приложения, а бумажные визитки на мероприятиях наконец остаются дома."
+         "ru": "Нетворкинг с NFC: контакт передаётся одним касанием, App Clip работает без установки приложения, а бумажные визитки на мероприятиях наконец остаются дома.",
+         "uk": "Нетворкінг з NFC: контакт передається одним дотиком, App Clip працює без встановлення застосунку, а паперові візитівки на заходах нарешті лишаються вдома."
       }
    },
    "tagDesc_automation": {
@@ -248,7 +259,8 @@
          "ar": "استخدام وسوم NFC لأتمتة منزلك وسير عملك وأجهزتك - من مشغّلات المنزل الذكي واختصارات iPhone وصولًا إلى تتبّع بكرات خيوط الطابعات ثلاثية الأبعاد.",
          "it": "Usare i tag NFC per automatizzare casa, flussi di lavoro e dispositivi - dai comandi per la smart home e i Comandi Rapidi su iPhone fino al monitoraggio delle bobine di filamento per la stampa 3D.",
          "tr": "Evini, iş akışlarını ve cihazlarını NFC tag'lerle otomatikleştirmek - akıllı ev tetikleyicileri ve iPhone kısayollarından 3B yazıcı filament makaralarını takip etmeye kadar.",
-         "ru": "Автоматизация дома, рабочих процессов и устройств с помощью NFC-меток: от сценариев умного дома и быстрых команд на iPhone до учёта катушек с филаментом для 3D-принтера."
+         "ru": "Автоматизация дома, рабочих процессов и устройств с помощью NFC-меток: от сценариев умного дома и быстрых команд на iPhone до учёта катушек с филаментом для 3D-принтера.",
+         "uk": "Автоматизація дому, робочих процесів і пристроїв за допомогою NFC-міток: від сценаріїв розумного дому та Швидких команд на iPhone до обліку котушок з філаментом для 3D-принтера."
       }
    },
    "tagDesc_industry": {
@@ -264,7 +276,8 @@
          "ar": "كيف يستخدم وكلاء العقارات والاستشاريون والعاملون في الرعاية الصحية وغيرهم NFC.cool في عملهم اليومي على أرض الواقع - حالات استخدام حقيقية لا نظريات.",
          "it": "Come agenti immobiliari, consulenti, professionisti sanitari e molti altri usano NFC.cool sul campo ogni giorno - casi d'uso reali, non teoria.",
          "tr": "Emlakçılar, danışmanlar, sağlık çalışanları ve daha birçok alan NFC.cool'u sahada her gün nasıl kullanıyor - teori değil, gerçek kullanım örnekleri.",
-         "ru": "Как риелторы, консультанты, врачи и специалисты из других сфер каждый день используют NFC.cool в работе: реальные сценарии, а не теория."
+         "ru": "Как риелторы, консультанты, врачи и специалисты из других сфер каждый день используют NFC.cool в работе: реальные сценарии, а не теория.",
+         "uk": "Як ріелтори, консультанти, лікарі та фахівці з інших сфер щодня використовують NFC.cool у роботі: реальні сценарії, а не теорія."
       }
    },
    "tagDesc_announcements": {
@@ -280,11 +293,12 @@
          "ar": "أخبار منتجات NFC.cool - إصدارات تطبيقات جديدة، وإطلاق منصات، وتحديثات ميزات، ونظرة صادقة من وراء الكواليس على ما نبنيه ونطلقه تاليًا.",
          "it": "Le novità di prodotto di NFC.cool - nuove versioni delle app, arrivi su altre piattaforme, aggiornamenti delle funzioni e uno sguardo sincero dietro le quinte su cosa stiamo costruendo.",
          "tr": "NFC.cool'dan ürün haberleri - yeni sürümler, platform lansmanları, özellik güncellemeleri ve sırada ne yaptığımıza dair dürüst, perde arkası bir bakış.",
-         "ru": "Новости NFC.cool: свежие релизы, запуски на новых платформах, обновления функций и честный рассказ о том, что мы делаем и что выпустим дальше."
+         "ru": "Новости NFC.cool: свежие релизы, запуски на новых платформах, обновления функций и честный рассказ о том, что мы делаем и что выпустим дальше.",
+         "uk": "Новини NFC.cool: свіжі релізи, запуски на нових платформах, оновлення функцій і чесна розповідь про те, що ми робимо і що випустимо далі."
       }
    },
    "featuresHubTitle": {
-      "localizations": { "en": "NFC.cool Features", "de": "NFC.cool Funktionen", "ja": "NFC.coolの機能", "pt": "Funcionalidades NFC.cool", "zh": "NFC.cool 功能", "id": "Fitur NFC.cool", "es": "Funciones de NFC.cool", "fr": "Fonctionnalités NFC.cool", "ar": "ميزات NFC.cool", "it": "Le funzioni di NFC.cool", "tr": "NFC.cool Özellikleri", "ru": "Возможности NFC.cool" }
+      "localizations": { "en": "NFC.cool Features", "de": "NFC.cool Funktionen", "ja": "NFC.coolの機能", "pt": "Funcionalidades NFC.cool", "zh": "NFC.cool 功能", "id": "Fitur NFC.cool", "es": "Funciones de NFC.cool", "fr": "Fonctionnalités NFC.cool", "ar": "ميزات NFC.cool", "it": "Le funzioni di NFC.cool", "tr": "NFC.cool Özellikleri", "ru": "Возможности NFC.cool", "uk": "Можливості NFC.cool" }
    },
    "featuresHubSubtitle": {
       "localizations": {
@@ -299,43 +313,44 @@
          "ar": "اقرأ وسوم NFC واكتبها وفكّ ترميزها. امسح رموز QR والباركود. التقط المستندات والأجسام ثلاثية الأبعاد والغرف. أرسل كل عملية مسح إلى الـwebhook الخاص بك - تطبيق واحد، وكل ماسح يمكن لهاتفك أن يكونه.",
          "it": "Leggi, scrivi e decodifica i tag NFC. Scansiona codici QR e codici a barre. Cattura documenti, oggetti 3D e ambienti. Inoltra ogni scansione al tuo webhook - una sola app, tutti gli scanner che il telefono può diventare.",
          "tr": "NFC tag'leri oku, yaz ve çöz. QR kodları ve barkodları tara. Belgeleri, 3B nesneleri ve odaları yakala. Her taramayı kendi webhook'una gönder - tek uygulama, telefonunun olabileceği her tarayıcı.",
-         "ru": "Считывай, записывай и разбирай NFC-метки. Сканируй QR-коды и штрихкоды. Снимай документы, объёмные предметы и помещения. Отправляй каждое сканирование в свой вебхук. Одно приложение вместо всех сканеров, какими может стать телефон."
+         "ru": "Считывай, записывай и разбирай NFC-метки. Сканируй QR-коды и штрихкоды. Снимай документы, объёмные предметы и помещения. Отправляй каждое сканирование в свой вебхук. Одно приложение вместо всех сканеров, какими может стать телефон.",
+         "uk": "Зчитуй, записуй і розбирай NFC-мітки. Скануй QR-коди та штрихкоди. Знімай документи, об'ємні предмети й приміщення. Надсилай кожне сканування у свій вебхук. Один застосунок замість усіх сканерів, якими може стати телефон."
       }
    },
    "featuresLabel": {
-      "localizations": { "en": "Features", "de": "Funktionen", "ja": "機能", "pt": "Funcionalidades", "zh": "功能", "id": "Fitur", "es": "Funciones", "fr": "Fonctionnalités", "ar": "الميزات", "it": "Funzioni", "tr": "Özellikler", "ru": "Возможности" }
+      "localizations": { "en": "Features", "de": "Funktionen", "ja": "機能", "pt": "Funcionalidades", "zh": "功能", "id": "Fitur", "es": "Funciones", "fr": "Fonctionnalités", "ar": "الميزات", "it": "Funzioni", "tr": "Özellikler", "ru": "Возможности", "uk": "Можливості" }
    },
    "featuresBackAll": {
-      "localizations": { "en": "← All features", "de": "← Alle Funktionen", "ja": "← すべての機能", "pt": "← Todas as funcionalidades", "zh": "← 所有功能", "id": "← Semua fitur", "es": "← Todas las funciones", "fr": "← Toutes les fonctionnalités", "ar": "→ كل الميزات", "it": "← Tutte le funzioni", "tr": "← Tüm özellikler", "ru": "← Все возможности" }
+      "localizations": { "en": "← All features", "de": "← Alle Funktionen", "ja": "← すべての機能", "pt": "← Todas as funcionalidades", "zh": "← 所有功能", "id": "← Semua fitur", "es": "← Todas las funciones", "fr": "← Toutes les fonctionnalités", "ar": "→ كل الميزات", "it": "← Tutte le funzioni", "tr": "← Tüm özellikler", "ru": "← Все возможности", "uk": "← Усі можливості" }
    },
    "pricingIncluded": {
-      "localizations": { "en": "included", "de": "enthalten", "ja": "対応", "pt": "incluído", "zh": "包含", "id": "termasuk", "es": "incluido", "fr": "inclus", "ar": "متوفّر", "it": "incluso", "tr": "dahil", "ru": "включено" }
+      "localizations": { "en": "included", "de": "enthalten", "ja": "対応", "pt": "incluído", "zh": "包含", "id": "termasuk", "es": "incluido", "fr": "inclus", "ar": "متوفّر", "it": "incluso", "tr": "dahil", "ru": "включено", "uk": "входить" }
    },
    "pricingNotIncluded": {
-      "localizations": { "en": "not included", "de": "nicht enthalten", "ja": "非対応", "pt": "não incluído", "zh": "不包含", "id": "tidak termasuk", "es": "no incluido", "fr": "non inclus", "ar": "غير متوفّر", "it": "non incluso", "tr": "dahil değil", "ru": "не включено" }
+      "localizations": { "en": "not included", "de": "nicht enthalten", "ja": "非対応", "pt": "não incluído", "zh": "不包含", "id": "tidak termasuk", "es": "no incluido", "fr": "non inclus", "ar": "غير متوفّر", "it": "non incluso", "tr": "dahil değil", "ru": "не включено", "uk": "не входить" }
    },
    "pricingLimited": {
-      "localizations": { "en": "limited", "de": "eingeschränkt", "ja": "一部対応", "pt": "limitado", "zh": "部分支持", "id": "terbatas", "es": "limitado", "fr": "limité", "ar": "محدود", "it": "limitato", "tr": "sınırlı", "ru": "ограниченно" }
+      "localizations": { "en": "limited", "de": "eingeschränkt", "ja": "一部対応", "pt": "limitado", "zh": "部分支持", "id": "terbatas", "es": "limitado", "fr": "limité", "ar": "محدود", "it": "limitato", "tr": "sınırlı", "ru": "ограниченно", "uk": "обмежено" }
    },
    "pricingNotApplicable": {
-      "localizations": { "en": "not applicable", "de": "nicht zutreffend", "ja": "対象外", "pt": "não aplicável", "zh": "不适用", "id": "tidak berlaku", "es": "no aplicable", "fr": "non applicable", "ar": "لا ينطبق", "it": "non applicabile", "tr": "geçerli değil", "ru": "неприменимо" }
+      "localizations": { "en": "not applicable", "de": "nicht zutreffend", "ja": "対象外", "pt": "não aplicável", "zh": "不适用", "id": "tidak berlaku", "es": "no aplicable", "fr": "non applicable", "ar": "لا ينطبق", "it": "non applicabile", "tr": "geçerli değil", "ru": "неприменимо", "uk": "не застосовується" }
    },
    "pricingComingSoon": {
-      "localizations": { "en": "Coming soon", "de": "Demnächst verfügbar", "ja": "近日対応", "pt": "Em breve", "zh": "即将推出", "id": "Segera hadir", "es": "Próximamente", "fr": "Bientôt disponible", "ar": "قريبًا", "it": "Prossimamente", "tr": "Yakında", "ru": "Скоро" }
+      "localizations": { "en": "Coming soon", "de": "Demnächst verfügbar", "ja": "近日対応", "pt": "Em breve", "zh": "即将推出", "id": "Segera hadir", "es": "Próximamente", "fr": "Bientôt disponible", "ar": "قريبًا", "it": "Prossimamente", "tr": "Yakında", "ru": "Скоро", "uk": "Незабаром" }
    },
    "navToggle": {
-      "localizations": { "en": "Toggle navigation menu", "de": "Navigationsmenü umschalten", "ja": "ナビゲーションメニューを開閉", "pt": "Alternar menu de navegação", "zh": "切换导航菜单", "id": "Alihkan menu navigasi", "es": "Alternar el menú de navegación", "fr": "Afficher ou masquer le menu de navigation", "ar": "تبديل قائمة التنقل", "it": "Apri o chiudi il menu di navigazione", "tr": "Gezinme menüsünü aç veya kapat", "ru": "Открыть или закрыть меню" }
+      "localizations": { "en": "Toggle navigation menu", "de": "Navigationsmenü umschalten", "ja": "ナビゲーションメニューを開閉", "pt": "Alternar menu de navegação", "zh": "切换导航菜单", "id": "Alihkan menu navigasi", "es": "Alternar el menú de navegación", "fr": "Afficher ou masquer le menu de navigation", "ar": "تبديل قائمة التنقل", "it": "Apri o chiudi il menu di navigazione", "tr": "Gezinme menüsünü aç veya kapat", "ru": "Открыть или закрыть меню", "uk": "Відкрити або закрити меню" }
    },
    "themeToggle": {
-      "localizations": { "en": "Toggle light or dark theme", "de": "Zwischen hellem und dunklem Design wechseln", "ja": "ライトテーマとダークテーマを切り替える", "pt": "Alternar entre tema claro e escuro", "zh": "切换浅色或深色主题", "id": "Beralih antara tema terang dan gelap", "es": "Cambiar entre tema claro y oscuro", "fr": "Basculer entre le thème clair et sombre", "ar": "التبديل بين المظهر الفاتح والداكن", "it": "Alterna tema chiaro e scuro", "tr": "Açık veya koyu temayı değiştir", "ru": "Переключить светлую или тёмную тему" }
+      "localizations": { "en": "Toggle light or dark theme", "de": "Zwischen hellem und dunklem Design wechseln", "ja": "ライトテーマとダークテーマを切り替える", "pt": "Alternar entre tema claro e escuro", "zh": "切换浅色或深色主题", "id": "Beralih antara tema terang dan gelap", "es": "Cambiar entre tema claro y oscuro", "fr": "Basculer entre le thème clair et sombre", "ar": "التبديل بين المظهر الفاتح والداكن", "it": "Alterna tema chiaro e scuro", "tr": "Açık veya koyu temayı değiştir", "ru": "Переключить светлую или тёмную тему", "uk": "Перемкнути світлу або темну тему" }
    },
    "langFlag": {
-      "localizations": { "en": "🇺🇸", "de": "🇩🇪", "ja": "🇯🇵", "pt": "🇵🇹", "zh": "🇨🇳", "id": "🇮🇩", "es": "🇪🇸", "fr": "🇫🇷", "ar": "🇸🇦", "it": "🇮🇹", "tr": "🇹🇷", "ru": "🇷🇺" }
+      "localizations": { "en": "🇺🇸", "de": "🇩🇪", "ja": "🇯🇵", "pt": "🇵🇹", "zh": "🇨🇳", "id": "🇮🇩", "es": "🇪🇸", "fr": "🇫🇷", "ar": "🇸🇦", "it": "🇮🇹", "tr": "🇹🇷", "ru": "🇷🇺", "uk": "🇺🇦" }
    },
    "langName": {
-      "localizations": { "en": "English", "de": "Deutsch", "ja": "日本語", "pt": "Português", "zh": "简体中文", "id": "Bahasa Indonesia", "es": "Español", "fr": "Français", "ar": "العربية", "it": "Italiano", "tr": "Türkçe", "ru": "Русский" }
+      "localizations": { "en": "English", "de": "Deutsch", "ja": "日本語", "pt": "Português", "zh": "简体中文", "id": "Bahasa Indonesia", "es": "Español", "fr": "Français", "ar": "العربية", "it": "Italiano", "tr": "Türkçe", "ru": "Русский", "uk": "Українська" }
    },
    "trustRatings": {
-      "localizations": { "en": "ratings", "de": "Bewertungen", "ja": "件の評価", "pt": "avaliações", "zh": "个评分", "id": "ulasan", "es": "valoraciones", "fr": "notes", "ar": "تقييم", "it": "valutazioni", "tr": "değerlendirme", "ru": "оценок" }
+      "localizations": { "en": "ratings", "de": "Bewertungen", "ja": "件の評価", "pt": "avaliações", "zh": "个评分", "id": "ulasan", "es": "valoraciones", "fr": "notes", "ar": "تقييم", "it": "valutazioni", "tr": "değerlendirme", "ru": "оценок", "uk": "оцінок" }
    }
 }

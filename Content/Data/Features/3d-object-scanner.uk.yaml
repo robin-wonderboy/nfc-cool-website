@@ -1,0 +1,87 @@
+slug: "3d-object-scanner"
+backLinkText: "← Усі можливості"
+
+card:
+  title: "3D-сканер об'єктів"
+  description: "Обійди предмет із телефоном, і Object Capture від Apple збере текстуровану 3D-модель. Експортуй у USDZ для доповненої реальності, у STL для 3D-друку або в OBJ для Blender. Потрібен iPhone Pro чи iPad Pro з LiDAR."
+  imagePath: "/assets/images/Webflow/3d-object.webp"
+  platforms: "iOS only"
+
+hero:
+  title: "3D-сканер об'єктів"
+  subtitle: "Обійди справжній предмет з iPhone у руках, і NFC.cool збере текстуровану 3D-модель через Object Capture від Apple просто на пристрої. Готову модель забирай у доповнену реальність або в будь-який 3D-редактор."
+  platforms: "iOS only"
+  heroImagePath: "/assets/images/Webflow/3d-object.webp"
+
+capabilitiesTitle: "Що вміє застосунок"
+capabilities:
+  - title: "Зйомка для фотограметрії"
+    description: "Обійди предмет, роблячи десятки знімків. Фотограметрія Object Capture просто на пристрої збирає текстуровану 3D-модель з правдоподібною геометрією."
+  - title: "Перегляд і доопрацювання"
+    description: "Роздивись модель у 3D ще до експорту. За бажання відкрий вихідні знімки сеансу, щоб побачити те саме, що бачила камера."
+  - title: "AR Quick Look"
+    description: "Постав відсканований предмет собі у вітальню через AR Quick Look. Файлом USDZ можна поділитися з друзями, і вони роздивляться його прямо в Повідомленнях."
+  - title: "Шість форматів експорту"
+    description: "Забирай текстурований USDZ для AR Quick Look або чисту геометрію в USD, OBJ, STL, PLY чи ABC для Blender та решти 3D-інструментів."
+
+subsectionsTitle: "З твоїх рук у доповнену реальність"
+subsections:
+  - title: "AR Quick Look у Повідомленнях"
+    body: "<p>Для доповненої реальності Apple має власний формат USDZ. Поділися відсканованим предметом в iMessage чи через AirDrop, і одержувач покрутить його, поставить у себе в кімнаті й зробить знімок екрана просто з попереднього перегляду повідомлення, нічого не встановлюючи. Чудово для показу товару, документування скульптури або просто щоб похвалитися.</p>"
+    platforms: "iOS"
+
+  - title: "Швидкі команди й App Intents"
+    body: "<p>NFC.cool вбудовується просто у Швидкі команди iOS і приносить готові дії: взяти останню зчитану NFC-мітку, записати повідомлення на мітку, відкрити сканер або дістати останній відсканований QR-код. Збери з них команду, яка зчитує мітку, розбирає її вміст і запускає далі що завгодно: автоматизацію, журнал, щоденник. Ті самі дії живлять кнопку <strong>Сканувати</strong> на екрані блокування в iOS 17 і новіших.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "iPhone зв'язує NFC-мітку з блоками автоматизації"
+    platforms: "iOS"
+
+  - title: "Синхронізація через iCloud між iPhone, iPad і Mac"
+    body: "<p>Відскановані моделі лежать у теці «Документи» в iCloud, тож iPhone, яким ти знімав, iPad, на якому переглядав, і <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac</a>, на якому редагуватимеш, бачать одну бібліотеку. Зніми в дорозі, доведи до ладу за столом.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "NFC.cool синхронізується між iPhone, iPad і Mac"
+    platforms: "iOS"
+
+specsTitle: "Обладнання та експорт"
+specs:
+  - title: "Вимоги до пристрою"
+    items:
+      - "iOS 17.0 або новіша"
+      - "Потрібен LiDAR: моделі iPhone Pro, починаючи з iPhone 12 Pro"
+      - "iPad Pro 2020 року й новіші теж підходять"
+  - title: "Формати експорту"
+    items:
+      - "USDZ: з текстурами, формат AR Quick Look від Apple"
+      - "USD, OBJ, STL, PLY, ABC: сама геометрія (через ModelIO)"
+      - "Вихідні знімки сеансу (Platinum)"
+
+pricing:
+  title: "Безкоштовно і Platinum"
+  columns: ["Безкоштовно", "Platinum"]
+  rows:
+    - label: "3D-сканування об'єктів"
+      values: ["✓", "✓"]
+    - label: "Розміщення об'єкта в доповненій реальності"
+      values: ["✓", "✓"]
+    - label: "Експорт 3D-моделей"
+      values: ["✗", "✓"]
+    - label: "Експорт фотографій"
+      values: ["✗", "✓"]
+
+faqTitle: "Часті питання"
+faq:
+  - question: "Чи потрібен на iPhone LiDAR?"
+    answer: "Так. Сеанс Object Capture від Apple вимагає пристрою з LiDAR, тобто iPhone Pro (12 Pro і новіші) або iPad Pro від 2020 року. У звичайних iPhone LiDAR немає."
+  - question: "Скільки триває сканування?"
+    answer: "Кілька хвилин ходьби навколо предмета, а потім ще пара хвилин збирання моделі на пристрої. Більші й фактурніші предмети забирають більше часу."
+  - question: "Чи можна надрукувати результат на 3D-принтері?"
+    answer: "Експортуй в OBJ і переведи його в STL у Blender, MeshLab чи будь-якому іншому 3D-інструменті. Найкраще виходять предмети середнього розміру з виразною фактурою."
+  - question: "Чим це відрізняється від сканера приміщень?"
+    answer: "Object Capture, тобто ця функція, будує одну 3D-модель предмета. Сканер приміщень бере LiDAR і RoomPlan від Apple та будує план простору: стіни, двері, меблі. LiDAR потрібен обом, але відповідають вони на різні питання."
+
+relatedReadingTitle: "Читай далі"
+relatedReading:
+  - title: "3D-сканування на iPhone: фотограметрія і LiDAR у кишені"
+    url: "/blog/3d-scan-feature/"
+  - title: "Сканер приміщень"
+    url: "/features/room-scanner/"

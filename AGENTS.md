@@ -1,6 +1,6 @@
 # NFC.cool - website
 
-Multi-page marketing site for the NFC.cool brand in twelve locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it`, `tr`, `ru` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
+Multi-page marketing site for the NFC.cool brand in thirteen locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it`, `tr`, `ru`, `uk` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
 
 ## Build & serve
 
@@ -14,6 +14,8 @@ python3 Scripts/lint-turkish.py   # Turkish-only prose lint (see below)
 python3 Scripts/lint-turkish.py --selftest   # check the Turkish lint's own rules
 python3 Scripts/lint-russian.py   # Russian-only prose lint (see below)
 python3 Scripts/lint-russian.py --selftest   # check the Russian lint's own rules
+python3 Scripts/lint-ukrainian.py   # Ukrainian-only prose lint (see below)
+python3 Scripts/lint-ukrainian.py --selftest   # check the Ukrainian lint's own rules
 ```
 
 `i18n-check` is this repo's own gate (see `Sources/Site/I18n/`, configured by repo-root
@@ -22,8 +24,8 @@ localizable roots (Blog, Pages, Data/Features, Data/Pricing, Landing), a UI-stri
 `Strings/Localizable.json` left untranslated for some locale, a leftover `⟦TODO⟧`
 scaffold marker, an em/en dash in structured data, or a straight ASCII `"` in the prose of
 a locale that has its own quotation marks (`lint.quoteStyle` in `i18n.yaml`: `de` `„…“`,
-`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`, `ru` `«…»`; `es`/`pt`/`id`/`it`/`tr` are deliberately
-absent because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
+`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`, `ru` `«…»`, `uk` `«…»`; `es`/`pt`/`id`/`it`/`tr` are
+deliberately absent because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
 blocks, HTML attributes and link targets are exempt from that rule. Structural drift (a
 translation missing an optional section the default language has) and "looks untranslated"
 content are advisory warnings. CI runs it before every build (`.github/workflows/deploy.yml`).
@@ -76,6 +78,33 @@ distinguish them. The register the lint cannot check (informal `ты`, the fixed
 the Russian calque traps and the dash-avoidance playbook) is in
 `Scripts/russian-style-guide.md`; read it before editing any `.ru` file.
 
+`Scripts/lint-ukrainian.py` is the fourth of these, for `uk`, and it exists for a sharper
+reason than the others. Ukrainian's characteristic defect is not awkwardness, it is Russian
+showing through in a form a spellchecker accepts, so most of the rules hunt exactly that: the
+four letters that are not in the Ukrainian alphabet at all (`ы э ъ ё`), `-тся` where Ukrainian
+always writes `-ться`, a word-initial `и`, a curated list of Russian function words spelled
+with Ukrainian-legal letters (`если`, `сейчас`, `можно`), surzhyk (`являється`, `включити` for
+turn-on, `на протязі`, `в залежності від`, `по` + dative plural, `скачати`), and the active
+present participles Russian forms and Ukrainian does not (`існуючий`, `працюючий`, `скануючий`).
+It carries the `ru` copula rule too, as `copula-tse`, because Ukrainian puts the same dash
+before `це` that Russian puts before `это` and the house style bans it. Two rules are
+Ukrainian-only: a missing apostrophe in the fixed list of words that need one (`комп'ютер`,
+`об'єкт`, `пам'ять`, `з'єднання`), and the homoglyph check, which matters more here than
+anywhere else because Latin `i` and Cyrillic `і` are the same glyph.
+
+Run `--selftest` to check the RULES rather than the content: it pins 95 cases, and three of
+them exist because a rule flagged CORRECT Ukrainian on the first pass over the locale. The
+apostrophe is not a word character, so `\bявля…` also matched inside `з'являється`; the verbal
+noun `включення` ("inclusion") is ordinary Ukrainian and only the device sense of `включити` is
+wrong; and the copula's clause boundary used to swallow a blank line, so a colon ending a
+`### Heading:` reached into the next paragraph. A fourth case runs the other way: the URL
+stripper was blanking the bare brand `NFC.cool`, which hid every `NFC.cool це …` from the
+copula rule, on the one subject the site names most, so a schemeless domain is now stripped
+only when it carries a path. The register the lint cannot check (informal `ти`, the fixed
+glossary, the Ukrainian calque traps, the dash-avoidance playbook, and euphony - `у`/`в` and
+`і`/`й`, which need a phonetic model) is in `Scripts/ukrainian-style-guide.md`; read it before
+editing any `.uk` file.
+
 Requires Swift 6.2+ and macOS 26 locally. CI uses `swift-actions/setup-swift@v2` on Ubuntu.
 
 ## Deploy
@@ -91,7 +120,7 @@ If we ever move to Cloudflare Pages, the form already works as-is (Worker is hos
 
 ## Sitemap (what visitors get)
 
-Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`, `/tr/`, `/ru/`); the table shows the EN path and its source.
+Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`, `/tr/`, `/ru/`, `/uk/`); the table shows the EN path and its source.
 
 | EN path | Source |
 | --- | --- |
