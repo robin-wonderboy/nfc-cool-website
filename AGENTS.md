@@ -1,6 +1,6 @@
 # NFC.cool - website
 
-Multi-page marketing site for the NFC.cool brand in eleven locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it`, `tr` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
+Multi-page marketing site for the NFC.cool brand in twelve locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it`, `tr`, `ru` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
 
 ## Build & serve
 
@@ -12,6 +12,8 @@ swift run Site validate    # SiteKit's built-in file-presence check (Blog/ + Pag
 python3 Scripts/lint-italian.py   # Italian-only prose lint (see below)
 python3 Scripts/lint-turkish.py   # Turkish-only prose lint (see below)
 python3 Scripts/lint-turkish.py --selftest   # check the Turkish lint's own rules
+python3 Scripts/lint-russian.py   # Russian-only prose lint (see below)
+python3 Scripts/lint-russian.py --selftest   # check the Russian lint's own rules
 ```
 
 `i18n-check` is this repo's own gate (see `Sources/Site/I18n/`, configured by repo-root
@@ -20,7 +22,7 @@ localizable roots (Blog, Pages, Data/Features, Data/Pricing, Landing), a UI-stri
 `Strings/Localizable.json` left untranslated for some locale, a leftover `⟦TODO⟧`
 scaffold marker, an em/en dash in structured data, or a straight ASCII `"` in the prose of
 a locale that has its own quotation marks (`lint.quoteStyle` in `i18n.yaml`: `de` `„…“`,
-`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`; `es`/`pt`/`id`/`it`/`tr` are deliberately
+`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`, `ru` `«…»`; `es`/`pt`/`id`/`it`/`tr` are deliberately
 absent because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
 blocks, HTML attributes and link targets are exempt from that rule. Structural drift (a
 translation missing an optional section the default language has) and "looks untranslated"
@@ -51,6 +53,29 @@ the script says why. The register the lint cannot check (informal `sen`, the fix
 the Turkish calque traps) is in `Scripts/turkish-style-guide.md`; read it before editing any
 `.tr` file.
 
+`Scripts/lint-russian.py` is the third of these, for `ru`, and it carries one rule the
+other two do not need. Russian normally puts a dash between a subject and a predicate
+noun (`NFC-метка — это чип`), but the house style bans the dash in every locale, so that
+whole shape has to be restructured; `copula-eto` finds it. That rule is worth
+understanding before editing any `.ru` file, because `это` is also a subject pronoun
+(`Для NFC это значение записи NDEF`), an object (`Счётчик касаний это использует`) and a
+determiner (`всё это`). It separates them with three signals: what opens the clause, what
+sits immediately before `это`, and what follows it. The last two only ever suppress, so a
+gap there costs a missed defect rather than a false alarm on correct prose. It found 63
+real defects on its first run over the locale.
+
+The rest of the lint covers the usual tells: `вы` register leaks (this locale is `ты`-only),
+Latin homoglyphs inside a Cyrillic word (`с o e a p x` look identical and break search,
+spellcheck and screen readers), dashes AND the ` - ` substitute, `-тся`/`-ться` after a
+modal, a fixed `ё` list, glossary violations (`NFC-тег`, `бэкап`, `гайд`, `тапнуть`),
+`является`, English curly quotes and English thousands separators. Prose only. Run
+`--selftest` to check the RULES rather than the content: it pins 64 cases, and several of
+them exist because a rule once flagged CORRECT Russian - `подключение` and `включена` are
+spelled with `е` while only `включён`/`включённый` take `ё`, and the `ё` rule has to
+distinguish them. The register the lint cannot check (informal `ты`, the fixed glossary,
+the Russian calque traps and the dash-avoidance playbook) is in
+`Scripts/russian-style-guide.md`; read it before editing any `.ru` file.
+
 Requires Swift 6.2+ and macOS 26 locally. CI uses `swift-actions/setup-swift@v2` on Ubuntu.
 
 ## Deploy
@@ -66,7 +91,7 @@ If we ever move to Cloudflare Pages, the form already works as-is (Worker is hos
 
 ## Sitemap (what visitors get)
 
-Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`, `/tr/`); the table shows the EN path and its source.
+Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`, `/tr/`, `/ru/`); the table shows the EN path and its source.
 
 | EN path | Source |
 | --- | --- |

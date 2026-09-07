@@ -7,3 +7,6 @@ Package.resolved
 *.xcworkspace
 DerivedData/
 .DS_Store
+# Python bytecode from the locale lint scripts
+__pycache__/
+*.pyc

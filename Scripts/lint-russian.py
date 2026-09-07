@@ -138,6 +138,102 @@ ALLOWED_PHRASES = [
     "1st Class - Flight Tracker",
 ]
 
+
+# --- The copula `X это Y` --------------------------------------------------
+# Russian puts a dash between a subject and a predicate noun when the copula is
+# omitted, and the dash goes before `это`: `NFC-метка — это чип`. This locale
+# bans the dash, so that whole shape has to be restructured (style guide §4.1),
+# which makes every occurrence a defect.
+#
+# The hard part is that `это` is also a subject pronoun (`Для NFC это значение
+# записи NDEF`), an object (`Счётчик касаний это использует`) and a determiner
+# (`всё это`). Telling those apart needs to know whether the word before it
+# heads a nominative subject. Three signals do it well enough:
+#   1. what OPENS the clause - a preposition or question word means `это` is the
+#      subject, and the clause is fine;
+#   2. what sits immediately BEFORE `это` - a preposition, particle or verb
+#      makes it an object or determiner;
+#   3. what FOLLOWS `это` - a verb or predicative adverb is not a predicate noun.
+# Signals 2 and 3 only ever SUPPRESS, so a gap there costs a missed defect
+# rather than a false alarm on correct prose.
+COPULA_TRANSPARENT = {"но", "а", "и", "однако", "зато", "тут", "теперь", "также"}
+
+COPULA_OPENERS = set("""
+в во на за под по про для из от к ко с со о об обо при до через над перед
+без между у вокруг после вместо кроме ради сквозь среди
+что чем чему чего кто кого кому как какой какая какое какие где куда откуда
+когда почему зачем сколько который которая которое которые чтобы если ли
+формально пока сначала потом теперь тогда здесь там сюда туда уже ещё еще
+именно только просто наконец конечно возможно вероятно поэтому значит однако
+всё все это то вот да нет не ни или либо
+часто обычно потому ведь итак впрочем скорее пожалуй разве неужели
+впервые сегодня вчера завтра раньше позже везде всюду
+снаружи внутри сверху снизу слева справа впереди позади рядом
+""".split())
+
+COPULA_PRE_STOP = {"ли", "всё", "все", "это", "то", "вот", "и", "а", "но", "так",
+                   "бы", "не", "ни", "же", "уж", "вон", "ровно", "именно", "разве"}
+
+COPULA_PREPOSITIONS = set("""
+в во на за под по про для из от к ко с со о об обо при до через над перед
+без между у вокруг после вместо кроме ради сквозь среди
+""".split())
+
+COPULA_POST_STOP = {"не", "ни", "тоже", "также", "уже", "ещё", "еще", "же", "бы",
+                    "ли", "и", "сам", "сама", "само", "сами"}
+
+COPULA_PREDICATIVE = set("""
+верно возможно важно нужно надо хорошо плохо понятно ясно легко просто удобно
+полезно нормально правда неправда очевидно логично странно интересно
+""".split())
+
+COPULA_PAST_MODAL = {"смог", "смогла", "смогли", "мог", "могла", "могли",
+                     "помог", "помогла", "хотел", "хотела", "решил", "решила"}
+
+COPULA_IMPERATIVE = {"сравни", "собери", "попробуй", "запиши", "считай", "проверь",
+                     "посмотри", "открой", "нажми", "поднеси", "возьми", "сделай",
+                     "смотри", "читай", "бери", "начни", "думай", "знай"}
+
+_COPULA_VERB_END = re.compile(
+    r"(?:ет|ёт|ит|ут|ют|ат|ят|ется|ится|ются|атся|ятся|ешь|ишь|ете|ите|ем|им|"
+    r"ал|ял|ил|ла|ло|ли|лся|лась|лось|лись|аю|яю|ую|юю|ают|яют|аем|яем|"
+    r"ёл|ел|ол|ул|ыл)$")
+_COPULA_NONFINITE = re.compile(r"(?:ть|ться|ти|тись|чь|чься)$")
+
+_ALNUM = "A-Za-zА-Яа-яЁё0-9"
+_CW = rf"[{_ALNUM}]+(?:[.\-_][{_ALNUM}]+)*"      # NFC.cool, 3D-сканер, NTAG216
+_EMPH = r"[*_«\"\'\u2018\u201c]*"              # markdown emphasis / opening quotes
+COPULA_PATTERN = (
+    rf"(?:^|[.!?:;»)\]]\s+|,\s+|\n)\s*{_EMPH}"
+    rf"(?P<subj>(?:{_CW}{_EMPH}\s+{_EMPH}){{0,5}}{_CW})"
+    rf"{_EMPH}\s+это\s+{_EMPH}(?P<after>{_CW})")
+
+
+def copula_is_defect(match: re.Match) -> bool:
+    """True when `это` is the second half of a copula that needs a dash."""
+    subj = match.group("subj").split()
+    after = match.group("after").lower()
+    while subj and subj[0].lower() in COPULA_TRANSPARENT:
+        subj = subj[1:]
+    if not subj:
+        return False
+    if subj[0].lower() in COPULA_OPENERS:
+        return False                              # a preposition opens the clause
+    last = subj[-1].lower()
+    if last in COPULA_PRE_STOP or last in COPULA_PREPOSITIONS:
+        return False                              # `на это`, `всё это`
+    if (_COPULA_VERB_END.search(last) or _COPULA_NONFINITE.search(last)
+            or last in COPULA_IMPERATIVE or last in COPULA_PAST_MODAL):
+        return False                              # `сделать это` -> object
+    if (after in COPULA_PREDICATIVE or after in COPULA_POST_STOP
+            or _COPULA_VERB_END.search(after)):
+        return False                              # `это работает`, `это верно`
+    return True
+
+
+# Rules whose regex is only the candidate finder; the predicate decides.
+SUPPRESSORS = {"copula-eto": lambda m: not copula_is_defect(m)}
+
 # (name, pattern, explanation, regex flags)
 ERROR_RULES: list[tuple[str, str, str, int]] = [
     (
@@ -194,6 +290,13 @@ ERROR_RULES: list[tuple[str, str, str, int]] = [
         re.I,
     ),
     (
+        "copula-eto",
+        COPULA_PATTERN,
+        "`X это Y` needs a dash before `это` in Russian, and this locale bans "
+        "the dash - restructure with a verb or a locative (style guide §4.1)",
+        re.M,
+    ),
+    (
         "curly-quote",
         r"[“”]",
         "English curly quotes - Russian prose uses «…» (nested: „…“)",
@@ -215,19 +318,7 @@ ERROR_RULES: list[tuple[str, str, str, int]] = [
     ),
 ]
 
-# Deliberately NOT linted: the copula `X это Y`. This locale bans the dash, so
-# `NFC.cool — это приложение` cannot be written and `NFC.cool это приложение` is
-# ungrammatical; the fix is always to restructure (style guide §4.1). But the
-# defect cannot be separated from correct Russian mechanically: `это` is also a
-# subject pronoun (`Для NFC это значение записи NDEF`), an object (`Счётчик
-# касаний это использует`) and a determiner (`всё это`), and telling those apart
-# needs to know whether the word before it is a nominative noun. A stop-list
-# version of this rule scored 11 real defects against 12 false positives on this
-# locale, so it stays a manual pass instead. Review it with:
-#   grep -o '\S\+ это \S\+' Content/**/*.ru.{md,yaml}
-# and check each hit for `noun + это + noun`, which is the shape to rewrite.
-#
-# Also deliberately NOT linted: comma placement before `что` / `чтобы` / `который`.
+# Deliberately NOT linted: comma placement before `что` / `чтобы` / `который`.
 # Russian subordinate clauses take a comma, and a missing one is a real defect,
 # but the same words also head non-clausal phrases (`что-то`, `не что иное`,
 # `который час`), and `что` after a preposition or inside a fixed expression
@@ -305,6 +396,29 @@ SELFTEST: list[tuple[str, str | None]] = [
     ("Он сказал “привет”", "curly-quote"),
     ("73,500 отзывов", "number-format"),
     ('title: "Возможности"', "ascii-quote"),
+    # -- the copula, which needs a dash this locale cannot use ---------------
+    ("NFC-метка это небольшой пассивный чип", "copula-eto"),
+    ("Бумажная визитка это застывший артефакт.", "copula-eto"),
+    ("Amiibo это именно чипы NTAG215.", "copula-eto"),
+    ("NTAG216 от NXP это самый ёмкий чип в семействе.", "copula-eto"),
+    ("Приложение для iPhone это полный набор для сканирования.", "copula-eto"),
+    ("Но самые надёжные это метки в формате карты.", "copula-eto"),
+    ("Самая простая раскладка это **один столбец**.", "copula-eto"),
+    ("Да. RoomPlan это API от Apple.", "copula-eto"),
+    # -- `это` as subject, object or determiner: all correct, none flagged ---
+    ("Для NFC это значение записи NDEF, ссылка или текст.", None),
+    ("Счётчик касаний это использует: метка настраивается так.", None),
+    ("И всё это по-прежнему выходит из-под одной клавиатуры.", None),
+    ("На iPhone это делает бесплатное приложение NFC.cool.", None),
+    ("Формально это верно почти для любого чипа NTAG.", None),
+    ("Работает ли это на iPhone?", None),
+    ("Бесплатно там, где это возможно.", None),
+    ("Снаружи это обычная NFC-метка.", None),
+    ("Каждый пришедший гость скажет за это спасибо.", None),
+    ("Попробуй провернуть это с пятьюстами карточками.", None),
+    ("Я считаю это важным для приватности.", None),
+    ("а большинству ровно это и нужно", None),
+    ("«Я не смог это проверить» и «это подделка» очень разные фразы.", None),
 ]
 
 
@@ -318,7 +432,13 @@ def selftest() -> int:
     failures = 0
     rules = compiled_error_rules()
     for prose, expected in SELFTEST:
-        hits = {name for name, pattern, _ in rules if pattern.search(prose)}
+        hits = set()
+        for name, pattern, _ in rules:
+            for m in pattern.finditer(prose):
+                if SUPPRESSORS.get(name, lambda _m: False)(m):
+                    continue
+                hits.add(name)
+                break
         if expected is None and hits:
             print(f"  [SELFTEST] false positive on correct Russian: "
                   f"{prose!r} -> {sorted(hits)}")
@@ -405,8 +525,11 @@ def check(path: Path, quiet: bool) -> tuple[list[str], list[str]]:
     ]
 
     for name, pattern, explanation in compiled_error_rules():
+        suppress = SUPPRESSORS.get(name, lambda _m: False)
         for m in pattern.finditer(prose):
             if any(start <= m.start() and m.end() <= end for start, end in allowed):
+                continue
+            if suppress(m):
                 continue
             errors.append(
                 f"  [ERROR] {rel}:{line_of(prose, m.start())} [{name}] "

@@ -235,14 +235,9 @@ that makes you reach for the source to understand it is a defect - rewrite it. T
 catches spelling and register; only this pass catches prose that is technically correct and
 still obviously translated.
 
-One check belongs in this pass because no linter can do it (see the note in
-`Scripts/lint-russian.py`): the copula `X это Y`. Since the dash is banned here, that shape is
-always a defect, but `это` is also a subject pronoun, an object and a determiner, so only a
-reader can tell them apart. Sweep it by hand:
-
-```bash
-grep -o '\S\+ это \S\+' Content/Blog/*.ru.md Content/Pages/*.ru.md Content/Data/**/*.ru.yaml
-```
-
-Every hit shaped `noun + это + noun` gets rewritten with a verb (§4.1). Everything else -
-`Для NFC это значение…`, `Счётчик касаний это использует`, `всё это` - is correct, leave it.
+The copula `X это Y` used to live in this pass, because the dash it needs is banned here
+and `это` is also a subject pronoun, an object and a determiner. It is now linted
+(`copula-eto` in `Scripts/lint-russian.py`), so the sweep is automatic; what stays manual
+is choosing the restructure. Reach for a verb (`NFC-метка хранит…`), a locative
+(`Внутри метки стоит…`), or split the sentence so `это` becomes a real subject
+(`Что такое NFC-метка? Это крошечный чип.`) - never ` - ` in place of the dash.
