@@ -1,0 +1,87 @@
+slug: "3d-object-scanner"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "3B Nesne Tarayıcı"
+  description: "Nesnenin etrafında dolaş, Apple'ın Object Capture'ı dokulu bir 3B model kursun. AR için USDZ, 3B baskı için STL, Blender için OBJ olarak dışa aktar. LiDAR'lı bir iPhone Pro ya da iPad Pro gerekir."
+  imagePath: "/assets/images/Webflow/3d-object.webp"
+  platforms: "Yalnızca iOS"
+
+hero:
+  title: "3B Nesne Tarayıcı"
+  subtitle: "iPhone'unla gerçek bir nesnenin etrafında dolaş: NFC.cool, Apple'ın cihazda çalışan Object Capture'ını kullanarak dokulu bir 3B model kurar. Biten modeli AR'a ya da herhangi bir 3B araca aktar."
+  platforms: "Yalnızca iOS"
+  heroImagePath: "/assets/images/Webflow/3d-object.webp"
+
+capabilitiesTitle: "Neler yapabilirsin"
+capabilities:
+  - title: "Fotogrametriyle yakalama"
+    description: "Nesnenin etrafında dolaşıp onlarca fotoğraf çek. Apple'ın cihazda çalışan Object Capture hattı, gerçekçi geometriye sahip dokulu bir 3B model kurar."
+  - title: "Önizle ve düzelt"
+    description: "Modeli dışa aktarmadan önce 3B olarak incele. Kameranın ne gördüğünü merak edersen oturumda çekilen ham görsellere de bakabilirsin."
+  - title: "AR Quick Look"
+    description: "Taradığın nesneyi AR Quick Look ile oturma odana koy. USDZ dosyalarını arkadaşlarınla paylaş, onlar da doğrudan Mesajlar içinde görsün."
+  - title: "Altı dışa aktarma biçimi"
+    description: "AR Quick Look için dokulu USDZ, ya da Blender ve diğer 3B araçlar için düz geometri olarak USD, OBJ, STL, PLY veya ABC."
+
+subsectionsTitle: "Elinden AR görünümüne"
+subsections:
+  - title: "Mesajlar'da AR Quick Look"
+    body: "<p>USDZ, Apple'ın kendi AR biçimi. Taradığın nesneyi iMessage ya da AirDrop ile paylaş, karşındaki onu döndürsün, kendi odasına yerleştirsin, ekran görüntüsünü alsın. Hepsi mesaj önizlemesinden, uygulama kurmadan. Ürün önizlemeleri, heykel belgelemesi ya da sırf hava atmak için birebir.</p>"
+    platforms: "iOS"
+
+  - title: "Kısayollar ve App Intents"
+    body: "<p>NFC.cool, hazır eylemleriyle doğrudan iOS Kısayollar uygulamasına bağlanır: son okunan NFC tag'ini al, tag'e mesaj yaz, tarayıcıyı aç ya da son okunan QR kodu getir. Bunları zincirleyip tag okuyan, içeriğini çözen ve sonrasında ne istersen onu başlatan kısayollar kur: otomasyon, kayıt tutma, günlük, aklına ne gelirse. Aynı eylemler iOS 17 ve sonrasındaki kilit ekranı <strong>Tarama Düğmesi</strong> denetimini de besler.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "NFC tag'ini otomasyon bloklarına bağlayan iPhone"
+    platforms: "iOS"
+
+  - title: "iPhone, iPad ve Mac arasında iCloud eşitleme"
+    body: "<p>Taranan modeller iCloud Belgeler klasöründe durur, yani taradığın iPhone, gözden geçirdiğin iPad ve düzenleyeceğin <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac</a> aynı kitaplığı görür. Yolda çek, masada bitir.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "iPhone, iPad ve Mac arasında eşitlenen NFC.cool"
+    platforms: "iOS"
+
+specsTitle: "Donanım ve dışa aktarma"
+specs:
+  - title: "Donanım gereksinimleri"
+    items:
+      - "iOS 17.0 ya da üzeri"
+      - "LiDAR şart: iPhone Pro modelleri (iPhone 12 Pro ve sonrası)"
+      - "iPad Pro (2020) ve sonrası da destekleniyor"
+  - title: "Dışa aktarma biçimleri"
+    items:
+      - "USDZ - dokulu, Apple'ın AR Quick Look biçimi"
+      - "USD, OBJ, STL, PLY, ABC - yalnızca geometri (ModelIO üzerinden)"
+      - "Ham çekim görselleri (Platinum)"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "3B nesne tarama"
+      values: ["✓", "✓"]
+    - label: "Nesneyi AR'da yerleştirme"
+      values: ["✓", "✓"]
+    - label: "3B model dışa aktarma"
+      values: ["✗", "✓"]
+    - label: "Fotoğraf dışa aktarma"
+      values: ["✗", "✓"]
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "iPhone'umda LiDAR olması şart mı?"
+    answer: "Evet. Apple'ın Object Capture oturumu LiDAR'lı cihaz ister, yani iPhone Pro (12 Pro ve sonrası) ya da 2020 ve sonrasının iPad Pro'su. Pro olmayan iPhone'larda LiDAR yok."
+  - question: "Bir tarama ne kadar sürer?"
+    answer: "Nesnenin etrafında birkaç dakika dolaşmak, ardından cihazda birkaç dakikalık yeniden kurulum. Daha büyük ya da daha dokulu nesneler daha uzun sürer."
+  - question: "Sonucu 3B yazıcıda basabilir miyim?"
+    answer: "OBJ olarak dışa aktarıp Blender, MeshLab ya da herhangi bir standart 3B araçta STL'ye çevirebilirsin. Model kalitesi en çok orta boy, dokusu belirgin nesnelerde iyi sonuç verir."
+  - question: "Bunun Oda Tarayıcı'dan farkı ne?"
+    answer: "Object Capture (bu özellik) tek bir nesnenin 3B modelini kurar. Oda Tarayıcı ise LiDAR ile Apple'ın RoomPlan'ını kullanıp mekanın kat planını çıkarır: duvarlar, kapılar, mobilyalar. İkisi de LiDAR ister ama farklı sorulara yanıt verir."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "iPhone'da fotogrametri ve LiDAR ile 3B tarama"
+    url: "/blog/3d-scan-feature/"
+  - title: "Oda Tarayıcı"
+    url: "/features/room-scanner/"

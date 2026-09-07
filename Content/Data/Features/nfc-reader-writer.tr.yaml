@@ -1,0 +1,188 @@
+slug: "nfc-reader-writer"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "NFC Okuma ve Yazma"
+  description: "Her NFC tag'i oku, 25'ten fazla mesaj türü yaz: bağlantı, Wi-Fi, kartvizit, kısayol ve dahası. Tag'leri kilitle, gizli verileri NFC Safe ile şifrele."
+  imagePath: "/assets/images/Webflow/nfc-card.webp"
+  platforms: "iOS · Android"
+
+hero:
+  title: "NFC Okuma ve Yazma"
+  subtitle: "iPhone ve Android'de NFC tag oku ve yaz. Okutunca her tag'i gör, kendi tag'lerine bağlantı, kişi ve Wi-Fi yaz, sonra kilitle ki kimse değiştiremesin."
+  platforms: "iOS · Android"
+  heroImagePath: "/assets/images/Webflow/nfc-scan-tag.webp"
+
+capabilitiesTitle: "Neler yapabilirsin"
+capabilities:
+  - title: "Her NDEF tag'ini oku"
+    description: "Herhangi bir NFC tag'ini okut ve NDEF kayıtlarını incele: adresler, kişiler, düz metin, MIME verisi, uygulama açma, özel yükler, üstüne ham baytlar ve teknoloji türü."
+  - title: "25'ten fazla mesaj türü yaz"
+    description: "Web siteleri, telefon numaraları, vCard'lar, Wi-Fi bilgileri, PayPal, Cash App ve Venmo, Spotify, YouTube, Kısayollar, Instagram, X, LinkedIn, TikTok, WhatsApp ve dahası."
+  - title: "Kilitle ve parolayla koru"
+    description: "Tag'i kalıcı olarak salt okunur yap ya da parolayla koru, böylece yalnızca yetkili cihazlar okuyup yazabilsin. Endüstriyel düzeyde tag sertleştirme."
+  - title: "Biçimlendir, toplu yaz, kopyala"
+    description: "Boş tag'leri biçimlendir, etkinlikler ya da ürün lansmanları için aynı içeriği bir yığın tag'e toplu yaz, bir tag'in içeriğini bir başkasına kopyala."
+  - title: "Okuyunca otomatik çalışsın"
+    description: "Tag okutulduğunda iOS kısayolu çalıştır, sonucu sesli okut, webhook tetikle ya da bağlantıyı kendiliğinden aç. Beş kanca, tek okutma."
+
+subsectionsTitle: "Sıradan bir NFC uygulamasından daha derin"
+subsections:
+  - title: "NFC Safe: gizli veriyi tag'in üstünde şifrele"
+    body: "<p>NFC uygulamalarının çoğu tag'e kartpostal gibi davranır: telefonu olan herkes okur. NFC Safe ise ona kapalı zarf gibi davranır. Gizli verin (parola, kurtarma ifadesi, lisans anahtarı ya da herhangi bir metin) tag'e ulaşmadan önce cihazında AES-256 ile şifrelenir. Tag'i kaybet, çaldır, bir yabancıya ver: parolan olmadan içerik yalnızca gürültüdür.</p><p>Aynı şifreleme iki platformda da çalışır, yani iPhone'da kilitlediğin gizli veriyi Android'de açabilirsin. Şifrelemenin ayrıntısını merak ediyorsan <a href=\"/blog/nfc-safe-encrypted-secrets/\">blogdaki NFC Safe incelemesini oku</a>.</p>"
+    imagePath: "/assets/images/Blog/nfc-safe-encrypted-secrets.webp"
+    imageAlt: "Tag üzerinde NFC Safe ile şifrelenmiş gizli veri"
+    platforms: "iOS · Android"
+
+  - title: "NFC okutma sayacı: her tag'i kimliğiyle ve sayısıyla izle"
+    body: "<p>Bazı NFC çipleri kendi okunma sayısını donanımda tutar. NFC okutma sayacı bunu işe koşar: tag'i öyle ayarlar ki her okumada taşıdığı içeriğe (adres, e-posta, SMS ya da kısayol) anlık okutma sayısını, istersen benzersiz tag kimliğini de ekler. Sunucu yok, internet yok, bakılacak arka uç yok; sayma ve değiştirme işini çipin kendisi yapar.</p><p>Böylece tek tag hangi fiziksel etiketin okutulduğunu ve kaç kez okutulduğunu söyler, sen de buna göre davranırsın: ilk 100 okumayı demoyla sınırla, kartvizitindeki ilgiyi ölç ya da yalnızca artan bir sayaçla ürünün gerçek olduğunu kanıtla. Baştan sona anlatımını istersen <a href=\"/blog/count-nfc-tag-scans/\">blogdaki NFC okutma sayacı rehberini oku</a> ya da <a href=\"/tap-counter/\">canlı demoyu dene</a>: tag'i okut ve sayfadaki sayının arttığını gör.</p>"
+    imagePath: "/assets/images/Blog/count-nfc-tag-scans.webp"
+    imageAlt: "Telefonla okutulan ve okuma sayısı artan bir NFC tag"
+    platforms: "iOS · Android"
+
+  - title: "OpenPrintTag: 3B yazıcı filamentin, makaranın üstünde"
+    body: "<p>OpenPrintTag, filament makarasının bilgilerini (malzeme, renk, üretici, UUID, kalan uzunluk) küçük, CBOR kodlu bir NDEF kaydına gömen açık bir standart. NFC.cool bu biçimi iki platformda da doğrudan okuyup yazar, böylece uyumlu yazıcılar makarayı takıldığı anda tanır. Biçime yabancıysan <a href=\"/blog/openprinttag-read-write-nfc-spools-phone/\">blog rehberimiz OpenPrintTag makaralarını okumayı ve yazmayı adım adım anlatıyor</a>.</p><p>Aynı biçim <a href=\"/features/webhooks/\">Webhook ve Otomasyon</a> sayfasındaki yapılandırılmış webhook yüklerini de besler: yeni makara algılandığı saniye baskı çiftliğine POST gönder.</p>"
+    imagePath: "/assets/images/Blog/openprinttag-read-write-nfc-spools-phone.webp"
+    imageAlt: "Telefonla OpenPrintTag NFC makaralarını okuma ve yazma"
+    platforms: "iOS · Android"
+
+  - title: "Diş fırçası başlığı sıfırlama"
+    body: "<p>Philips Sonicare fırça başlıklarında kullanımı izleyen bir NFC tag var; sap bu yüzden değiştir diye başının etini yiyor. NFC.cool o sayacı sıfırlayabilir: tag'in durumunu okur, sıfırlama adımlarında sana eşlik eder, yeni durumu geri yazar. İki platformda da aynı. Çipin tam olarak neyi tuttuğunu merak ediyorsan <a href=\"/blog/reset-sonicare-brush-head-nfc/\">blogdaki Sonicare fırça başlığı rehberini oku</a>. (Fırça başlığı üretmiyoruz; sadece seninkine bir ay daha onurlu ömür veriyoruz.)</p>"
+    imagePath: "/assets/images/Blog/reset-sonicare-brush-head-nfc.webp"
+    imageAlt: "Philips Sonicare fırça başlığını NFC ile sıfırlama"
+    platforms: "iOS · Android"
+
+  - title: "Uzman modu"
+    body: "<p>Çipte gerçekte ne olduğunu bilmek isteyenler için: NFC.cool bir tag'in tüm belleğini onaltılık olarak dökebilir, alttaki çip modelini algılar (NTAG213/215/216, NTAG424 DNA, MIFARE Classic/Ultralight, ISO 15693 türevleri, FeliCa ve diğerleri) ve toplam bayt, kullanıcı baytı, kilit sayfaları ile yetenek kaplarını bildirir. Geliştiriciler, üreticiler ve tag ayıklayan herkes için.</p><p>iOS'ta <strong>Uzman APDU modu</strong> bir kat daha derine iner: tag'e ham ISO 7816 komutları gönder ve yanıtları incele. Sıra dışı bir okuyucuyla ya da özel bir protokolle uğraşırken, ya da sadece çipin neyi itiraf edeceğini görmek istediğinde.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-power-user-mode.webp"
+    imageAlt: "NFC tag belleğini tanı panelleriyle inceleyen iPhone"
+    platforms: "iOS · Android"
+
+  - title: "Okutunca kripto para"
+    body: "<p>Bitcoin, Ethereum, Solana, Lightning ya da herhangi bir cüzdan adresini ödeme URI'li bir NDEF kaydı olarak yaz. Konferanslarda sabit cüzdanını okutarak paylaş, ürününün üstündeki etikete göm ya da birine kalıcı adres taşıyan metal kart ver. Okuma da karşılıklı: kripto tag'i okut, doğrudan cüzdan uygulamana geç.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-cryptocurrency-tap.webp"
+    imageAlt: "NFC tag üzerinden kripto cüzdanı paylaşan iPhone"
+    platforms: "iOS · Android"
+
+  - title: "Parolayı yazmadan Wi-Fi'ye bağlanma"
+    body: "<p>Wi-Fi ağ adını, güvenlik türünü ve parolanı tag'e bir kez yaz. O andan sonra tag'i okutan herkes ağa katılır: parolayı harf harf söylemek yok, kiralık evde duvara yapıştırılmış not yok. Tersi de geçerli: başkasının evindeki Wi-Fi tag'ini okut, bağlanmayı işletim sistemi sana sorsun.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-wifi-onboarding.webp"
+    imageAlt: "NFC tag üzerinden Wi-Fi ağına katılan iPhone"
+    platforms: "iOS · Android"
+
+  - title: "Sesli okusun"
+    body: "<p>Erişilebilirlik için, eller serbest çalışmak için ya da sırf hoş olduğu için: konuşma sentezi kancasını aç, okuttuğun anda tag'in içeriği sesli okunsun. Konuşma hızı ayarlanabilir; VoiceOver ve diğer yardımcı teknolojilerle birlikte çalışır.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-speak-aloud.webp"
+    imageAlt: "NFC tag'ini ses dalgalarıyla sesli okuyan iPhone"
+    platforms: "iOS"
+
+  - title: "CSV'den toplu yazma"
+    body: "<p>Listeyi Numbers, Excel ya da Google E-Tablolar'da hazırla, CSV olarak dışa aktar ve o dosyayı telefonda içe al. Her satır bir tag olur; birden çok sütun varsa her hücre o tag'de kendi kaydı olur. NFC.cool ayracı algılar, tag başına baytı gösteren bir önizleme açar, sonra sen tag'leri telefona tuttukça birbiri ardına yazar. Yazılan satırlar dosyadan silinir, yani istediğin an durup kaldığın yerden devam edersin. <a href=\"/blog/batch-write-nfc-tags-csv/\">E-tablodan son tag'e kadar tüm anlatımı oku</a>.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-csv-batch-write.webp"
+    imageAlt: "E-tablodan NFC tag'lerine toplu yazma yapan iPhone"
+    platforms: "iOS · Android"
+
+  - title: "Kısayollar ve App Intents"
+    body: "<p>NFC.cool, hazır eylemleriyle doğrudan iOS Kısayollar uygulamasına bağlanır: son okunan NFC tag'ini al, tag'e mesaj yaz, tarayıcıyı aç ya da son okunan QR kodu getir. Bunları zincirleyip tag okuyan, içeriğini çözen ve sonrasında ne istersen onu başlatan kısayollar kur: otomasyon, kayıt tutma, günlük, aklına ne gelirse. Aynı eylemler iOS 17 ve sonrasındaki kilit ekranı <strong>Tarama Düğmesi</strong> denetimini de besler.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "NFC tag'ini otomasyon bloklarına bağlayan iPhone"
+    platforms: "iOS"
+
+  - title: "iPhone, iPad ve Mac arasında iCloud eşitleme"
+    body: "<p>Okuma geçmişi, NFC Safe kayıtları ve yazma şablonları iCloud hesabına bağlı her cihaz arasında sorunsuz eşitlenir. Cebindeki iPhone'la tag'i okut, biraz sonra okuma iPad kitaplığında olsun. NFC.cool artık <a href=\"/blog/nfc-cool-comes-to-mac/\">Apple Silicon Mac'lerde de çalışıyor</a>, yani aynı kitaplık orada da karşına çıkar.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "iPhone, iPad ve Mac arasında eşitlenen NFC.cool"
+    platforms: "iOS"
+
+specsTitle: "Desteklenen tag'ler ve teknolojiler"
+specs:
+  - title: "Tag aileleri"
+    items:
+      - "NFC Forum Tip 1, 2, 3, 4, 5"
+      - "NTAG 213, 215, 216, 424 DNA, NTAG I²C türevleri"
+      - "MIFARE Classic 1K/4K, MIFARE Ultralight, MIFARE DESFire"
+      - "ISO 14443 A/B, ISO 15693, FeliCa (iOS)"
+  - title: "Kayıt türleri"
+    items:
+      - "URI (web, mailto, tel, sms, geo, özel şemalar)"
+      - "Metin (dil etiketli)"
+      - "vCard / kişi"
+      - "Wi-Fi bilgileri, Bluetooth eşleştirme"
+      - "Smart Poster (bileşik)"
+      - "Uygulama açma"
+      - "Kripto para adresi (URI tabanlı)"
+      - "OpenPrintTag (3B yazıcı filament bilgileri)"
+      - "NFC Safe (şifreli harici tür, urn:nfc:ext:crypto)"
+      - "MIME, harici tür, ham baytlar"
+  - title: "Platform notları"
+    items:
+      - "iOS 16 ve üzeri (iPhone XS ve sonrasında kilit ekranından arka planda tag okuma)"
+      - "Android 8.0 ve üzeri (API 26), ön planda NFC okuma"
+      - "iOS'tan tag yazmak Core NFC yetkileri ister, bunlar uygulamada hazır gelir"
+      - "Android'de arka planda NFC okuma için uygulamanın ön planda olması gerekir"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "NFC tag okuma"
+      values: ["✓", "✓"]
+    - label: "NFC tag çözümleme"
+      values: ["✓", "✓"]
+    - label: "NFC tag yazma"
+      values: ["limited", "✓"]
+    - label: "NFC mesaj türleri"
+      values: ["limited", "✓"]
+    - label: "NFC tag biçimlendirme"
+      values: ["✗", "✓"]
+    - label: "NFC tag'i parolayla koruma"
+      values: ["✗", "✓"]
+    - label: "NFC tag kilitleme"
+      values: ["✗", "✓"]
+    - label: "NFC Safe"
+      values: ["✗", "✓"]
+    - label: "NFC toplu modlar"
+      values: ["✗", "✓"]
+    - label: "NFC CSV yazma"
+      values: ["✗", "✓"]
+    - label: "NFC uzman komutları"
+      values: ["✗", "✓"]
+    - label: "NFC okutma sayacı"
+      values: ["✗", "✓"]
+    - label: "OpenPrintTag (3B baskı)"
+      values: ["✓", "✓"]
+
+featuredReviewsTitle: "NFC hakkında ne diyorlar"
+featuredReviews:
+  - quote: "Diğer NFC uygulamalarının aksine arayüzü çok güzel, işçiliği neredeyse kusursuz."
+    author: "garretthoyos"
+    location: "App Store · Mart 2023"
+  - quote: "BU UYGULAMAYA BAYILIYORUM. NFC tag'lerden benim gibi hiç anlamayanlar için harika!"
+    author: "Dallasg479"
+    location: "App Store · Ekim 2020"
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "Tag okumak için iPhone'umun kilidi açık olmalı mı?"
+    answer: "Okumaların çoğunda hayır: iPhone XS ve sonrası NDEF tag'leri kilit ekranından, arka planda okur, uygulamayı açmaya gerek kalmaz. Android'de ise tag okumak için uygulamanın ön planda olması gerekir."
+  - question: "İnternet olmadan tag okuyabilir miyim?"
+    answer: "Evet. NFC okuma ve yazma tamamen cihazda olur. NFC.cool tag içeriğini hiçbir sunucuya yüklemez."
+  - question: "NFC tag yazmak güvenli mi?"
+    answer: "Yazma varsayılan olarak güvenli ve geri alınabilir: bir tag'i istediğin kadar yeniden yazabilirsin. Kilitleme özelliğini yalnızca emin olduğunda kullan, çünkü kalıcı olarak kilitlenen tag bir daha yazılamaz."
+  - question: "NFC Safe ne kadar güvenli?"
+    answer: "NFC Safe içerikleri AES-256-GCM ile şifreler; anahtarı parolandan PBKDF2-HMAC-SHA256 ile, 100.000 yineleme, 16 baytlık rastgele tuz ve kayıt başına 12 baytlık nonce kullanarak türetir. Parola olmadan tag'deki içerik rastgele baytlardan ayırt edilemez."
+  - question: "Aynı NFC Safe tag'i hem iOS'ta hem Android'de çalışır mı?"
+    answer: "Evet. Biçim iki platformda ortak. Birinde şifrele, diğerinde çöz: aynı parola, aynı içerik."
+  - question: "Sonicare fırça başlığını sıfırlamak bir şeyi geçersiz kılar mı?"
+    answer: "Tag üzerindeki kullanım sayacını sıfırlar, sap da seni rahat bırakır. Fırça başlığının kendisi sıfırlandığından haberdar olmaz, fırçalamayı sürdürür. Kılların ne zaman değişmesi gerektiğine kendin karar ver."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "NFC tag'leri tarayıcında çevrimiçi oku"
+    url: "/online-nfc-reader/"
+  - title: "NFC tag nedir: sıfırdan başlayanlar için tam rehber"
+    url: "/blog/nfc-tags-beginners-guide/"
+  - title: "iPhone ile NFC tag nasıl yazılır"
+    url: "/blog/write-nfc-tags-iphone/"
+  - title: "iPhone ile hangi NFC tag türleri çalışır"
+    url: "/blog/nfc-tag-types-for-iphones/"

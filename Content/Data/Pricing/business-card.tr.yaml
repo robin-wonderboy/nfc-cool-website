@@ -1,0 +1,34 @@
+# /tr/business-card/ için plan karşılaştırması. Content/Pages/business-card.tr.md
+# içindeki {{PRICING_TABLE:business-card}} belirteciyle PricingTableRenderer üretir.
+columns: ["Free", "Personal", "Small Business", "Business"]
+rows:
+  - label: "Fiyat"
+    values: ["**$0**", "**$19,99**", "**$49,99**", "**$99,99**"]
+  - label: "Kart"
+    values: ["1", "1", "10", "100"]
+  - label: "Profil görüntüleme"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "vCard olarak kaydetme"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Müşteri adayı toplama"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "İstatistikler"
+    values: ["✗", "✓", "✓", "✓"]
+  - label: "Özel logo"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "NFC ve QR ile paylaşım"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Apple Wallet"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Google Wallet"
+    values: ["soon", "soon", "soon", "soon"]
+  - label: "Konferans Modu"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "PIN koruması"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Anlık bildirimler"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Veri dışa aktarma (GDPR)"
+    values: ["✓", "✓", "✓", "✓"]
+  - label: "Kimler için"
+    values: ["Denemek isteyenler", "Bireyler", "Küçük ekipler", "Büyüyen şirketler"]

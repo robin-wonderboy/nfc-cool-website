@@ -1,0 +1,110 @@
+slug: "document-scanner"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "OCR'lı Belge Tarayıcı"
+  description: "iPhone ya da iPad'de belgeleri kenar algılamayla ve OCR ile tara. Hepsi cihazında olur, hiçbir şey yüklenmez. İçinde arama yapılabilen, çok sayfalı PDF'ler üret."
+  imagePath: "/assets/images/Webflow/document-scan.webp"
+  platforms: "Yalnızca iOS"
+
+hero:
+  title: "OCR'lı Belge Tarayıcı"
+  subtitle: "Belgeleri kendiliğinden kenar algılama ve perspektif düzeltmeyle çek. Cihazda çalışan OCR her taramayı, cihazından hiç çıkmayan aranabilir metne çevirir."
+  platforms: "Yalnızca iOS"
+  heroImagePath: "/assets/images/Webflow/document-scan.webp"
+
+capabilitiesTitle: "Neler yapabilirsin"
+capabilities:
+  - title: "Kenarları kendiliğinden bulsun"
+    description: "Kamerayı sayfaya doğrult; NFC.cool köşeleri bulup kendiliğinden çeker. Çok sayfalı tarama tüm bir tomarı tek oturumda alır."
+  - title: "Perspektif düzeltme"
+    description: "Eğri mi çektin? NFC.cool sayfayı düzgün bir dikdörtgene oturtur, gölgeleri temizler ve kontrastı yükseltir, sonuç düz taranmış gibi görünür."
+  - title: "Cihazda OCR"
+    description: "Metin tanıma iPhone'unda, yerelde çalışır: ne belge ne metin cihazdan çıkar. Her sayfanın tanınan metni görselin yanında saklanır ve uygulama içinde aranabilir."
+  - title: "Metin katmanı gömülü PDF"
+    description: "OCR metnini katman olarak gömen çok sayfalı PDF üret, böylece her kelime herhangi bir PDF okuyucuda seçilebilir, kopyalanabilir ve aranabilir olsun."
+  - title: "Hızlı paylaş ve kaydet"
+    description: "Mail, Mesajlar ya da AirDrop ile gönder veya Dosyalar'a kaydet. Filigran yok, kayıt olmak yok, NFC.cool logosu yok."
+
+subsectionsTitle: "Ekran görüntüsünden akıllısı"
+subsections:
+  - title: "Çok sayfalı tarama ve otomatik başlık"
+    body: "<p>Belgeler her zaman tek sayfa olmuyor. NFC.cool çekimler arasında kamerayı açık tutar, sayfaları yeniden sıralamana izin verir, kötü çıkanları atmanı sağlar ve hepsini tek belgede birleştirir. Yerleşik başlık önerisi ilk sayfayı okuyup mantıklı bir dosya adı önerir, her seferinde yeniden adlandırma derdinden kurtulursun.</p>"
+    imagePath: "/assets/images/Webflow/document-scan-detail.webp"
+    imageAlt: "Çok sayfalı belge ayrıntı görünümü"
+    platforms: "iOS"
+
+  - title: "Fotoğraf galerinden içe aktar"
+    body: "<p>Fişi normal kamerayla çoktan çektin mi? Galerinden görseli (ya da birkaçını) seç: NFC.cool içe aktarılan fotoğraflara da taze çekimlerdeki kenar algılamayı, perspektif düzeltmeyi ve OCR'ı uygular. Aylardır dağınık duran telefon çekimlerini toparlamak için birebir.</p>"
+    platforms: "iOS"
+
+  - title: "Sıkıştırma sende"
+    body: "<p>Telefondan çıkan PDF'ler dikkat etmezsen şişebilir. NFC.cool sıkıştırma oranını ayar olarak sunar, böylece arşiv kalitesiyle e-postaya sığan dosya boyutu arasında yeniden tarama yapmadan seçim yaparsın.</p>"
+    platforms: "iOS"
+
+  - title: "Kısayollar ve App Intents"
+    body: "<p>NFC.cool, hazır eylemleriyle doğrudan iOS Kısayollar uygulamasına bağlanır: son okunan NFC tag'ini al, tag'e mesaj yaz, tarayıcıyı aç ya da son okunan QR kodu getir. Bunları zincirleyip tag okuyan, içeriğini çözen ve sonrasında ne istersen onu başlatan kısayollar kur: otomasyon, kayıt tutma, günlük, aklına ne gelirse. Aynı eylemler iOS 17 ve sonrasındaki kilit ekranı <strong>Tarama Düğmesi</strong> denetimini de besler.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "NFC tag'ini otomasyon bloklarına bağlayan iPhone"
+    platforms: "iOS"
+
+  - title: "iPhone, iPad ve Mac arasında iCloud eşitleme"
+    body: "<p>Belgeler hesabındaki her cihaz arasında iCloud üzerinden sorunsuz eşitlenir. Sözleşmeyi iPhone'la tara, iPad'de oku, <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac'te</a> imzala: aynı kitaplık, ileri geri aktarma yok. Özgün görseller de tanınan metin de birlikte gelir.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "iPhone, iPad ve Mac arasında eşitlenen NFC.cool"
+    platforms: "iOS"
+
+specsTitle: "Yetenekler ve sınırlar"
+specs:
+  - title: "Tanıma"
+    items:
+      - "iOS Vision çerçevesiyle OCR"
+      - "Latin, Kiril ve Yunan alfabeleri"
+      - "El yazısı tanıma"
+      - "Çok dilli algılama"
+      - "Tanınan metin taramadan sonra düzenlenebilir"
+  - title: "Çıktı"
+    items:
+      - "Metin katmanı gömülü PDF"
+      - "Sayfa başına JPEG ya da HEIC görsel"
+      - "Çok sayfalı belgeler"
+      - "İsteğe bağlı siyah beyaz mod"
+      - "Ayarlanabilir sıkıştırma oranı"
+  - title: "Gizlilik"
+    items:
+      - "Tüm OCR cihazda çalışır"
+      - "NFC.cool'a hiçbir belge ya da metin yüklenmez"
+      - "Belgeler iCloud'da ya da uygulama alanında saklanır, seçim senin"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "Belge tarama"
+      values: ["✓", "✓"]
+    - label: "Fotoğraftan belge"
+      values: ["✓", "✓"]
+    - label: "OCR"
+      values: ["✓", "✓"]
+    - label: "PDF olarak dışa aktarma"
+      values: ["✗", "✓"]
+    - label: "iCloud'a otomatik aktarma"
+      values: ["✗", "✓"]
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "OCR çevrimdışı çalışır mı?"
+    answer: "Evet. iOS Vision, OCR'ı tamamen cihazda yapar. Uçakta, dağ başında, nerede olursan ol tarayıp metne çevirebilirsin."
+  - question: "OCR hangi dilleri destekliyor?"
+    answer: "iOS Vision şu anda İngilizce, Fransızca, İtalyanca, Almanca, İspanyolca, Portekizce ve Basitleştirilmiş Çince tanıyor. Ayrıca el yazısı tanıma da destekleniyor."
+  - question: "OCR ne kadar isabetli?"
+    answer: "Basılı metinde çok yüksek. El yazısında isabet, yazının düzgünlüğüne ve kontrasta bağlı. Tanınan metni taramadan sonra düzenleyebilirsin."
+  - question: "Taranan belgeler nerede saklanıyor?"
+    answer: "Ücretsiz sürümde cihazdaki uygulama alanında. Platinum'da istersen iCloud Belgeler'e otomatik aktarılır, böylece Dosyalar uygulamasında ve iCloud hesabına bağlı her cihazda görünür."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "Cebe sığan belge tarama"
+    url: "/blog/document-scanning-guide/"
+  - title: "3B Nesne Tarayıcı"
+    url: "/features/3d-object-scanner/"

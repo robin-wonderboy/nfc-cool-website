@@ -1,0 +1,98 @@
+slug: "barcode-scanner"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "Barkod Tarayıcı"
+  description: "13 barkod biçimi ve 6 iki boyutlu kod tara: EAN, UPC, QR, PDF417, Data Matrix ve dahası. Toplu mod, sayım ve giriş kaydı için kamerayı açık tutar."
+  imagePath: "/assets/images/Webflow/qr-barcode.webp"
+  platforms: "Yalnızca iOS"
+
+hero:
+  title: "Barkod Tarayıcı"
+  subtitle: "19 kod biçimi tara: 13 doğrusal barkod (EAN, UPC, Code 128, GS1 DataBar ve diğerleri) ve 6 iki boyutlu kod (QR, PDF417, Aztec, Data Matrix ile Micro türevleri). Toplu mod, sayım ve etkinlik girişleri için kamerayı açık tutar."
+  platforms: "Yalnızca iOS"
+  heroImagePath: "/assets/images/Webflow/qr-barcode.webp"
+
+capabilitiesTitle: "Neler yapabilirsin"
+capabilities:
+  - title: "Başlıca tüm barkod biçimleri"
+    description: "EAN-13/8, UPC-E (UPC-A, EAN-13 olarak okunur), Code 128, Code 39 (Mod 43 dahil), Code 93, ITF, ITF-14, Codabar, GS1 DataBar, PDF417, Aztec, Data Matrix ve dahası. Biçim kendiliğinden algılanır, mod değiştirmek yok."
+  - title: "Toplu mod"
+    description: "Bir yığın barkodu yeniden nişan almadan arka arkaya tara. Sayımlarda, etkinlik girişlerinde ya da kütüphane arşivlerinde işe yarar."
+  - title: "Ürün araması"
+    description: "Okuttuğun perakende barkoduna dokun ve arat: barkod numarası önceden seçtiğin arama motorunda (Google, Ecosia, DuckDuckGo, Bing ya da Startpage) çalışır, sonuçlar doğrudan karşına gelir."
+  - title: "Tarama geçmişi ve paylaşım"
+    description: "Her tarama zaman damgasıyla saklanır. Önemli olanları favorile, birine kendi başlığını ver, geçmiş görünümünden doğrudan paylaş."
+  - title: "Okuyunca otomatik çalışsın"
+    description: "Adresler ve kısayol kodları tarandığı anda kendiliğinden açılabilir, webhook tetikleyebilir ya da sesli okunabilir. NFC ve QR'ı da besleyen aynı beş kancalı otomasyon."
+
+subsectionsTitle: "Yüksek hacimli tarama için"
+subsections:
+  - title: "Çoklu tarama, toplu okuma ve istediğinde fener"
+    body: "<p>Üç ayar tarayıcıyı tek seferlik olmaktan çıkarıp sürekli bir akışa çevirir. <strong>Çoklu tarama</strong> tek kamera oturumunda birden çok kod okutmanı sağlar. <strong>Toplu okuma</strong> sayım ya da etkinlik girişleri için kamerayı açık tutar. <strong>Otomatik fener</strong> ise loş ışıkta LED'i yakar, el feneri düğmesini aramakla uğraşmazsın.</p>"
+    imagePath: "/assets/images/Features/qr-scanner-multi-scan-batch-torch.webp"
+    imageAlt: "Fener ışığıyla birden çok QR kod ve barkod tarayan iPhone"
+    platforms: "iOS"
+
+  - title: "Sayım ve etkinlik girişleri için webhook'lar"
+    body: "<p>Barkod tarayıcıyı kendi arka ofis sistemine doğrult. Okunan her barkod senin adresine webhook gönderir, böylece kamera ilerledikçe stok veritabanın, katılımcı sistemin ya da kütüphane kataloğun anlık güncellenir. JSON yükünün biçimi ve örnek sunucu için <a href=\"/features/webhooks/\">Webhook ve Otomasyon</a> sayfasına bak.</p>"
+    platforms: "iOS"
+
+  - title: "Kısayollar ve App Intents"
+    body: "<p>NFC.cool, hazır eylemleriyle doğrudan iOS Kısayollar uygulamasına bağlanır: son okunan NFC tag'ini al, tag'e mesaj yaz, tarayıcıyı aç ya da son okunan QR kodu getir. Bunları zincirleyip tag okuyan, içeriğini çözen ve sonrasında ne istersen onu başlatan kısayollar kur: otomasyon, kayıt tutma, günlük, aklına ne gelirse. Aynı eylemler iOS 17 ve sonrasındaki kilit ekranı <strong>Tarama Düğmesi</strong> denetimini de besler.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "NFC tag'ini otomasyon bloklarına bağlayan iPhone"
+    platforms: "iOS"
+
+  - title: "iPhone, iPad ve Mac arasında iCloud eşitleme"
+    body: "<p>Barkod tarama geçmişin iCloud hesabındaki her cihaz arasında eşitlenir. Raf dolusu ürünü iPhone'la tara, listeyi iPad'de gözden geçir, taramalara <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac'te</a> başlık verip paylaş: tek bir eşitlenmiş geçmiş, elle taşınacak hiçbir şey yok.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "iPhone, iPad ve Mac arasında eşitlenen NFC.cool"
+    platforms: "iOS"
+
+specsTitle: "Desteklenen biçimler (toplam 19)"
+specs:
+  - title: "1B barkodlar (13 biçim)"
+    items:
+      - "EAN-13, EAN-8"
+      - "UPC-E (UPC-A, EAN-13 olarak okunur)"
+      - "Code 39, Code 39 Mod 43"
+      - "Code 93, Code 128"
+      - "Codabar"
+      - "Interleaved 2 of 5, ITF-14"
+      - "GS1 DataBar (standart, Expanded, Limited)"
+  - title: "2B ve katmanlı kodlar (6 biçim)"
+    items:
+      - "QR Code"
+      - "Micro QR"
+      - "PDF417"
+      - "Micro PDF417"
+      - "Aztec"
+      - "Data Matrix"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "QR ve barkod okuma"
+      values: ["✓", "✓"]
+    - label: "QR ve barkod toplu okuma"
+      values: ["✗", "✓"]
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "Bu neden yalnızca iOS'ta var?"
+    answer: "NFC.cool'un Android sürümü şimdilik NFC'ye ve dijital kartvizite odaklanıyor. Barkod tarama Android yol haritasında."
+  - question: "Aynı anda birden çok barkod tarayabilir miyim?"
+    answer: "Evet, toplu mod kamerayı açık tutar ve bulduğu her barkodu sıraya alır. Sıradaki herhangi bir kayda dokunup üzerinde işlem yapabilirsin."
+  - question: "Taramalarımı kaydedip paylaşabilir miyim?"
+    answer: "Evet, her tarama zaman damgasıyla geçmiş görünümünde kalır. Bir taramayı favorileyebilir, başlık verebilir ve oradan paylaşabilirsin."
+  - question: "Tarayıcı çevrimdışı çalışır mı?"
+    answer: "Taramanın kendisi için evet. Ürün araması internet ister (barkod numarasını arama motorunda çalıştırır), ama barkodun okunması yalnızca cihazda olur."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "QR kodlar adresten başka ne taşıyabilir"
+    url: "/blog/tap-scan-thrive/"
+  - title: "QR Kod Tarayıcı ve Stüdyo"
+    url: "/features/qr-scanner/"

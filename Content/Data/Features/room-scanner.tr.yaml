@@ -1,0 +1,90 @@
+slug: "room-scanner"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "Oda Tarayıcı"
+  description: "Odanın içinde dolaş, RoomPlan temiz bir kat planı çıkarsın: duvarlar, kapılar, pencereler ve mobilyalar, oda ölçüleri ve alan hesabıyla birlikte."
+  imagePath: "/assets/images/Webflow/scan-room.webp"
+  platforms: "Yalnızca iOS"
+
+hero:
+  title: "Oda Tarayıcı"
+  subtitle: "LiDAR destekli RoomPlan, mekanda attığın turu temiz ve parametrik bir kat planına çevirir: duvarlar, kapılar, pencereler ve tanınan mobilyalar, tek bir USDZ sahnesi olarak."
+  platforms: "Yalnızca iOS"
+  heroImagePath: "/assets/images/Webflow/scan-room.webp"
+
+capabilitiesTitle: "Neler yapabilirsin"
+capabilities:
+  - title: "RoomPlan ile yakalama"
+    description: "iPhone'unun LiDAR algılayıcısıyla odanın içinde dolaş. NFC.cool anlık olarak parametrik model kurar: duvarlar, kapılar, pencereler ve açıklıklar."
+  - title: "Tanınan mobilyalar"
+    description: "Yataklar, koltuklar, masalar, sandalyeler, dolaplar, ocaklar, lavabolar, klozetler, küvetler ve televizyonlar sahnenin içinde algılanıp etiketlenir."
+  - title: "Taban alanı ve ölçüler"
+    description: "Her oda taban alanını, tavan yüksekliğini ve duvar başına ölçüleri bildirir. Bunları modelden okuyabilir ya da dışa aktardığın USDZ'ye gömebilirsin."
+  - title: "AR Quick Look"
+    description: "Biten odayı AR Quick Look'ta aç ya da USDZ'yi paylaş: karşındaki model içinde doğrudan Mesajlar'dan dolaşabilir."
+
+subsectionsTitle: "Bir turdan çalışan kat planına"
+subsections:
+  - title: "Odanı AR'da yerleştir"
+    body: "<p>Tarama bittiğinde onu AR Quick Look'a bırak ve dijital ikizinin içinde fiilen dolaş. Almadan önce mobilya yerleşimini sınamak için ya da tablette çizimden asla edinemeyeceğin ölçek duygusunu yakalamak için işe yarar.</p>"
+    imagePath: "/assets/images/Blog/mac-3d-detail.webp"
+    imageAlt: "Oda taraması ayrıntı görünümü"
+    platforms: "iOS"
+
+  - title: "Çok odalı akışlar"
+    body: "<p>Her tarama bir oda. Mutfağı tara, salonu tara, yatak odalarını tara: hepsi kitaplığında yan yana durur, dilediğin 3B düzenleyici bunları çok odalı tek bir USDZ'de birleştirebilir. Özellikle emlak ilanlarında, tadilat planlamasında ya da sigorta belgelemesinde işe yarar.</p>"
+    platforms: "iOS"
+
+  - title: "Kısayollar ve App Intents"
+    body: "<p>NFC.cool, hazır eylemleriyle doğrudan iOS Kısayollar uygulamasına bağlanır: son okunan NFC tag'ini al, tag'e mesaj yaz, tarayıcıyı aç ya da son okunan QR kodu getir. Bunları zincirleyip tag okuyan, içeriğini çözen ve sonrasında ne istersen onu başlatan kısayollar kur: otomasyon, kayıt tutma, günlük, aklına ne gelirse. Aynı eylemler iOS 17 ve sonrasındaki kilit ekranı <strong>Tarama Düğmesi</strong> denetimini de besler.</p>"
+    imagePath: "/assets/images/Features/nfc-reader-writer-shortcuts-app-intents.webp"
+    imageAlt: "NFC tag'ini otomasyon bloklarına bağlayan iPhone"
+    platforms: "iOS"
+
+  - title: "iPhone, iPad ve Mac arasında iCloud eşitleme"
+    body: "<p>Taranan odalar iCloud Belgeler klasöründe durur, yani taradığın iPhone, gözden geçirdiğin iPad ve düzenleyeceğin <a href=\"/blog/nfc-cool-comes-to-mac/\">Mac</a> aynı kitaplığı görür. Mekanı bir kez dolaş, kat planını sonra masa başında düzelt.</p>"
+    imagePath: "/assets/images/Blog/nfc-cool-comes-to-mac.webp"
+    imageAlt: "iPhone, iPad ve Mac arasında eşitlenen NFC.cool"
+    platforms: "iOS"
+
+specsTitle: "Donanım ve çıktı"
+specs:
+  - title: "Donanım gereksinimleri"
+    items:
+      - "LiDAR'lı iPhone (12 Pro ve sonrası Pro modeller)"
+      - "iPad Pro (2020) ve sonrası da destekleniyor"
+      - "RoomPlan iOS 16'dan beri var; en yeni iyileştirmeler iOS 17 ve sonrasında"
+  - title: "Çıktı"
+    items:
+      - "Adlandırılmış öğeler içeren USDZ sahnesi"
+      - "Duvarlar, kapılar, pencereler, açıklıklar"
+      - "Tanınan mobilya kategorileri"
+      - "Taban alanı ve ölçüler"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "Oda tarama"
+      values: ["✓", "✓"]
+    - label: "Oda ölçüleri"
+      values: ["✓", "✓"]
+    - label: "Alan hesabı"
+      values: ["✗", "✓"]
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "LiDAR şart mı?"
+    answer: "Evet. RoomPlan, Apple'ın yalnızca LiDAR ile çalışan bir arayüzü. (3B Nesne Tarayıcı da LiDAR ister: Apple'ın Object Capture oturumu bunu denetler.)"
+  - question: "Bir tarama ne kadar sürer?"
+    answer: "Odanın içinde dolaşman yeterli. Sonuç anlık üretilir ve sen turu bitirdiğinde hazırdır."
+  - question: "Sonucu CAD yazılımında açabilir miyim?"
+    answer: "Evet, USDZ'yi modern CAD ve 3B araçların çoğu destekliyor. SketchUp ya da Revit akışları için Blender veya ücretsiz bir USD'den OBJ'ye çevirici kullan."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "3B Nesne Tarayıcı"
+    url: "/features/3d-object-scanner/"
+  - title: "iPhone'da fotogrametri ve LiDAR ile 3B tarama"
+    url: "/blog/3d-scan-feature/"

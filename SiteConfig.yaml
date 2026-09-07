@@ -5,7 +5,7 @@ language: "en"
 
 localization:
   defaultLanguage: "en"
-  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar", "it"]
+  languages: ["de", "ja", "pt", "zh", "id", "es", "fr", "ar", "it", "tr"]
   translationMode: "manual"
   legalLanguage: "de"
   # Localized nav + footer labels. URLs stay locale-agnostic; SiteKit prefixes
@@ -497,6 +497,61 @@ localization:
           - title: "Termini"
             url: "/terms/"
           - title: "Libro dei reclami"
+            url: "https://www.livroreclamacoes.pt/Inicio/"
+
+    tr:
+      navigation:
+        items:
+          - title: "Ana Sayfa"
+            url: "/"
+          - title: "Özellikler"
+            url: "/features/"
+          - title: "Kartvizit"
+            url: "/business-card/"
+          - title: "NFC Tag Satın Al"
+            url: "/affiliate-links/"
+          - title: "Çevrimiçi NFC Okuyucu"
+            url: "/online-nfc-reader/"
+          - title: "Blog"
+            url: "/blog/"
+          - title: "Destek ve İletişim"
+            url: "/contact/"
+        showSearch: false
+        showThemeToggle: true
+      footer:
+        copyrightName: "NFC.cool"
+        startYear: 2017
+        showAttribution: false
+        links:
+          - title: "Özellikler"
+            url: "/features/"
+          - title: "Çevrimiçi NFC Okuyucu"
+            url: "/online-nfc-reader/"
+          - title: "Kartvizit"
+            url: "/business-card/"
+          - title: "NFC Tag"
+            url: "/affiliate-links/"
+          - title: "Geliştiriciler"
+            url: "/developers/"
+          - title: "Değerlendirmeler"
+            url: "/reviews/"
+          - title: "Diğer Uygulamalar"
+            url: "/apps/"
+          - title: "Hakkında"
+            url: "/about/"
+          - title: "Sürüm Notları"
+            url: "/changelog/"
+          - title: "Blog"
+            url: "/blog/"
+          - title: "Destek ve İletişim"
+            url: "/contact/"
+          - title: "Basın"
+            url: "/press/"
+          - title: "Gizlilik"
+            url: "/privacy/"
+          - title: "Kullanım Koşulları"
+            url: "/terms/"
+          - title: "Şikayet Defteri"
             url: "https://www.livroreclamacoes.pt/Inicio/"
 
 contentDirectory: "Content"

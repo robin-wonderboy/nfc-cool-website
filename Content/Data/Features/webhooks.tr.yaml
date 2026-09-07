@@ -1,0 +1,100 @@
+slug: "webhooks"
+backLinkText: "← Tüm özellikler"
+
+card:
+  title: "Webhook ve Otomasyon"
+  description: "Okuttuğun anda beş kanca çalışır: kendi sunucuna POST at, kısayol çalıştır, adresi aç, sonucu sesli okut ya da ses çal. Taramayı NFC.cool yapar; sonrasına sen karar verirsin."
+  imagePath: "/assets/images/Webflow/webhook.webp"
+  platforms: "iOS · Android"
+
+hero:
+  title: "Webhook ve Otomasyon"
+  subtitle: "NFC tag, QR kod ya da barkod okuttuğun anda beş yerleşik kanca çalışır: kendi sunucuna POST at, adresi aç, kısayol çalıştır, sonucu sesli okut ya da ses çal. Tarayıcı NFC.cool, eylem senin."
+  platforms: "iOS · Android"
+  heroImagePath: "/assets/images/Webflow/webhook.webp"
+
+capabilitiesTitle: "Beş kanca"
+capabilities:
+  - title: "Webhook (kendi adresine POST)"
+    description: "Tarama başarılı olduğu anda yapılandırılmış JSON gövdesiyle HTTP POST. Tek adres, istersen HTTP Basic kimlik doğrulaması, hepsi bu. iOS ve Android."
+  - title: "Kısayol (iOS)"
+    description: "Okunan adres `shortcuts://` şemasını taşıyorsa eşleşen iOS kısayolu kendiliğinden çalışır, fazladan dokunmaya gerek kalmaz. Tarama verisini Kısayollar'ın ulaşabildiği her yere yönlendir."
+  - title: "Bağlantıyı aç (iOS)"
+    description: "İçerik normal bir adresse Safari'de (ya da eşleşen uygulamada) kendiliğinden açılır. \"Açmak için dokun\" adımını atla."
+  - title: "Konuşma sentezi (iOS)"
+    description: "Okunan içeriği eller serbest sesli dinle. Konuşma hızı ayarlanabilir. Erişilebilirlikte, elin doluyken ya da sırf tatmin edici bir onay için işe yarar."
+  - title: "Ses çal (iOS)"
+    description: "Okuma anında onay sesi çal: kendi seçtiğin ses dosyası ya da hazır tonlardan biri."
+
+subsectionsTitle: "Webhook nasıl çalışır"
+subsections:
+  - title: "Tetikleyiciler: NFC, QR ve barkod"
+    body: "<p>Webhook'lar üç olay kaynağında çalışır: <strong>NFC okumaları</strong>, <strong>QR taramaları</strong> ve <strong>barkod taramaları</strong>. Her kaynağın kendi açma kapama anahtarı var, yani kamera tarayıcısı aynı uç noktayı doldurmadan NFC okumalarını stok sistemine aktarabilirsin. Webhook'un kendisi aynı kalır: tek adres, tek JSON yükü, tek POST.</p>"
+    platforms: "iOS · Android"
+
+  - title: "Yükün biçimi"
+    body: "<p>Her POST şu biçimde bir JSON gövdesi gönderir:</p><pre><code>{\n  \"identifier\": \"04:A2:7F:1B:5E:80:00\",\n  \"date\": \"2026-05-12T14:23:01Z\",\n  \"content\": \"Filament Spool #1234\",\n  \"tagType\": \"openPrintTag\",\n  \"structured\": {\n    \"material\": \"PLA\",\n    \"color\": \"#FF6F4C\",\n    \"manufacturer\": \"Prusament\",\n    \"uuid\": \"5e8a-7c1d-4f90\"\n  }\n}</code></pre><p><code>tagType</code> ve <code>structured</code> yalnızca <a href=\"/features/nfc-reader-writer/\">OpenPrintTag</a> gibi özel biçimlerde görünür; diğer tüm taramalar yalnızca ilk üç alanı gönderir. Alan alan dökümü, kimlik doğrulamayı, curl örneklerini ve çalışmaya hazır örnek sunucuları <a href=\"/developers/\">geliştirici belgelerinde</a> bulabilirsin.</p>"
+    platforms: "iOS · Android"
+
+  - title: "GitHub'da örnek sunucu"
+    body: "<p>Döngünün tamamını uçtan uca görmenin en hızlı yolu: <a href=\"https://github.com/NickAtGit/nfc-cool-webhook-server\">GitHub'daki web sunucusu</a>. NFC.cool webhook yüklerini kabul eden, kaydeden ve yapıyı canlı gösteren küçük bir örnek sunucu. Klonla, çalıştır, iPhone'unu ona yönlendir, taramaların düştüğünü izle.</p>"
+    platforms: "iOS · Android"
+
+specsTitle: "Teknik ayrıntılar"
+specs:
+  - title: "Aktarım"
+    items:
+      - "HTTPS önerilir; geliştirmede HTTP'ye izin verilir"
+      - "`Content-Type: application/json` ile POST"
+      - "İsteğe bağlı HTTP Basic kimlik doğrulaması (kullanıcı adı ve parola)"
+      - "Kimlik bilgileri iOS Anahtar Zinciri'nde şifreli saklanır"
+  - title: "Yük"
+    items:
+      - "`identifier` - tag UID'si ya da okunan kod"
+      - "`date` - ISO 8601 zaman damgası"
+      - "`content` - çözülmüş içerik (adres, metin ve benzeri)"
+      - "`tagType` - yapılandırılmış tag'lerde bulunur (örneğin `openPrintTag`)"
+      - "`structured` - yapılandırılmış tag türleri için iç içe JSON"
+  - title: "Kaynaklar"
+    items:
+      - "NFC okumaları (NDEF)"
+      - "QR taramaları"
+      - "Barkod taramaları"
+      - "Her kaynak ayrı ayrı açılabilir"
+
+pricing:
+  title: "Ücretsiz ve Platinum"
+  columns: ["Ücretsiz", "Platinum"]
+  rows:
+    - label: "NFC ve QR webhook"
+      values: ["✗", "✓"]
+    - label: "Konuşma sentezleyici"
+      values: ["✗", "✓"]
+    - label: "Kısayollar"
+      values: ["✗", "✓"]
+    - label: "iCloud eşitleme"
+      values: ["✓", "✓"]
+
+faqTitle: "Sık sorulanlar"
+faq:
+  - question: "Bu Android'de çalışıyor mu?"
+    answer: "Evet, webhook'lar NFC.cool Tools'un hem iOS hem Android sürümünde var. JSON yükünün biçimi iki platformda da aynı. (Diğer dört kanca (otomatik kısayol, konuşma, ses ve bağlantı açma) yalnızca iOS'ta.)"
+  - question: "Kaç adres tanımlayabilirim?"
+    answer: "Bugün için tek adres. Tüm tarama olayları aynı adrese gider; hangi kaynağın açık olduğuna ve yükün türüne göre ayırt edilir."
+  - question: "Hangi kimlik doğrulama destekleniyor?"
+    answer: "HTTP Basic: kullanıcı adı ve parola, iOS Anahtar Zinciri'nde şifreli saklanır. Bearer token, özel başlıklar ve HMAC imzalama şimdilik desteklenmiyor."
+  - question: "Sunucum kapalıysa ne olur?"
+    answer: "POST başarısız olur ve olay cihazda kaydedilir. Bugün otomatik yeniden deneme kuyruğu yok; sunucun kesintiye uğrayabiliyorsa işleyicini tekrar çağrılmaya dayanıklı yaz ve tarama geçmişinden yeniden tetikle."
+  - question: "Yük boyutu sınırı var mı?"
+    answer: "NFC.cool tarafında katı bir sınır yok. Tag içeriklerinin kendisi NFC standardıyla sınırlı (tipik NDEF tag'lerde birkaç KB)."
+  - question: "Gerçekten çalışırken nerede görebilirim?"
+    answer: "<a href=\"https://github.com/NickAtGit/nfc-cool-webhook-server\">GitHub'daki web sunucusunu</a> klonla, yerelde çalıştır, uygulamayı ona yönlendir; her taramanın anında geldiğini göreceksin."
+
+relatedReadingTitle: "Okumaya devam et"
+relatedReading:
+  - title: "OpenPrintTag: akıllı 3B baskı makaralarını okuma ve yazma"
+    url: "/blog/openprinttag-read-write-nfc-spools-phone/"
+  - title: "Sunucu olmadan NFC tag okumaları nasıl sayılır"
+    url: "/blog/count-nfc-tag-scans/"
+  - title: "NFC Okuma ve Yazma"
+    url: "/features/nfc-reader-writer/"

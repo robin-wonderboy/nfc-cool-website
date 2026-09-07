@@ -40,6 +40,7 @@ struct LocaleRegionProcessor: OutputProcessor {
       ("fr", "fr-FR", "fr_FR", "🇫🇷", ""),
       ("ar", "ar", "ar_AR", "🇸🇦", "rtl"),
       ("it", "it-IT", "it_IT", "🇮🇹", ""),
+      ("tr", "tr-TR", "tr_TR", "🇹🇷", ""),
    ]
 
    func process(outputDirectory: URL, projectDirectory: URL, themeConfig: ThemeConfig?) throws {

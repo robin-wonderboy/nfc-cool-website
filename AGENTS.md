@@ -1,6 +1,6 @@
 # NFC.cool - website
 
-Multi-page marketing site for the NFC.cool brand in ten locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
+Multi-page marketing site for the NFC.cool brand in eleven locales (`en` plus `de`, `ja`, `pt`, `zh`, `id`, `es`, `fr`, `ar`, `it`, `tr` - read the live list from `localization.languages` in `SiteConfig.yaml`), built with [SiteKit](https://github.com/FlineDev/SiteKit-Package). Uses the `blog()` recipe with a set of custom renderers layered on top in `Sources/Site/Main.swift` (landing, per-feature, features index, blog index/post, marketing pages, tag listings, 404, robots.txt, static root files) plus site-specific processors (locale region, OG image, ratings, lang picker, etc.).
 
 ## Build & serve
 
@@ -10,6 +10,8 @@ swift run Site serve       # build + dev server on http://localhost:8080
 swift run Site i18n-check   # translation completeness gate (hard, run in CI)
 swift run Site validate    # SiteKit's built-in file-presence check (Blog/ + Pages/ only)
 python3 Scripts/lint-italian.py   # Italian-only prose lint (see below)
+python3 Scripts/lint-turkish.py   # Turkish-only prose lint (see below)
+python3 Scripts/lint-turkish.py --selftest   # check the Turkish lint's own rules
 ```
 
 `i18n-check` is this repo's own gate (see `Sources/Site/I18n/`, configured by repo-root
@@ -18,7 +20,7 @@ localizable roots (Blog, Pages, Data/Features, Data/Pricing, Landing), a UI-stri
 `Strings/Localizable.json` left untranslated for some locale, a leftover `⟦TODO⟧`
 scaffold marker, an em/en dash in structured data, or a straight ASCII `"` in the prose of
 a locale that has its own quotation marks (`lint.quoteStyle` in `i18n.yaml`: `de` `„…“`,
-`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`; `es`/`pt`/`id`/`it` are deliberately
+`zh` `“…”`, `ja` `「…」`, `fr` `« … »`, `ar` `«…»`; `es`/`pt`/`id`/`it`/`tr` are deliberately
 absent because ASCII quotes are idiomatic there). Frontmatter, code spans, `<script>`/`<style>`
 blocks, HTML attributes and link targets are exempt from that rule. Structural drift (a
 translation missing an optional section the default language has) and "looks untranslated"
@@ -35,6 +37,20 @@ Run it on the whole locale, or pass specific files. The register the lint cannot
 informal `tu`, Apple-Italy vocabulary, the fixed glossary, and the Italian calque traps -
 is written down in `Scripts/italian-style-guide.md`; read it before editing any `.it` file.
 
+`Scripts/lint-turkish.py` is the same idea for `tr`, added for the same reason (no native
+reviewer). It enforces the tells a Turkish reader spots first: a missing apostrophe before a
+suffix on a proper noun or initialism (`iPhone'un`, `Android'de`, `NFC'yi`, `App Store'dan`),
+`tag` inflected without an apostrophe or with BACK vowel harmony (the loanword is read /teg/,
+so `tag'e`/`tag'i`/`tag'ler`, never `taga`/`tagı`/`taglar`), English plurals on loanwords, the
+fixed orthography traps (`herşey`, `hiç bir`, `bir çok`, `yada`, `herkez`, `farketmez`,
+`şuan`, `-da ki`), ASCII-folded Turkish (`icin`, `degil`, `ozellik`), and em dashes. Prose
+only. Run `--selftest` to check the RULES rather than the content: it pins 27 cases, because
+Python's `re.I` folds dotless `ı` onto `i` and twice made a rule flag CORRECT Turkish. Do not
+add `re.I` to a rule that distinguishes the two. `bir` density is deliberately NOT linted -
+the script says why. The register the lint cannot check (informal `sen`, the fixed glossary,
+the Turkish calque traps) is in `Scripts/turkish-style-guide.md`; read it before editing any
+`.tr` file.
+
 Requires Swift 6.2+ and macOS 26 locally. CI uses `swift-actions/setup-swift@v2` on Ubuntu.
 
 ## Deploy
@@ -50,7 +66,7 @@ If we ever move to Cloudflare Pages, the form already works as-is (Worker is hos
 
 ## Sitemap (what visitors get)
 
-Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`); the table shows the EN path and its source.
+Every localized page lives under `/<lang>/…` for each locale in `localization.languages` (`/de/`, `/ja/`, `/pt/`, `/zh/`, `/id/`, `/es/`, `/fr/`, `/ar/`, `/it/`, `/tr/`); the table shows the EN path and its source.
 
 | EN path | Source |
 | --- | --- |
