@@ -1,7 +1,7 @@
 ---
 title: "NFC.coolについて"
 slug: "about"
-description: "NFC.coolの背景にあるストーリー、ミッション、そして人 - 独立開発のプライバシー重視スキャン・ツールキット。"
+description: "NFC.coolの背景にあるストーリー、ミッション、そして人 - プラットフォームに精通した個人開発者が独立して作る、iPhoneとAndroid向けのプライバシー重視スキャン・ツールキット。"
 ---
 
 <section class="page-hero">

@@ -1,7 +1,7 @@
 ---
 title: "開発者向け"
 slug: "developers"
-description: "NFC.coolをあなたのスタックへ接続:Webhookペイロード、App Intents、URLスキーム、機械可読フィード。"
+description: "NFC.coolをあなたのスタックへ接続する方法 - Webhookペイロードのリファレンス、App Intents、URLスキーム、機械可読フィードなど、iPhoneとAndroidでのサーバーサイド連携に必要なすべて。"
 ---
 
 <section class="page-hero">

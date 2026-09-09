@@ -9,7 +9,7 @@ card:
 
 hero:
   title: "支持 OCR 的文档扫描"
-  subtitle: "扫描文档时自动识别边缘并校正透视。设备端 OCR 让每一次扫描都变成可搜索的文本。"
+  subtitle: "扫描文档时自动识别边缘并校正透视。设备端 OCR 让每一次扫描都变成可搜索的文本，文档和文本都不会离开你的设备。"
   platforms: "仅限 iOS"
   heroImagePath: "/assets/images/Webflow/document-scan.webp"
 

@@ -1,7 +1,7 @@
 ---
 title: "ユーザーの声"
 slug: "reviews"
-description: "世界中のユーザーから寄せられた、NFC.coolの実際の5つ星レビュー。"
+description: "アメリカ、ドイツ、日本をはじめ世界中のユーザーから寄せられた、NFC.coolの実際の5つ星レビュー。iPhone版・Android版NFC.cool Toolsの評価をご紹介します。"
 ---
 
 <section class="page-hero">
